@@ -13,8 +13,8 @@
 
 Route::get('/','PagesController@index')->name('landing');
 
-Route::get('/home','Fnhome\HomeController@index');
+Route::get('/fnhome','Fnhome\HomeController@index')->name('fnhome');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
