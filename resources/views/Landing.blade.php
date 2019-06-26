@@ -12,7 +12,11 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                       optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                       Odit sed qui, dolorum!.</p>
+<<<<<<< HEAD
                     <a class="btn btn-green"><i class="fas fa-home left"></i> Home</a>
+=======
+                    <a class="btn btn-pink" href="/home"><i class="fas fa-clone left"></i> View project</a>
+>>>>>>> db60ed085a418c36d84b06f2a5006834584730e1
                   </div>
                 </div>
 
