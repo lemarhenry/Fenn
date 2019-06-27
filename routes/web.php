@@ -18,3 +18,5 @@ Route::get('/fnhome','Fnhome\HomeController@index')->name('fnhome');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::get('Networking','NetworkController@index')->name('Networking');
