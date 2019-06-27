@@ -1,5 +1,6 @@
 @extends('layouts.landing')
 @section('content')
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-6 pb-3 pr-0">
