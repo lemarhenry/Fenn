@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
-Route::get('Networking','NetworkController@index')->name('Networking');
+Route::get('/networking','Fnhome\NetworkController@index')->name('Networking');
