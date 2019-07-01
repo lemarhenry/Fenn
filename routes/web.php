@@ -20,3 +20,7 @@ Auth::routes();
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('/networking','Fnhome\NetworkController@index')->name('Networking');
+
+Route::get('/admin',function(){
+    return view('admin.index');
+});

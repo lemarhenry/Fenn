@@ -1,151 +1,131 @@
-@extends('layouts.app')
-@section('content')
+<header>
 
-<body class="fixed-sn light-blue-skin">
+        <!-- Sidebar navigation -->
+        <div id="slide-out" class="side-nav sn-bg-4 fixed text-dark">
+          <ul class="custom-scrollbar">
 
-        <!--Double navigation-->
-        <header>
-          <!-- Sidebar navigation -->
-          <div id="slide-out" class="side-nav sn-bg-4 fixed">
-            <ul class="custom-scrollbar">
-              <!-- Logo -->
-              <li>
-                <div class="logo-wrapper waves-light">
-                  <a href="#"><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" class="img-fluid flex-center"></a>
+            <!-- Logo -->
+            <li class="logo-sn waves-effect py-3">
+              <div class="text-center text-black-50">
+              <a href="/admin" class="pl-0"><img src="{{url('storage/xpress.png')}}" style="height:100px;"></a>
+              </div>
+            </li>
+
+            {{-- <!-- Search Form -->
+            <li>
+              <form class="search-form" role="search">
+                <div class="md-form mt-0 waves-light ">
+                  <input type="text" class="form-control py-2" placeholder="Search">
+                </div>
+              </form>
+            </li>
+             --}}
+
+            <!-- Side navigation links -->
+            <li>
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-box-open"></i>Update Shipments<i
+                  class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul class="list-unstyled">
+                <li><a href="" class="waves-effect">Add Shipments</a>
+                  </li>
+                  <li><a href="" class="waves-effect">View all Shipments</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+                <a href="" class="collapsible-header waves-effect text-dark"><i class="w-fa fas fa-newspaper"></i>News Page</a>
+                </li>
+                <li>
+                <a href="" class="collapsible-header waves-effect text-dark"><i class="w-fa fas fa-user"></i>All Users</a>
+                </li>
+                <li>
+
+                <a href="" class="collapsible-header waves-effect text-dark"><i class="w-fa far fa-calendar-check"></i>Incoming Deliveries</a>
+                </li>
+                <li>
+                <a href="" class="collapsible-header waves-effect text-dark"><i class="w-fa fas fa-file-invoice"></i>Invoices</a>
+                </li>
+                <li>
+                <a href="" class="collapsible-header waves-effect text-dark"><i class="fas fa-calculator"></i>Shipment Calculator</a>
+                </li>
+                {{-- <li><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-envelope"></i>Messages<i
+                  class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul class="list-unstyled">
+                  <li><a href="{{ age') }}" class="waves-effect">Inbox</a>
+                  </li>
+                  <li><a href="#" class="waves-effect">Compose Message</a>
+                  </li> --}}
+                </ul>
+              </div>
+            </li>
+              </ul>
+            </li>
+            <!-- Side navigation links -->
+
+          </ul>
+          <div class="sidenav-bg mask-strong"></div>
+        </div>
+        <!-- Sidebar navigation -->
+
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar double-nav bg-white">
+
+          <!-- SideNav slide-out button -->
+          <div class="float-left ">
+            <a href="#" data-activates="slide-out" class="button-collapse text-dark"><i class="fas fa-bars"></i></a>
+          </div>
+
+          <!-- Breadcrumb -->
+          <div class="breadcrumb-dn mr-auto">
+            <p>Admin Dashboard</p>
+          </div>
+
+          <div class="d-flex change-mode">
+
+            {{-- <div class="ml-auto mb-0 mr-3 change-mode-wrapper">
+              <button class="btn btn-outline-black btn-sm" id="dark-mode">Change Mode</button>
+            </div>   --}}
+
+            <!-- Navbar links -->
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+
+              <!-- Dropdown -->
+              <li class="nav-item dropdown notifications-nav">
+                <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="badge red" id="invoicentc"></span> <i class="fas fa-bell"></i>
+                  <span class="d-none d-md-inline-block">Notifications</span>
+                </a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <span id="invoicent"></span>
+                <span id="deliverynt"></span>
                 </div>
               </li>
-              <!--/. Logo -->
-              <!--Social-->
-              <li>
-                <ul class="social">
-                  <li><a href="#" class="icons-sm fb-ic"><i class="fab fa-facebook"> </i></a></li>
-                  <li><a href="#" class="icons-sm pin-ic"><i class="fab fa-pinterest"> </i></a></li>
-                  <li><a href="#" class="icons-sm gplus-ic"><i class="fab fa-google-plus"> </i></a></li>
-                  <li><a href="#" class="icons-sm tw-ic"><i class="fab fa-twitter"> </i></a></li>
-                </ul>
-              </li>
-              <!--/Social-->
-              <!--Search Form-->
-              <li>
-                <form class="search-form" role="search">
-                  <div class="form-group md-form mt-0 pt-1 waves-light">
-                    <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                </form>
-              </li>
-              <!--/.Search Form-->
-              <!-- Side navigation links -->
-              <li>
-                <ul class="collapsible collapsible-accordion">
-                  <li><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-chevron-right"></i> Submit
-                      blog<i class="fas fa-angle-down rotate-icon"></i></a>
-                    <div class="collapsible-body">
-                      <ul>
-                        <li><a href="#" class="waves-effect">Submit listing</a>
-                        </li>
-                        <li><a href="#" class="waves-effect">Registration form</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li><a class="collapsible-header waves-effect arrow-r"><i class="far fa-hand-pointer"></i>
-                      Instruction<i class="fas fa-angle-down rotate-icon"></i></a>
-                    <div class="collapsible-body">
-                      <ul>
-                        <li><a href="#" class="waves-effect">For bloggers</a>
-                        </li>
-                        <li><a href="#" class="waves-effect">For authors</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li><a class="collapsible-header waves-effect arrow-r"><i class="far fa-eye"></i> About<i class="fas fa-angle-down rotate-icon"></i></a>
-                    <div class="collapsible-body">
-                      <ul>
-                        <li><a href="#" class="waves-effect">Introduction</a>
-                        </li>
-                        <li><a href="#" class="waves-effect">Monthly meetings</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li><a class="collapsible-header waves-effect arrow-r"><i class="far fa-envelope"></i> Contact me<i
-                        class="fas fa-angle-down rotate-icon"></i></a>
-                    <div class="collapsible-body">
-                      <ul>
-                        <li><a href="#" class="waves-effect">FAQ</a>
-                        </li>
-                        <li><a href="#" class="waves-effect">Write a message</a>
-                        </li>
-                        <li><a href="#" class="waves-effect">FAQ</a>
-                        </li>
-                        <li><a href="#" class="waves-effect">Write a message</a>
-                        </li>
-                        <li><a href="#" class="waves-effect">FAQ</a>
-                        </li>
-                        <li><a href="#" class="waves-effect">Write a message</a>
-                        </li>
-                        <li><a href="#" class="waves-effect">FAQ</a>
-                        </li>
-                        <li><a href="#" class="waves-effect">Write a message</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <!--/. Side navigation links -->
-            </ul>
-            <div class="sidenav-bg mask-strong"></div>
-          </div>
-          <!--/. Sidebar navigation -->
-          <!-- Navbar -->
-          <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg double-nav">
-            <!-- SideNav slide-out button -->
-            <div class="float-left">
-              <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
-            </div>
-            <!-- Breadcrumb-->
-            <div class="breadcrumb-dn mr-auto">
-              <p>Material Design for Bootstrap</p>
-            </div>
-            <ul class="nav navbar-nav nav-flex-icons ml-auto">
               <li class="nav-item">
-                <a class="nav-link"><i class="fa fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
+                <a class="nav-link waves-effect"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"><i class="fa fa-comments-o"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Account</span></a>
+                <a class="nav-link waves-effect"><i class="far fa-comments"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  Dropdown
+                <a class="nav-link dropdown-toggle waves-effect text-dark" href="#" id="userDropdown" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i> <span class="clearfix d-none d-sm-inline-block"></span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="">My Account</a>
+                <a class="dropdown-item" href="">Log Out</a>
+                      </div>
               </li>
+
             </ul>
-          </nav>
-          <!-- /.Navbar -->
-        </header>
-        <!--/.Double navigation-->
+            <!-- Navbar links -->
 
-        <!--Main Layout-->
-        <main>
-          <div class="container-fluid mt-5">
-            <h2>Advanced Double Navigation with fixed SideNav & fixed Navbar:</h2>
-            <br>
-            <h5>1. Fixed side menu, hidden on small devices.</h5>
-            <h5>2. Fixed Navbar. It will always stay visible on the top, even when you scroll down.</h5>
-            <div style="height: 2000px"></div>
           </div>
-        </main>
-        <!--Main Layout-->
 
-      </body>
+        </nav>
+        <!-- Navbar -->
+
+      </header>
