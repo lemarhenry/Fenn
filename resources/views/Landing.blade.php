@@ -1,4 +1,4 @@
-@extends('layouts.landing')
+@extends('layouts.Cms')
 @section('content')
 
 <div class="container-fluid">
@@ -13,7 +13,7 @@
                     <h5 class="green-text "><i class="fas fa-home"></i></i>Home</h5>
                     {{-- <h3 class="card-title pt-2"><strong>This is the card title</strong></h3> --}}
                     <p> FennTech Ltd is an IT solutions provider with over 14 years experience in crafting solutions for home, office, schools and government.
-                            The company was founded on the premiss that you don’t just need a computer, nor a fax machine, but a solution for all your technology needs.</p>
+                            The company was founded on the premiseh that you don’t just need a computer, nor a fax machine, but a solution for all your technology needs.</p>
                     <a class="btn btn-green"  href="{{route('fnhome')}}"><i class="fas fa-home left"></i> Home</a>
                   </div>
                 </div>
