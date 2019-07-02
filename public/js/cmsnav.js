@@ -1,7 +1,7 @@
-// SideNav Button Initialization
-$(".button-collapse").sideNav({
-    breakpoint: 1200
-  });
-  // SideNav Scrollbar Initialization
-  var sideNavScrollbar = document.querySelector('.custom-scrollbar');
-  var ps = new PerfectScrollbar(sideNavScrollbar);
+function init() {
+    $navbarBtn.sideNav({
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on &lt;a&gt; clicks, useful for Angular/Meteor
+        breakpoint: 1200 // Breakpoint for button collapse
+    });
+}
