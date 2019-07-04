@@ -10,8 +10,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('/public/js/cmsnav.js') }}" defer></script>
 
 
     <!-- Fonts -->
@@ -28,7 +26,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
-        @include('inc.navbar')
+        {{-- @include('inc.cmsnav') --}}
         <main class="py-4">
             @yield('content')
         </main>
