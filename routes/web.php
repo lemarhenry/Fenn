@@ -21,6 +21,8 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('/networking','Fnhome\NetworkController@index')->name('Networking');
 
+Route::get('/corporate','Fnhome\CorporateController@index')->name('corporate');
+
 Route::get('/admin',function(){
     return view('admin.index');
 });
