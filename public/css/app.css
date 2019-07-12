@@ -54,11 +54,26 @@
   /* Centered text */
   .centered {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size:200%;
     color: white;
+  }
+  /* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom:25px;
+  left: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    transform: translate(25%, -50%);
+    top: 100%;
+    bottom: 8px;
+    right: 0px;
   }
 
 html {

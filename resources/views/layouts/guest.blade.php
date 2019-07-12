@@ -29,7 +29,7 @@
 <body>
     <div id="app">
         @include('inc.navbar')
-        <main class="py-4">
+        <main class="pt-2">
             @yield('content')
         </main>
     @include('inc.footer')
