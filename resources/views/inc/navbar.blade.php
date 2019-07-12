@@ -1,7 +1,7 @@
 
 <!--Navbar -->
 <Header>
-<nav class="mb-1 navbar navbar-expand-lg navbar-light">
+<nav class="mb-1 navbar navbar-expand-lg navbar-light fixed-top">
 <a class="navbar-brand" href="#"><img src="{{ url('storage/logo.png') }}" alt="" srcset="" style="width:40%"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
       aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,5 +48,8 @@
     </div>
   </nav>
   <!--/.Navbar -->
+<br>
+<br>
+
 </Header>
 

@@ -1,93 +1,145 @@
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5">
 
-<footer >
-        <!-- Footer -->
-        <footer class="page-footer font-small green pt-4">
+        <div style="background-color: #0054A6;">
+          <div class="container">
 
-            <!-- Footer Links -->
-            <div class="container-fluid text-center text-md-left">
+            <!-- Grid row-->
+            <div class="row py-4 d-flex align-items-center">
 
-              <!-- Grid row -->
-              <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                <h6 class="mb-0">Get connected with us on social networks!</h6>
+              </div>
+              <!-- Grid column -->
 
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
+              <!-- Grid column -->
+              <div class="col-md-6 col-lg-7 text-center text-md-right">
 
-                  <!-- Content -->
-        <h4 class="text-uppercase text-dark">Contact Us</h4>
-
-        <div class="text-dark">
-                Address: Shop #13, Juici Plaza, Mandeville, Manchester Jamaica W.I.
-                <br>
-                Tel: 876-285-0133
-                <br>
-                Email: info@fenntechltd.com
-
-        </div>
-
-                </div>
-                <!-- Grid column -->
-
-                <hr class="clearfix w-100 d-md-none pb-3">
-
-                <!-- Grid column -->
-                {{-- <div class="col-md-3 mb-md-0 mb-3">
-
-                  <!-- Links -->
-                  <h5 class="text-uppercase">Links</h5>
-
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="#!">Link 1</a>
-                    </li>
-                    <li>
-                      <a href="#!">Link 2</a>
-                    </li>
-                    <li>
-                      <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                      <a href="#!">Link 4</a>
-                    </li>
-                  </ul>
-
-                </div> --}}
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                  <!-- Links -->
-                  <h5 class="text-uppercase text-dark">Connect:</h5>
-
-                  <ul class="list-unstyled">
-                    <li class="list-inline-item">
-                        <a class="btn-floating btn-fb mx-1">
-                          <i class="fab blue fa-facebook-f"> </i>
-                        </a>
-                      </li>
-
-                      <li class="list-inline-item">
-                        <a class="btn-floating btn-tw mx-1">
-                          <i class="fab lightblue fa-twitter"> </i>
-                        </a>
-                      </li>
-                  </ul>
-
-                </div>
-                <!-- Grid column -->
+                <!-- Facebook -->
+                <a class="fb-ic" href="https://www.facebook.com/fenntechltd">
+                  <i class="fab fa-facebook-f white-text mr-4" > </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic" href="https://twitter.com/FennTech">
+                  <i class="fab fa-twitter white-text mr-4"> </i>
+                </a>
+                <!-- Google +-->
+                <a class="gplus-ic">
+                  <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                </a>
+                <!--Linkedin -->
+                <a class="li-ic">
+                  <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic">
+                  <i class="fab fa-instagram white-text"> </i>
+                </a>
 
               </div>
-              <!-- Grid row -->
+              <!-- Grid column -->
 
             </div>
-            <!-- Footer Links -->
+            <!-- Grid row-->
 
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2018 Copyright:
-              {{-- <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a> --}}
+          </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+          <!-- Grid row -->
+          <div class="row mt-3 dark-grey-text">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+              <!-- Content -->
+              <h6 class="text-uppercase font-weight-bold">FENNTECH</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+             <p>The company was founded on the premiss that you don’t just need a computer, nor a fax machine, but a solution for all your technology needs.</p>
+
             </div>
-            <!-- Copyright -->
+            <!-- Grid column -->
 
-          </footer>
-          <!-- Footer -->
-        </footer>
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Services</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <a class="dark-grey-text" href="#!">Home & Office Security</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="#!">Networking and
+                        Cabling</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="#!">Repair & Installation</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="#!">Website Design and
+                        Development</a>
+              </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Clients:</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <a class="dark-grey-text" href="#!">Juicie Patties</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="#!">Kings</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="#!">Noble WIFI</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="#!">Cooyah</a>
+              </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Contact</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+            <i class="fas fa-home mr-3"></i>
+                Shop #13, Juici Plaza, Mandeville, Manchester, Jamaica W.I.</p>
+              <p>
+                <i class="fas fa-envelope mr-3">
+                    </i> info@fenntechltd.com</p>
+              <p>
+                <i class="fas fa-phone mr-3">
+                    </i> 876-285-0133</p>
+
+
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+          <a class="dark-grey-text" href="http://www.fenntechltd.com/"> fenntechltd.com</a>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+      <!-- Footer -->

@@ -43,6 +43,23 @@
 *::after {
   box-sizing: border-box;
 }
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+
+
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:200%;
+    color: white;
+  }
 
 html {
   font-family: sans-serif;
