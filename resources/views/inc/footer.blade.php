@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <!-- Footer -->
 <footer class="page-footer font-small blue-grey lighten-5 ">
 
@@ -143,3 +144,4 @@
 
       </footer>
       <!-- Footer -->
+    </div>
