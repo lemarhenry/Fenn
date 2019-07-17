@@ -1,7 +1,7 @@
 
 <!--Navbar -->
-<Header >
-<nav class="mb-1 navbar navbar-expand-lg navbar-light fixed-top">
+<Header class="pb-2 nav" >
+<nav class="mb-1 navbar navbar-expand-lg  navbar-light fixed-top ">
 <a class="navbar-brand" href="#"><img src="{{ url('storage/logo.png') }}" alt="" srcset="" style="width:40%"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
       aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,19 +16,28 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="{{route('about')}}">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
+          <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Services</a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{route('homeSecurity')}}">Home&Office Security</a>
+                        <a class="dropdown-item" href="#">Repair&Installation</a>
+                        <a class="dropdown-item" href="{{route('corporate')}}">Corporate&Institutions</a>
+                        <a class="dropdown-item" href="#">Website Design</a>
+                        <a class="dropdown-item" href="{{route('Networking')}}">Networking&Cabling</a>
+                </div>
+              </li>
+              <li class="nav-item">
 
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">Products</a>
             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#"> Computer systems</a>
-              <a class="dropdown-item" href="#">Laptops</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=1_12"> Computer systems</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=1_13">Laptops</a>
               <a class="dropdown-item" href="#"> Tablets</a>
               <a class="dropdown-item" href="#">Software</a>
               <a class="dropdown-item" href="#">Accessories</a>
@@ -42,7 +51,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
           </li>
       </ul>
     </div>
