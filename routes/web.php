@@ -15,9 +15,17 @@ Route::get('/','PagesController@index')->name('landing');
 
 Route::get('/fnhome','Fnhome\HomeController@index')->name('fnhome');
 
+Route::get('/about', 'PagesController@about')->name('about');
+
+
+
+Route::get('/contact', 'PagesController@contact')->name('contact');
+
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::get('/homeSecurity', 'PagesController@homeSecurity')->name('homeSecurity');
 
 Route::get('/networking','Fnhome\NetworkController@index')->name('Networking');
 

@@ -82,6 +82,41 @@
     margin-right: 20%;
     margin-bottom: 6rem;
   }
+  /*Border brerak*/
+  hr.style18 {
+    height: 30px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+  }
+  hr.style18:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+  }
+
+
+  /*Contact page*/
+
+  .map-container-section {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-container-section iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
 
   /* Centered text */
   .centered {
@@ -4626,7 +4661,7 @@ input[type=button].btn-block {
   -webkit-box-pack: justify;
           justify-content: space-between;
   padding: 0.5rem 1rem;
-  /* background: linear-gradient(40deg, rgba(0,51,199,.3), rgba(245, 243, 247, 0.418)); */
+  background: grey;
 }
 
 .navbar > .container,

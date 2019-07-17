@@ -16,13 +16,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="{{route('about')}}">About</a>
           </li>
           <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">Services</a>
                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Home&Office Security</a>
+                        <a class="dropdown-item" href="{{route('homeSecurity')}}">Home&Office Security</a>
                         <a class="dropdown-item" href="#">Repair&Installation</a>
                         <a class="dropdown-item" href="{{route('corporate')}}">Corporate&Institutions</a>
                         <a class="dropdown-item" href="#">Website Design</a>
@@ -51,7 +51,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
           </li>
       </ul>
     </div>
