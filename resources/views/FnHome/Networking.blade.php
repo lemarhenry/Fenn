@@ -51,7 +51,7 @@
 <div class="row container-fluid">
 <div class="col-12 px-0 py-0">
 
-    @include('inc.testimonial')
+    @include('components.testimonial')
 
 
 </div>
@@ -59,7 +59,7 @@
 
 <div  class="row">
 <div class="col-lg-12 col-md-6" id="section">
-   @include('inc.features')
+   @include('components.features')
 
 </div>
 

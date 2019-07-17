@@ -1,6 +1,6 @@
 <div class="container-fluid">
 <!-- Footer -->
-<footer class="page-footer font-small blue-grey lighten-5 ">
+<footer class="page-footer font-small blue-grey lighten-5 mx-0">
 
         <div style="background-color: #0054A6;">
           <div class="container">
