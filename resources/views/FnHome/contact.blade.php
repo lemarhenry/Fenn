@@ -17,11 +17,14 @@
 
             <!-- Form with header -->
             <div class="card">
+                <div class="card-header blue accent-1 text-white">
+                        <div class="form-header ">
+                                <h3 class="mt-2"><i class="fas fa-envelope"></i> Write to us:</h3>
+                         </div>
+                </div>
               <div class="card-body">
                 <!-- Header -->
-                <div class="form-header blue accent-1">
-                  <h3 class="mt-2"><i class="fas fa-envelope"></i> Write to us:</h3>
-                </div>
+
                 <p class="dark-grey-text">We'll write rarely, but only the best content.</p>
                 <!-- Body -->
                 <div class="md-form">

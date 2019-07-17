@@ -13,18 +13,18 @@ class PagesController extends Controller
 
   public function about(){
 
-    return view('Fnhome.about');
+    return view('FnHome.about');
 
 }
 
 public function homeSecurity(){
 
-    return view('Fnhome.homeSecurity');
+    return view('FnHome.homeSecurity');
 
 }
 
   public function contact(){
 
-    return view('Fnhome.contact');
+    return view('FnHome.contact');
 }
 }
