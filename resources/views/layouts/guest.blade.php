@@ -26,7 +26,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css">
-
+<link rel="stylesheet" href="{{asset('css/iziToast.css')}}">
 </head>
 <body>
     <div id="app">
@@ -44,7 +44,11 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
-
+    <script src="{{asset('js/iziToast.js')}}"></script>
+<script src="{{asset('js/guest.js')}}"></script>
+    <script>
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+      </script>
     </div>
 </body>
 </html>

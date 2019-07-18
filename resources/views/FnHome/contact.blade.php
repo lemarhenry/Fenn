@@ -35,40 +35,44 @@
                             <i class="fas fa-user prefix grey-text"></i>
                             <input
                                 type="text"
-                                id="form-name"
+                                id="formname"
                                 class="form-control"
                             />
-                            <label for="form-name">Your name</label>
+                            <label for="formname">Your name</label>
+                            <span id="errorname" class="text-danger"></span>
                         </div>
                         <div class="md-form">
                             <i class="fas fa-envelope prefix grey-text"></i>
                             <input
                                 type="text"
-                                id="form-email"
+                                id="formemail"
                                 class="form-control"
                             />
-                            <label for="form-email">Your email</label>
+                            <label for="formemail">Your email</label>
+                            <span id="erroremail" class="text-danger"></span>
                         </div>
                         <div class="md-form">
                             <i class="fas fa-tag prefix grey-text"></i>
                             <input
                                 type="text"
-                                id="form-Subject"
+                                id="formSubject"
                                 class="form-control"
                             />
-                            <label for="form-Subject">Subject</label>
+                            <label for="formSubject">Subject</label>
+                            <span id="errorsubject" class="text-danger"></span>
                         </div>
                         <div class="md-form">
                             <i class="fas fa-pencil-alt prefix grey-text"></i>
                             <textarea
-                                id="form-text"
+                                id="formtext"
                                 class="form-control md-textarea"
                                 rows="3"
                             ></textarea>
-                            <label for="form-text">Send message</label>
+                            <span id="errorbody" class="text-danger"></span>
+                            <label for="formtext">Send message</label>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-light-blue">Submit</button>
+                            <button class="btn btn-light-blue" id="sendmsg">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -110,21 +114,21 @@
             <!-- Buttons-->
             <div class="row text-center pb-2">
                 <div class="col-md-4">
-                    <a class="btn-floating blue accent-1">
+                    <a class=" btn btn-floating blue accent-1">
                         <i class="fas fa-map-marker-alt"></i>
                     </a>
                     <p>Shop #13, Juici Plaza, Mandeville, Manchester</p>
                     <p class="mb-md-0">Jamaica W.I.</p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn-floating blue accent-1">
+                    <a class="btn btn-floating blue accent-1">
                         <i class="fas fa-phone"></i>
                     </a>
                     <p>+1876-619-8324</p>
                     <p class="mb-md-0">Mon - Sat, 9:00-5:00</p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn-floating blue accent-1">
+                    <a class="btn btn-floating blue accent-1">
                         <i class="fas fa-envelope"></i>
                     </a>
                     <p>info@fenntechltd.com</p>

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="">
 <!-- Footer -->
 <footer class="page-footer font-small blue-grey lighten-5 mx-0">
 

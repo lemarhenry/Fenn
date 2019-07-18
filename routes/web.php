@@ -19,7 +19,8 @@ Route::get('/about', 'PagesController@about')->name('about');
 
 
 
-Route::get('/contact', 'PagesController@contact')->name('contact');
+Route::get('/contact', 'Fnhome\ContactController@create')->name('contact');
+Route::post('/contact','Fnhome\ContactController@store');
 
 Auth::routes();
 
