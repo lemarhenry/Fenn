@@ -22,7 +22,7 @@
                             <h1 class="heading display-4">
                                 Home and Office Security
                             </h1>
-                            <h4 class="subheading font-weight-bold">
+                            <h4 class="subheading font-weight">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Fugit, error amet numquam iure
                                 provident voluptate esse quasi, veritatis totam
@@ -32,7 +32,7 @@
                             <div class="mr-auto">
                                 <button
                                     type="button"
-                                    class="btn btn-lily btn-margin btn-rounded "
+                                    class="btn btn-lily btn-margin btn-rounded text-white "
                                 >
                                     Features
                                     <i class="fas fa-caret-right ml-3"></i>

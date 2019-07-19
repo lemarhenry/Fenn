@@ -17,9 +17,15 @@
             <div class="d-flex flex-column justify-content-center align-items-center h-100 pt-5">
                     {{-- <a class="navbar-brand" href="#"><img src="{{ url('storage/logo.png') }}" alt="" srcset="" style="width:40%"></a> --}}
               <h1 class="heading display-4">Networking and Cabling</h1>
-              <h4 class="subheading font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</h4>
+              <h4 class="subheading font-weight">
+                Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Fugit, error amet numquam iure
+                provident voluptate esse quasi, veritatis totam
+                voluptas nostrum quisquam eum porro a pariatur
+                veniam.
+            </h4>
               <div class="mr-auto">
-                <button type="button" class="btn btn-lily btn-margin btn-rounded " >Features <i class="fas fa-caret-right ml-3"></i>
+                <button type="button" class="btn btn-lily btn-margin btn-rounded white-text " >Features <i class="fas fa-caret-right ml-3"></i>
                 <a href="#section"></a></button>
               </div>
             </div>

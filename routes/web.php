@@ -1,4 +1,6 @@
 <?php
+// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +33,10 @@ Route::get('/homeSecurity', 'PagesController@homeSecurity')->name('homeSecurity'
 Route::get('/networking','Fnhome\NetworkController@index')->name('Networking');
 
 Route::get('/corporate','Fnhome\CorporateController@index')->name('corporate');
+
+Route::get('/website', 'Fnhome\WebPageController@index')->name('website');
+
+Route::get('/repair','Fnhome\RepairPageController@index')->name('repair');
 
 Route::get('/admin',function(){
     return view('admin.index');

@@ -27,11 +27,11 @@
             <i class="fas fa-quote-left pr-2"></i>I've been a customer at FennTech for over seven years. There is always a friendly atmosphere while they solve the toughest of technological problems."</p>
           <!--Review-->
           <div class="orange-text">
-            <i class="fas fa-star"> </i>
-            <i class="fas fa-star"> </i>
-            <i class="fas fa-star"> </i>
-            <i class="fas fa-star"> </i>
-            <i class="fas fa-star-half-alt"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
           </div>
         </div>
 
@@ -79,11 +79,11 @@
             <i class="fas fa-quote-left pr-2"></i>Almost every time I speak with them (FennTech), they are creating new ideas on how to solve everyday tech problems."</p>
           <!--Review-->
           <div class="orange-text">
-            <i class="fas fa-star"> </i>
-            <i class="fas fa-star"> </i>
-            <i class="fas fa-star"> </i>
-            <i class="fas fa-star"> </i>
-            <i class="far fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
           </div>
         </div>
 

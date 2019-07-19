@@ -19,13 +19,12 @@
                             /></a>
                             --}}
                             <h1 class="heading display-4">About Us</h1>
-                            <h4 class="subheading font-weight-bold">
-                                FennTech Ltd is an IT solutions provider with
-                                over 14 years experience in crafting solutions
-                                for home, office, schools and government. The
-                                company was founded on the premiss that you
-                                don’t just need a computer, nor a fax machine,
-                                but a solution for all your technology needs.
+                            <h4 class="subheading font-weight">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Fugit, error amet numquam iure
+                                provident voluptate esse quasi, veritatis totam
+                                voluptas nostrum quisquam eum porro a pariatur
+                                veniam.
                             </h4>
                             <div class="mr-auto">
                                 <button
@@ -65,7 +64,7 @@
     <br />
     <div class="row container-fluid">
         <div class="col-lg-12 col-md-6" id="section">
-            <h5 class="dark">Our Solution include:</h5>
+            <h5 class="dark"><b>Our Solution include:</b> </h5>
             <ul class="list-unstyled">
                 <ul class="pb-2">
                     <li>
@@ -103,7 +102,7 @@
                     <li>Custom IT solutions</li>
                 </ul>
 
-                <h5 class="dark">Our respected list of clients include:</h5>
+                <h5 class="dark"><b>Our respected list of clients include:</b> </h5>
 
                 <ul class="pb-2">
                     <li>Juici Patties (HQ and stores)</li>

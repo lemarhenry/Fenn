@@ -23,9 +23,9 @@
                   aria-haspopup="true" aria-expanded="false">Services</a>
                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{route('homeSecurity')}}">Home&Office Security</a>
-                        <a class="dropdown-item" href="#">Repair&Installation</a>
+                        <a class="dropdown-item" href="{{route('repair')}}">Repair&Installation</a>
                         <a class="dropdown-item" href="{{route('corporate')}}">Corporate&Institutions</a>
-                        <a class="dropdown-item" href="#">Website Design</a>
+                        <a class="dropdown-item" href="{{route('website')}}">Website Design</a>
                         <a class="dropdown-item" href="{{route('Networking')}}">Networking&Cabling</a>
                 </div>
               </li>
@@ -38,16 +38,17 @@
             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=1_12"> Computer systems</a>
               <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=1_13">Laptops</a>
-              <a class="dropdown-item" href="#"> Tablets</a>
-              <a class="dropdown-item" href="#">Software</a>
-              <a class="dropdown-item" href="#">Accessories</a>
-              <a class="dropdown-item" href="#">Computer Parts</a>
-              <a class="dropdown-item" href="#">Furniture</a>
-              <a class="dropdown-item" href="#">Ink & Toners</a>
-              <a class="dropdown-item" href="#">Network & WiFi</a>
-              <a class="dropdown-item" href="#">Printers</a>
-              <a class="dropdown-item" href="#">Security</a>
-              <a class="dropdown-item" href="#">UPS & Power</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=3">Phones</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=1_14"> Tablets</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=7">Software</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=2">Accessories</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=8">Computer Parts</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=40">Furniture</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=6">Ink & Toners</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=4">Network & WiFi</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=19">Printers</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=product_info&cPath=20&products_id=144">Security</a>
+              <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=43">UPS & Power</a>
             </div>
           </li>
           <li class="nav-item">

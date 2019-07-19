@@ -132,13 +132,20 @@
 
           </div>
           <!-- Grid row -->
+<div class="row">
 
+    <div class="col-md4">
+        <a class="dark-grey-text" href="https://www.freepik.com">Images designed by Freepik</a>
+    </div>
+</div>
         </div>
         <!-- Footer Links -->
 
         <!-- Copyright -->
         <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
           <a class="dark-grey-text" href="http://www.fenntechltd.com/"> fenntechltd.com</a>
+          <br>
+
         </div>
         <!-- Copyright -->
 
