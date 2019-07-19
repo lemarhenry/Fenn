@@ -33,8 +33,8 @@
         </div>
     </div>
 
-    <div class="row">
-
+    <div class="row " style="justify-content:center">
+            <h2 class="h1-responsive font-weight-bold my-5" >"What Can We Do For You"</h2>
         <div class="col-12">
 
             <!-- Card deck -->
@@ -59,13 +59,17 @@
                         <h4 class="card-title">Products we sell</h4>
                         <!--Text-->
                         <p class="card-text">
-                            <li>General PC Repairs</li>
-                               <li>In-Home, In-Office</li>
-                               <li>Virus Removal</li>
-                               <li> Accessories</li>
-                               <li>Maintenance</li></p>
+
+
+
+
+                            <li>Computer Systems</li>
+                               <li> Laptops</li>
+                               <li> Tablet Computers</li>
+                               <li>  Accessories</li>
+                               <li> Software</li></p>
                         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                        <button type="button" class="btn btn-light-blue btn-md">
+                        <button style="color:white" type="button" class="btn btn-light-blue btn-md">
                                 More
 
                             </button>
@@ -100,8 +104,8 @@
                                <li> Accessories</li>
                                <li>Maintenance</li></p>
                         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                        <button type="button" class="btn btn-light-blue btn-md">
-                                <a href="{{route('repair')}}">   More</a>
+                        <button type="button"  class="btn btn-light-blue btn-md">
+                                <a href="{{route('repair')}}"style="color:white">   More</a>
                          </button>
 
                     </div>
@@ -136,7 +140,7 @@
                         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                         <button type="button" class="btn btn-light-blue btn-md">
 
-                                <a href="{{route('homeSecurity')}}">   More </a>
+                                <a href="{{route('homeSecurity')}}"style="color:white">   More </a>
 
 
 
@@ -189,7 +193,7 @@
                                 <br>
                             <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                             <button type="button" class="btn btn-light-blue btn-md">
-                                <a href="{{route('Networking')}}"> More</a>
+                                <a href="{{route('Networking')}}"style="color:white"> More</a>
 
                             </button>
 
@@ -226,7 +230,7 @@
                             <button type="button" class="btn btn-light-blue btn-md">
 
 
-                                <a href="{{route('corporate')}}">More</a></button>
+                                <a href="{{route('corporate')}}"style="color:white">More</a></button>
 
                         </div>
 
@@ -261,7 +265,7 @@
                             <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                             <button type="button" class="btn btn-light-blue btn-md">
 
-                                <a href="{{route('website')}}">  More </a>
+                                <a href="{{route('website')}}"style="color:white">  More </a>
 
                             </button>
 

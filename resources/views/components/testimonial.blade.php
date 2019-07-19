@@ -3,7 +3,7 @@
 <section class="team-section text-center my-5">
 
     <!-- Section heading -->
-    <h2 class="h1-responsive font-weight-bold my-5">Testimonials</h2>
+    <h2 class="h1-responsive font-weight-bold my-5">"Testimonials"</h2>
     <!-- Section description -->
     <p class="dark-grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam

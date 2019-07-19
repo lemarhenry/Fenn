@@ -48,4 +48,7 @@ sendMessage = () => {
     }
 };
 
+//image box
+ baguetteBox.run('.tz-gallery');
+
 
