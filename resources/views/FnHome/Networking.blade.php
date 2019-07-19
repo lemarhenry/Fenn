@@ -11,7 +11,15 @@
     <section class="view">
 
         <div class="row">
+                <div class="col-md-6">
 
+                        <div class="view">
+                          <img src="{{ url('storage/images/illustrationforcabling.jpg') }}"  class="img-fluid rounded" alt="smaple image">
+                          <div class="mask flex-center hm-gradient">
+                          </div>
+                        </div>
+
+                      </div>
           <div class="col-md-6">
 
             <div class="d-flex flex-column justify-content-center align-items-center h-100 pt-5">
@@ -32,15 +40,7 @@
 
           </div>
 
-          <div class="col-md-6">
 
-            <div class="view">
-              <img src="{{ url('storage/images/illustrationforcabling.jpg') }}"  class="img-fluid rounded" alt="smaple image">
-              <div class="mask flex-center hm-gradient">
-              </div>
-            </div>
-
-          </div>
 
         </div>
 

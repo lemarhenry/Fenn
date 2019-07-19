@@ -13,6 +13,19 @@
 
         <!-- Grid row -->
         <div class="row">
+   <!-- Grid column -->
+   <div class="col-lg-7">
+        <div class="view">
+            <img
+                src="{{ url('storage/images/contact.jpg') }}"
+                class="img-fluid rounded"
+                alt="smaple image"
+            />
+            <div class="mask flex-center hm-gradient"></div>
+        </div>
+    </div>
+    <!-- Grid column -->
+
             <!-- Grid column -->
             <div class="col-lg-5 mb-lg-0 mb-4">
                 <!-- Form with header -->
@@ -80,18 +93,6 @@
             </div>
             <!-- Grid column -->
 
-            <!-- Grid column -->
-            <div class="col-lg-7">
-                <div class="view">
-                    <img
-                        src="{{ url('storage/images/contact.jpg') }}"
-                        class="img-fluid rounded"
-                        alt="smaple image"
-                    />
-                    <div class="mask flex-center hm-gradient"></div>
-                </div>
-            </div>
-            <!-- Grid column -->
         </div>
         <!-- Grid row -->
     </section>

@@ -5,19 +5,22 @@
         <div class="col-12  px-0 py-0">
             <section class="view">
                 <div class="row">
+
+                        <div class="col-md-6">
+                                <div class="view">
+                                    <img
+                                        src="{{ url('storage/images/aboutpage.jpg') }}"
+                                        class="img-fluid rounded"
+                                        alt="smaple image"
+                                    />
+                                    <div class="mask flex-center hm-gradient"></div>
+                                </div>
+                            </div>
                     <div class="col-md-6">
                         <div
                             class="d-flex flex-column justify-content-center align-items-center h-100 pt-5"
                         >
-                            {{--
-                            <a class="navbar-brand" href="#"
-                                ><img
-                                    src="{{ url('storage/logo.png') }}"
-                                    alt=""
-                                    srcset=""
-                                    style="width:40%"
-                            /></a>
-                            --}}
+
                             <h1 class="heading display-4">About Us</h1>
                             <h4 class="subheading font-weight">
                                 Lorem ipsum dolor sit amet, consectetur
@@ -39,16 +42,6 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="view">
-                            <img
-                                src="{{ url('storage/images/aboutpage.jpg') }}"
-                                class="img-fluid rounded"
-                                alt="smaple image"
-                            />
-                            <div class="mask flex-center hm-gradient"></div>
-                        </div>
-                    </div>
                 </div>
             </section>
             <!-- Intro -->

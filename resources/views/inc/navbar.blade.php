@@ -2,7 +2,7 @@
 <!--Navbar -->
 <Header class="pb-2 nav" >
 <nav class="mb-1 navbar navbar-expand-lg  navbar-light fixed-top ">
-<a class="navbar-brand" href="#"><img src="{{ url('storage/logo.png') }}" alt="" srcset="" style="width:40%"></a>
+<a class="navbar-brand" href="{{route('landing')}}"><img src="{{ url('storage/logo.png') }}" alt="" srcset="" style="width:40%"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
       aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
