@@ -30,7 +30,7 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('/homeSecurity', 'PagesController@homeSecurity')->name('homeSecurity');
 
-Route::get('/networking','Fnhome\NetworkController@index')->name('Networking');
+Route::get('/networking','Fnhome\NetworkController@index')->name('networking');
 
 Route::get('/corporate','Fnhome\CorporateController@index')->name('corporate');
 

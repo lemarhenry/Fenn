@@ -70,7 +70,7 @@
                         FennTech Ltd is an IT solutions provider with over 14 years experience in crafting solutions for home, office, schools and government.
                         The company was founded on the premiss that you don’t just need a computer, nor a fax machine, but a solution for all your technology needs.
                         </p>
-                    <a class="btn btn-blue"  href="{{route('Networking')}}"><i class="fas fa-network-wired"></i> Network</a>
+                    <a class="btn btn-blue"  href="{{route('networking')}}"><i class="fas fa-network-wired"></i> Network</a>
                   </div>
                 </div>
 

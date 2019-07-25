@@ -126,4 +126,4 @@
     <!-- Grid row -->
 
   </section>
-  <!-- Projects section v.3 -->
+

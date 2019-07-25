@@ -22,11 +22,11 @@
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">Services</a>
                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{route('homeSecurity')}}">Home&Office Security</a>
-                        <a class="dropdown-item" href="{{route('repair')}}">Repair&Installation</a>
-                        <a class="dropdown-item" href="{{route('corporate')}}">Corporate&Institutions</a>
+                        <a class="dropdown-item" href="{{route('homeSecurity')}}">Home & Office Security</a>
+                        <a class="dropdown-item" href="{{route('repair')}}">Repair & Installation</a>
+                        <a class="dropdown-item" href="{{route('corporate')}}">Corporate & Institutions</a>
                         <a class="dropdown-item" href="{{route('website')}}">Website Design</a>
-                        <a class="dropdown-item" href="{{route('Networking')}}">Networking&Cabling</a>
+                        <a class="dropdown-item" href="{{route('networking')}}">Networking & Cabling</a>
                 </div>
               </li>
               <li class="nav-item">

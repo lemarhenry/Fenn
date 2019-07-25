@@ -1,33 +1,30 @@
 @extends('layouts.guest') @section('content')
 
 <div class="container-fluid py-0">
-    <div class="row">
-        <div class="col-12  px-0 py-0">
-            <section class="view">
+
+            <section class="view p-5">
                 <div class="row">
 
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                                 <div class="view">
                                     <img
                                         src="{{ url('storage/images/aboutpage.jpg') }}"
-                                        class="img-fluid rounded"
+                                        class="img-fluid rounded "
                                         alt="smaple image"
                                     />
                                     <div class="mask flex-center hm-gradient"></div>
                                 </div>
                             </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-6 card">
                         <div
-                            class="d-flex flex-column justify-content-center align-items-center h-100 pt-5"
+                            class="d-flex flex-column justify-content-center align-items-center"
                         >
 
                             <h1 class="heading display-4">About Us</h1>
                             <h4 class="subheading font-weight">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Fugit, error amet numquam iure
-                                provident voluptate esse quasi, veritatis totam
-                                voluptas nostrum quisquam eum porro a pariatur
-                                veniam.
+                                FennTech Ltd is an IT solutions provider with over 14 years experience in crafting solutions for home, office,
+                                schools and government. The company was founded on the
+                                 premiss that you don’t just need a computer, nor a fax machine, but a solution for all your technology needs.
                             </h4>
                             <div class="mr-auto">
                                 <button
@@ -45,18 +42,18 @@
                 </div>
             </section>
             <!-- Intro -->
-        </div>
-    </div>
+
+
     <div class="row container-fluid">
         <div class="col-12 px-0 py-0">
             @include('components.testimonial')
         </div>
     </div>
     <br />
-    <hr class="style18" />
+    <hr class="my-3">
     <br />
-    <div class="row container-fluid">
-        <div class="col-lg-12 col-md-6" id="section">
+    <div class="row container-fluid pb-4">
+        <div class="col-lg-12 col-md-6 card" id="section">
             <h5 class="dark"><b>Our Solution include:</b> </h5>
             <ul class="list-unstyled">
                 <ul class="pb-2">

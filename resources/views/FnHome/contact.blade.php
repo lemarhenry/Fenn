@@ -14,11 +14,11 @@
         <!-- Grid row -->
         <div class="row">
    <!-- Grid column -->
-   <div class="col-lg-7">
+   <div class="col-lg-6">
         <div class="view">
             <img
                 src="{{ url('storage/images/contact.jpg') }}"
-                class="img-fluid rounded"
+                class="img-fluid rounded dropshadowimg"
                 alt="smaple image"
             />
             <div class="mask flex-center hm-gradient"></div>
@@ -27,7 +27,7 @@
     <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-lg-5 mb-lg-0 mb-4">
+            <div class="col-lg-6 mb-lg-0 mb-4">
                 <!-- Form with header -->
                 <div class="card">
                     <div class="card-header blue accent-1 text-white">

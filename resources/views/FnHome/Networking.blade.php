@@ -3,27 +3,24 @@
 
 
 
-<div class="container-fluid py-0">
+<div class="container-fluid ">
 
-<div class="row">
-<div  class="col-12  px-0 py-0">
-
-    <section class="view">
+    <section class="view p-5">
 
         <div class="row">
                 <div class="col-md-6">
 
                         <div class="view">
-                          <img src="{{ url('storage/images/illustrationforcabling.jpg') }}"  class="img-fluid rounded" alt="smaple image">
+                          <img src="{{ url('storage/images/illustrationforcabling.jpg') }}" style="height:435px;width:870px"  class="img-fluid rounded" alt="smaple image">
                           <div class="mask flex-center hm-gradient">
                           </div>
                         </div>
 
                       </div>
-          <div class="col-md-6">
+          <div class="col-md-6 card">
 
-            <div class="d-flex flex-column justify-content-center align-items-center h-100 pt-5">
-                    {{-- <a class="navbar-brand" href="#"><img src="{{ url('storage/logo.png') }}" alt="" srcset="" style="width:40%"></a> --}}
+            <div class="d-flex flex-column justify-content-center align-items-center ">
+
               <h1 class="heading display-4">Networking and Cabling</h1>
               <h4 class="subheading font-weight">
                 Lorem ipsum dolor sit amet, consectetur
@@ -31,11 +28,12 @@
                 provident voluptate esse quasi, veritatis totam
                 voluptas nostrum quisquam eum porro a pariatur
                 veniam.
-            </h4>
-              <div class="mr-auto">
-                <button type="button" class="btn btn-lily btn-margin btn-rounded white-text " >Features <i class="fas fa-caret-right ml-3"></i>
-                <a href="#section"></a></button>
+                <div class="mr-auto">
+               <a href="#section"> <button type="button" class="btn btn-lily btn-margin btn-rounded white-text " >Features <i class="fas fa-caret-right ml-3"></i>
+                </button></a>
               </div>
+            </h4>
+
             </div>
 
           </div>
@@ -49,11 +47,11 @@
 
 
 
-</div>
 
 
 
-</div>
+
+
 <div class="row container-fluid">
 <div class="col-12 px-0 py-0">
 

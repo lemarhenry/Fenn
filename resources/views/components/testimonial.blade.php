@@ -5,9 +5,7 @@
     <!-- Section heading -->
     <h2 class="h1-responsive font-weight-bold my-5">"Testimonials"</h2>
     <!-- Section description -->
-    <p class="dark-grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
-      eum porro a pariatur veniam.</p>
+    <p class="dark-grey-text w-responsive mx-auto mb-5"> <b> What is said about us from our valued customers which we have long since provided services for. </b></p>
 
     <!--Grid row-->
     <div class="row text-center">
@@ -18,7 +16,8 @@
         <div class="testimonial">
           <!--Avatar-->
           <div class="avatar mx-auto">
-            <img src="#" alt="some image" class="rounded-circle z-depth-1 img-fluid">
+
+            <img src="{{ url('storage/images/user.png') }}" alt="some image" class="rounded-circle z-depth-1 img-fluid">
           </div>
           <!--Content-->
           <h4 class="font-weight-bold dark-grey-text mt-4"> Mr. Errol Wiles</h4>
@@ -44,7 +43,7 @@
         <div class="testimonial">
           <!--Avatar-->
           <div class="avatar mx-auto">
-            <img src="#" alt="some image" class="rounded-circle z-depth-1 img-fluid">
+            <img src="{{ url('storage/images/user.png') }}" alt="some image" class="rounded-circle z-depth-1 img-fluid">
           </div>
           <!--Content-->
           <h4 class="font-weight-bold dark-grey-text mt-4">Three Angels Pharmacy</h4>
@@ -70,7 +69,7 @@
         <div class="testimonial">
           <!--Avatar-->
           <div class="avatar mx-auto">
-            <img src="#" alt="some image" class="rounded-circle z-depth-1 img-fluid">
+            <img src="{{ url('storage/images/user.png') }}" alt="some image" class="rounded-circle z-depth-1 img-fluid">
           </div>
           <!--Content-->
           <h4 class="font-weight-bold dark-grey-text mt-4"> Courtney Thomas</h4>
