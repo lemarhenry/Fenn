@@ -135,7 +135,7 @@
 <div class="row">
 
     <div class="col-md4">
-        <a class="dark-grey-text" href="https://www.freepik.com">Images designed by Freepik</a>
+
     </div>
 </div>
         </div>
