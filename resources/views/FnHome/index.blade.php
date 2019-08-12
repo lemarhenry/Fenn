@@ -231,7 +231,7 @@
                                 style="width:50%"
                                 alt="Card image cap"
                             />
-                            <a href="{#!}">
+                            <a href="#!">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
                         </div>

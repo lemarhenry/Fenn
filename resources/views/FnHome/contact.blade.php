@@ -103,8 +103,6 @@
                 <!-- Form with header -->
             </div>
             <!-- Grid column -->
-            <<<<<<< HEAD ======= >>>>>>>
-            3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
         </div>
         <!-- Grid row -->
     </section>
@@ -130,29 +128,19 @@
                     <a class=" btn btn-floating blue accent-1">
                         <i class="fas fa-map-marker-alt"></i>
                     </a>
-                    <<<<<<< HEAD
                     <p>
                         Shop #13, Juici Plaza, Mandeville, Manchester <br />
                         <span class="mb-md-0">Jamaica W.I.</span>
                     </p>
-                    =======
-                    <p>Shop #13, Juici Plaza, Mandeville, Manchester</p>
-                    <p class="mb-md-0">Jamaica W.I.</p>
-                    >>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                 </div>
                 <div class="col-md-4">
                     <a class="btn btn-floating blue accent-1">
                         <i class="fas fa-phone"></i>
                     </a>
-                    <<<<<<< HEAD
                     <p>
                         +1876-619-8324 <br />
                         <span class="mb-md-0">Mon - Sat, 9:00-5:00</span>
                     </p>
-                    =======
-                    <p>+1876-619-8324</p>
-                    <p class="mb-md-0">Mon - Sat, 9:00-5:00</p>
-                    >>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                 </div>
                 <div class="col-md-4">
                     <a class="btn btn-floating blue accent-1">

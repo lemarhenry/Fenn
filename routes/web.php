@@ -26,7 +26,7 @@ Route::post('/contact', 'Fnhome\ContactController@store');
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/admin', 'DashboardController@index')->name('admin');
 
 Route::get('/homeSecurity', 'PagesController@homeSecurity')->name('homeSecurity');
 
@@ -38,9 +38,8 @@ Route::get('/website', 'Fnhome\WebPageController@index')->name('website');
 
 Route::get('/repair', 'Fnhome\RepairPageController@index')->name('repair');
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
 
 Route::get('/carousel', 'Fnhome\ComponentsController@carouselImages');
-Route::get('testimonial', 'Fnhome\ComponentsController@testimonial');
+Route::get('/testimonial', 'Fnhome\ComponentsController@testimonial');
+
+Auth::routes();
