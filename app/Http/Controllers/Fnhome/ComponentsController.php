@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Http\Controllers\Fnhome;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class ComponentsController extends Controller
+{
+    public function carouselImages()
+    {
+        $images = Carousel::orderBy('created_at', 'desc')->get();
+    }
+}
