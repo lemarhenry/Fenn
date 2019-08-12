@@ -1,11 +1,20 @@
-$(document).ready({});
 validateEmail = email => {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 };
-$("#sendmsg").on("click", () => sendMessage());
+$("#sendmsg").on("submit", event => sendMessage(event));
 
-sendMessage = () => {
+mediaQuery = () => {
+    let abh = $("#aboutheadertext");
+    if (screen.width < 654) {
+        abh.addClass("text-center");
+    } else {
+        abh.removeClass("text-center");
+    }
+};
+
+sendMessage = e => {
+    e.preventDefault();
     let name = $("#formname").val();
     let email = $("#formemail").val();
     let subject = $("#formSubject").val();
@@ -126,3 +135,5 @@ baguetteBox.run(".tz-gallery");
 // function calls
 Carousel();
 testimonials();
+
+window.addEventListener("resize", () => mediaQuery());

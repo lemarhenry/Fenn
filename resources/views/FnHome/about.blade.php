@@ -13,28 +13,18 @@
                     <div class="mask flex-center hm-gradient"></div>
                 </div>
             </div>
-            <div class="col-lg-6 card">
+            <div class="col-lg-6 card-body">
                 <div
                     class="d-flex flex-column justify-content-center align-items-center"
                 >
                     <h1 class="heading display-4">About Us</h1>
-                    <h4 class="subheading font-weight">
+                    <h4 class="subheading font-weight" id="aboutheadertext">
                         FennTech Ltd is an IT solutions provider with over 14
                         years experience in crafting solutions for home, office,
                         schools and government. The company was founded on the
                         premiss that you don’t just need a computer, nor a fax
                         machine, but a solution for all your technology needs.
                     </h4>
-                    <div class="mr-auto">
-                        <button
-                            type="button"
-                            class="btn btn-lily btn-margin btn-rounded text-white"
-                        >
-                            More Info
-                            <i class="fas fa-caret-right ml-3"></i>
-                            <a href="#section"></a>
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -50,7 +40,7 @@
     <hr class="my-3" />
     <br />
     <div class="row container-fluid pb-4">
-        <div class="col-lg-12 col-md-6 card" id="section">
+        <div class="col-lg-12 col-md-6 card-body" id="section">
             <h5 class="dark"><b>Our Solution include:</b></h5>
             <ul class="list-unstyled">
                 <ul class="pb-2">

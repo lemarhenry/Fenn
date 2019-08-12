@@ -15,11 +15,10 @@
                                     <div class="mask flex-center hm-gradient"></div>
                                 </div>
                             </div>
-                    <div class="col-md-6 card">
+                    <div class="col-md-6 card-body">
                         <div
                             class="d-flex flex-column justify-content-center align-items-center "
                         >
-
                             <h1 class="heading display-4">Repair and Installations</h1>
                             <h4 class="subheading font-weight">
                                 Lorem ipsum dolor sit amet, consectetur
@@ -27,15 +26,6 @@
                                 provident voluptate esse quasi, veritatis totam
                                 voluptas nostrum quisquam eum porro a pariatur
                                 veniam.
-                                <div class="mr-auto">
-                                 <a href="#section"><button
-                                    type="button"
-                                    class="btn btn-lily btn-margin btn-rounded text-white">
-                                    More Info
-                                    <i class="fas fa-caret-right ml-3"></i>
-
-                                </button></a>
-                            </div>
                             </h4>
 
                         </div>
@@ -227,10 +217,12 @@
             <div class="card-body ">
               <h5 class="card-title">Includes:</h5>
               <p class="card-text">
+                <ol>
                <li> protect your entire system</li>
                <li>gets regularly updated</li>
                <li>offer you support  </li>
                <li>warranty on this service</li>
+                </ol>
                 </p>
 
             </div>

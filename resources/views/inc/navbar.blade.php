@@ -1,7 +1,7 @@
 
 <!--Navbar -->
 <Header class="pb-2 nav" >
-<nav class="mb-1 navbar navbar-expand-lg  navbar-light fixed-top ">
+<nav class="mb-1 navbar navbar-expand-lg  navbar-light fixed-top bg-white">
 <a class="navbar-brand" href="{{route('landing')}}"><img src="{{ url('storage/logo.png') }}" alt="" srcset="" style="width:40%"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
       aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,8 +30,6 @@
                 </div>
               </li>
               <li class="nav-item">
-
-          <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">Products</a>

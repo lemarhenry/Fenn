@@ -1,9 +1,14 @@
 @extends('layouts.guest') @section('content')
+<style>
+    li {
+        list-style: none;
+        text-align: center;
+    }
+</style>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 p-2">
-            @include('components.carousel')
-            @include('components/testimonial')
+            @include('components.carousel') @include('components/testimonial')
         </div>
     </div>
 
@@ -43,19 +48,20 @@
                             <li>Accessories</li>
                             <li>Software</li>
                         </p>
-                        <!-- buttons -->
-                        <button
-                            style="color:white"
-                            type="button"
-                            class="btn btn-light-blue btn-md "
-                        >
-                            <a
-                                href="http://buy.fenntechltd.com/"
+                        <div class="text-center">
+                            <button
                                 style="color:white"
+                                type="button"
+                                class="btn btn-light-blue btn-md "
                             >
-                                More
-                            </a>
-                        </button>
+                                <a
+                                    href="http://buy.fenntechltd.com/"
+                                    style="color:white"
+                                >
+                                    More
+                                </a>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <!-- Card -->
@@ -89,12 +95,19 @@
                             <li>Accessories</li>
                             <li>Maintenance</li>
                         </p>
-                        <!-- buttons -->
-                        <button type="button" class="btn btn-light-blue btn-md">
-                            <a href="{{ route('repair') }}" style="color:white">
-                                More</a
+                        <div class="text-center">
+                            <button
+                                type="button"
+                                class="btn btn-light-blue btn-md"
                             >
-                        </button>
+                                <a
+                                    href="{{ route('repair') }}"
+                                    style="color:white"
+                                >
+                                    More</a
+                                >
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <!-- Card -->
@@ -128,15 +141,20 @@
                             <li>Lapop & PC Security</li>
                             <li>General Security Products</li>
                         </p>
-                        <!-- buttons -->
-                        <button type="button" class="btn btn-light-blue btn-md">
-                            <a
-                                href="{{ route('homeSecurity') }}"
-                                style="color:white"
+                        <div class="text-center">
+                            <!-- buttons -->
+                            <button
+                                type="button"
+                                class="btn btn-light-blue btn-md"
                             >
-                                More
-                            </a>
-                        </button>
+                                <a
+                                    href="{{ route('homeSecurity') }}"
+                                    style="color:white"
+                                >
+                                    More
+                                </a>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <!-- Card -->
@@ -182,18 +200,19 @@
                                 <li>Wireless Setup</li>
                             </p>
                             <br />
-                            <!-- buttons -->
-                            <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                            >
-                                <a
-                                    href="{{ route('networking') }}"
-                                    style="color:white"
+                            <div class="text-center">
+                                <button
+                                    type="button"
+                                    class="btn btn-light-blue btn-md"
                                 >
-                                    More</a
-                                >
-                            </button>
+                                    <a
+                                        href="{{ route('networking') }}"
+                                        style="color:white"
+                                    >
+                                        More</a
+                                    >
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <!-- Card -->
@@ -230,17 +249,18 @@
                                 <li>Wireless Network Development</li>
                             </p>
                             <br />
-                            <!-- buttons -->
-                            <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                            >
-                                <a
-                                    href="{{ route('corporate') }}"
-                                    style="color:white"
-                                    >More</a
+                            <div class="text-center">
+                                <button
+                                    type="button"
+                                    class="btn btn-light-blue btn-md"
                                 >
-                            </button>
+                                    <a
+                                        href="{{ route('corporate') }}"
+                                        style="color:white"
+                                        >More</a
+                                    >
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <!-- Card -->
@@ -278,18 +298,19 @@
                                 <li>Intranet & CMS</li>
                             </p>
                             <br />
-                            <!-- buttons -->
-                            <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                            >
-                                <a
-                                    href="{{ route('website') }}"
-                                    style="color:white"
+                            <div class="text-center">
+                                <button
+                                    type="button"
+                                    class="btn btn-light-blue btn-md"
                                 >
-                                    More
-                                </a>
-                            </button>
+                                    <a
+                                        href="{{ route('website') }}"
+                                        style="color:white"
+                                    >
+                                        More
+                                    </a>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <!-- Card -->

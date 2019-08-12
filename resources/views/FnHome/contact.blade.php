@@ -24,9 +24,6 @@
                     <div class="mask flex-center hm-gradient"></div>
                 </div>
             </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
             <div class="col-lg-6 mb-lg-0 mb-4">
                 <!-- Form with header -->
                 <div class="card">
@@ -43,52 +40,64 @@
                         <p class="dark-grey-text">
                             We'll write rarely, but only the best content.
                         </p>
-                        <!-- Body -->
-                        <div class="md-form">
-                            <i class="fas fa-user prefix grey-text"></i>
-                            <input
-                                type="text"
-                                id="formname"
-                                class="form-control"
-                            />
-                            <label for="formname">Your name</label>
-                            <span id="errorname" class="text-danger"></span>
-                        </div>
-                        <div class="md-form">
-                            <i class="fas fa-envelope prefix grey-text"></i>
-                            <input
-                                type="text"
-                                id="formemail"
-                                class="form-control"
-                            />
-                            <label for="formemail">Your email</label>
-                            <span id="erroremail" class="text-danger"></span>
-                        </div>
-                        <div class="md-form">
-                            <i class="fas fa-tag prefix grey-text"></i>
-                            <input
-                                type="text"
-                                id="formSubject"
-                                class="form-control"
-                            />
-                            <label for="formSubject">Subject</label>
-                            <span id="errorsubject" class="text-danger"></span>
-                        </div>
-                        <div class="md-form">
-                            <i class="fas fa-pencil-alt prefix grey-text"></i>
-                            <textarea
-                                id="formtext"
-                                class="form-control md-textarea"
-                                rows="3"
-                            ></textarea>
-                            <span id="errorbody" class="text-danger"></span>
-                            <label for="formtext">Send message</label>
-                        </div>
-                        <div class="text-center">
-                            <button class="btn btn-light-blue" id="sendmsg">
-                                Submit
-                            </button>
-                        </div>
+                        <form id="sendmsg">
+                            <div class="md-form">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input
+                                    type="text"
+                                    id="formname"
+                                    class="form-control"
+                                />
+                                <label for="formname">Your name</label>
+                                <span id="errorname" class="text-danger"></span>
+                            </div>
+                            <div class="md-form">
+                                <i class="fas fa-envelope prefix grey-text"></i>
+                                <input
+                                    type="text"
+                                    id="formemail"
+                                    class="form-control"
+                                />
+                                <label for="formemail">Your email</label>
+                                <span
+                                    id="erroremail"
+                                    class="text-danger"
+                                ></span>
+                            </div>
+                            <div class="md-form">
+                                <i class="fas fa-tag prefix grey-text"></i>
+                                <input
+                                    type="text"
+                                    id="formSubject"
+                                    class="form-control"
+                                />
+                                <label for="formSubject">Subject</label>
+                                <span
+                                    id="errorsubject"
+                                    class="text-danger"
+                                ></span>
+                            </div>
+                            <div class="md-form">
+                                <i
+                                    class="fas fa-pencil-alt prefix grey-text"
+                                ></i>
+                                <textarea
+                                    id="formtext"
+                                    class="form-control md-textarea"
+                                    rows="3"
+                                ></textarea>
+                                <span id="errorbody" class="text-danger"></span>
+                                <label for="formtext">Send message</label>
+                            </div>
+                            <div class="text-center">
+                                <button
+                                    class="btn btn-light-blue"
+                                    type="submit"
+                                >
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <!-- Form with header -->
@@ -119,15 +128,19 @@
                     <a class=" btn btn-floating blue accent-1">
                         <i class="fas fa-map-marker-alt"></i>
                     </a>
-                    <p>Shop #13, Juici Plaza, Mandeville, Manchester</p>
-                    <p class="mb-md-0">Jamaica W.I.</p>
+                    <p>
+                        Shop #13, Juici Plaza, Mandeville, Manchester <br />
+                        <span class="mb-md-0">Jamaica W.I.</span>
+                    </p>
                 </div>
                 <div class="col-md-4">
                     <a class="btn btn-floating blue accent-1">
                         <i class="fas fa-phone"></i>
                     </a>
-                    <p>+1876-619-8324</p>
-                    <p class="mb-md-0">Mon - Sat, 9:00-5:00</p>
+                    <p>
+                        +1876-619-8324 <br />
+                        <span class="mb-md-0">Mon - Sat, 9:00-5:00</span>
+                    </p>
                 </div>
                 <div class="col-md-4">
                     <a class="btn btn-floating blue accent-1">
