@@ -77,6 +77,7 @@
 
                         <div class="col-md-4">
                             <div class="card">
+<<<<<<< HEAD
                                 <a
                                     class="lightbox"
                                     href="{{ url('storage/images/L1.jpg') }}"
@@ -86,12 +87,17 @@
                                         alt="Park"
                                         class="card-img-top"
                                     />
+=======
+                                <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
+                                <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
+>>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                                 </a>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="card">
+<<<<<<< HEAD
                                 <a
                                     class="lightbox"
                                     href="{{ url('storage/images/L1.jpg') }}"
@@ -101,10 +107,15 @@
                                         alt="Park"
                                         class="card-img-top"
                                     />
+=======
+                                <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
+                                <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
+>>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                                 </a>
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card">
@@ -117,12 +128,20 @@
                                         alt="Park"
                                         class="card-img-top"
                                     />
+=======
+                      <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
+                                <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
+>>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                                 </a>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="card">
+<<<<<<< HEAD
                                 <a
                                     class="lightbox"
                                     href="{{ url('storage/images/L1.jpg') }}"
@@ -132,12 +151,17 @@
                                         alt="Park"
                                         class="card-img-top"
                                     />
+=======
+                                <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
+                                <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
+>>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                                 </a>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="card">
+<<<<<<< HEAD
                                 <a
                                     class="lightbox"
                                     href="{{ url('storage/images/L1.jpg') }}"
@@ -156,5 +180,22 @@
         </div>
     </div>
 </main>
+=======
+                                <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
+                                <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+</div>
+
+    </main>
+>>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
 
 @endsection

@@ -57,7 +57,11 @@
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
+<<<<<<< HEAD
                 letter-spacing: 0.1rem;
+=======
+                letter-spacing: .1rem;
+>>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                 text-decoration: none;
                 text-transform: uppercase;
             }
@@ -70,6 +74,7 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
+<<<<<<< HEAD
             <div class="top-right links">
                 @auth
                 <a href="{{ url('/home') }}">Home</a>
@@ -80,6 +85,19 @@
                 <a href="{{ route('register') }}">Register</a>
                 @endif @endauth
             </div>
+=======
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </div>
+>>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
             @endif
 
             <div class="content">

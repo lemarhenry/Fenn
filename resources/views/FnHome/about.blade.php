@@ -37,71 +37,89 @@
         </div>
     </div>
     <br />
+    <<<<<<< HEAD
     <hr class="my-3" />
     <br />
     <div class="row container-fluid pb-4">
         <div class="col-lg-12 col-md-6 card-body" id="section">
             <h5 class="dark"><b>Our Solution include:</b></h5>
-            <ul class="list-unstyled">
-                <ul class="pb-2">
-                    <li>
-                        Procurement of Computers and Laptop systems of all
-                        brands, makes and models.
-                    </li>
-                    <li>
-                        Component level repairs and diagnostics to laptops, LCD
-                        screens, multimedia projects, digital cameras and other
-                        electronics
-                    </li>
-                    <li>
-                        CCTV Installation, maintenance and consultancy (Security
-                        Cameras)
-                    </li>
-                    <li>
-                        Wireless and Wired network design and implementation
-                        (including fiber optics & structured cabling)
-                    </li>
-                    <li>
-                        Access control and Security systems (including fire
-                        alarms)
-                    </li>
-                    <li>
-                        Construction-level technology infrastructure design and
-                        implementation
-                    </li>
-                    <li>
-                        Software engineering including website development,
-                        mobile apps etc
-                    </li>
-                    <li>
-                        Custom remote monitoring and control of various tasks
-                    </li>
-                    <li>Custom IT solutions</li>
-                </ul>
+            =======
+            <hr class="my-3" />
+            <br />
+            <div class="row container-fluid pb-4">
+                <div class="col-lg-12 col-md-6 card" id="section">
+                    <h5 class="dark"><b>Our Solution include:</b></h5>
+                    >>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
+                    <ul class="list-unstyled">
+                        <ul class="pb-2">
+                            <li>
+                                Procurement of Computers and Laptop systems of
+                                all brands, makes and models.
+                            </li>
+                            <li>
+                                Component level repairs and diagnostics to
+                                laptops, LCD screens, multimedia projects,
+                                digital cameras and other electronics
+                            </li>
+                            <li>
+                                CCTV Installation, maintenance and consultancy
+                                (Security Cameras)
+                            </li>
+                            <li>
+                                Wireless and Wired network design and
+                                implementation (including fiber optics &
+                                structured cabling)
+                            </li>
+                            <li>
+                                Access control and Security systems (including
+                                fire alarms)
+                            </li>
+                            <li>
+                                Construction-level technology infrastructure
+                                design and implementation
+                            </li>
+                            <li>
+                                Software engineering including website
+                                development, mobile apps etc
+                            </li>
+                            <li>
+                                Custom remote monitoring and control of various
+                                tasks
+                            </li>
+                            <li>Custom IT solutions</li>
+                        </ul>
 
-                <h5 class="dark">
-                    <b>Our respected list of clients include:</b>
-                </h5>
+                        <<<<<<< HEAD
+                        <h5 class="dark">
+                            <b>Our respected list of clients include:</b>
+                        </h5>
+                        =======
+                        <h5 class="dark">
+                            <b>Our respected list of clients include:</b>
+                        </h5>
+                        >>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
 
-                <ul class="pb-2">
-                    <li>Juici Patties (HQ and stores)</li>
-                    <li>Northern Caribbean University</li>
-                    <li>
-                        The National PC Bank (with 32 branches and HQ in
-                        Mandeville)
-                    </li>
-                    <li>CVM TV</li>
-                    <li>Noble WiFi LTD</li>
-                    <li>CY Clothing (Cooyah brand)</li>
-                    <li>Three Angels Pharmacy</li>
-                    <li>Kings Chemical Company</li>
-                    <li>Willowdene Group of Schools</li>
-                    <li>Aabuthnott Galimore High School</li>
-                    <li>Southern Regional Health Authority (Gov’t)</li>
-                </ul>
-            </ul>
+                        <ul class="pb-2">
+                            <li>Juici Patties (HQ and stores)</li>
+                            <li>Northern Caribbean University</li>
+                            <li>
+                                The National PC Bank (with 32 branches and HQ in
+                                Mandeville)
+                            </li>
+                            <li>CVM TV</li>
+                            <li>Noble WiFi LTD</li>
+                            <li>CY Clothing (Cooyah brand)</li>
+                            <li>Three Angels Pharmacy</li>
+                            <li>Kings Chemical Company</li>
+                            <li>Willowdene Group of Schools</li>
+                            <li>Aabuthnott Galimore High School</li>
+                            <li>Southern Regional Health Authority (Gov’t)</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
         </div>
+
+        @endsection
     </div>
 </div>
-
-@endsection
