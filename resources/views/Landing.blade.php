@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-6 pb-3 pr-0">
+        <div class="col-6 pb-3 pr-0" id="c1">
             <!-- just for space-->
             <br />
             <div
@@ -39,7 +39,7 @@
             <br />
             <br />
         </div>
-        <div class="col-6 pb-3 pr-3 ">
+        <div class="col-6 pb-3 pr-3 " id="c2">
             <br />
             <div
                 class="card card-image"
@@ -75,7 +75,7 @@
             <br />
             <br />
         </div>
-        <div class="col-6 pr-0 ">
+        <div class="col-6 pr-0 " id="c3">
             <div
                 class="card card-image"
                 style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);"
@@ -111,7 +111,7 @@
             <br />
             <br />
         </div>
-        <div class="col-6 pr-3 ">
+        <div class="col-6 pr-3 " id="c4">
             <div
                 class="card card-image "
                 style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);"
