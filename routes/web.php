@@ -41,3 +41,6 @@ Route::get('/repair', 'Fnhome\RepairPageController@index')->name('repair');
 Route::get('/admin', function () {
     return view('admin.index');
 });
+
+Route::get('/carousel', 'Fnhome\ComponentsController@carouselImages');
+Route::get('testimonial', 'Fnhome\ComponentsController@testimonial');
