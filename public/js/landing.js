@@ -25,3 +25,7 @@ mediaQuery = () => {
 };
 
 window.addEventListener("resize", () => mediaQuery());
+
+if (screen.width < 654) {
+    mediaQuery();
+}

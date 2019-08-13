@@ -23,9 +23,6 @@ Route::get('/about', 'PagesController@about')->name('about');
 
 Route::get('/contact', 'Fnhome\ContactController@create')->name('contact');
 Route::post('/contact', 'Fnhome\ContactController@store');
-
-Auth::routes();
-
 Route::get('/admin', 'DashboardController@index')->name('admin');
 
 Route::get('/homeSecurity', 'PagesController@homeSecurity')->name('homeSecurity');
@@ -42,4 +39,7 @@ Route::get('/repair', 'Fnhome\RepairPageController@index')->name('repair');
 Route::get('/carousel', 'Fnhome\ComponentsController@carouselImages');
 Route::get('/testimonial', 'Fnhome\ComponentsController@testimonial');
 
+
+Route::get('/create/testimonial', 'admin\ComponentsController@tcpage')->name('testimonial.create');
+Route::post('/create/testimonial', 'admin\ComponentsController@testimonialSave');
 Auth::routes();

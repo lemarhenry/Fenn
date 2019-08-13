@@ -52,7 +52,6 @@ sendMessage = e => {
             .catch(err =>
                 iziToast.error({
                     position: "topCenter",
-                    title: "Error",
                     message: err
                 })
             );
@@ -81,30 +80,31 @@ Carousel = () => {
         })
         .catch(err => {
             iziToast.error({
-                title: "Error",
                 position: "topCenter",
                 message: err
             });
-            console.log(err);
         });
 };
 
 testimonials = () => {
     let testimonial = document.querySelector("#testimonial") || null;
     let output = "";
-    axios.get("/testimonial").then(res => {
-        res.data.forEach(res => {
-            let des_rate = "";
-            for (let i = 0; i < res.rating; i++) {
-                des_rate += "<i class='fas fa-star'> </i>";
-            }
-            output += `<div class="col-md-4 mb-md-0 mb-5">
+    axios
+        .get("/testimonial")
+        .then(res => {
+            res.data.forEach(res => {
+                let des_rate = "";
+                for (let i = 0; i < res.rating; i++) {
+                    des_rate += "<i class='fas fa-star'> </i>";
+                }
+                output += `<div class="col-md-4 mb-md-0 mb-5">
                 <div class="testimonial">
                     <div class="avatar mx-auto">
                         <img
                             src="storage/testimonial/${res.image}"
-                            alt="some image"
-                            class="rounded-circle z-depth-1 img-fluid"
+                            alt="${res.client}"
+                            class="img-thumbnail img-fluid rounded-circle"
+                            style="width:80%"
                         />
                     </div>
                     <!--Content-->
@@ -123,11 +123,17 @@ testimonials = () => {
                     </div>
                 </div>
             </div>`;
-        });
-        if (testimonial) {
-            testimonial.innerHTML = output;
-        }
-    });
+            });
+            if (testimonial) {
+                testimonial.innerHTML = output;
+            }
+        })
+        .catch(err =>
+            iziToast({
+                position: "topCenter",
+                message: err
+            })
+        );
 };
 //image box
 baguetteBox.run(".tz-gallery");
@@ -136,4 +142,5 @@ baguetteBox.run(".tz-gallery");
 Carousel();
 testimonials();
 
+// Media query
 window.addEventListener("resize", () => mediaQuery());
