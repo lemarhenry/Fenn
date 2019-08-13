@@ -19,7 +19,7 @@
                             class="d-flex flex-column justify-content-center align-items-center ">
 
                             <h1 class="heading display-4">
-                                Home & Office Security
+                                Home and Office Security
                             </h1>
                             <h4 class="subheading font-weight">
                                 Home & Office security is an issue for every business and home owners alike, no matter the size. To find out what is best for his or

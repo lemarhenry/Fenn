@@ -20,14 +20,13 @@
                             class="d-flex flex-column justify-content-center align-items-center "
                         >
 
-                            <h1 class="heading display-4">Repair & Installations</h1>
-                            <h4 class="subheading font-weight" style="word-wrap:inherit">
-                                Computer repair is the process of identifying,
-                                troubleshooting and resolving problems and issues in a
-                                faulty computer. Computer repair is a broad field
-                                encompassing many tools, techniques and procedures used to
-                                repair computer hardware, software or network/Internet
-                                problems.
+                            <h1 class="heading display-4">Repair and Installations</h1>
+                            <h4 class="subheading font-weight">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Fugit, error amet numquam iure
+                                provident voluptate esse quasi, veritatis totam
+                                voluptas nostrum quisquam eum porro a pariatur
+                                veniam.
                                 <div class="mr-auto">
                                  <a href="#section"><button
                                     type="button"

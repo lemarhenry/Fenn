@@ -20,10 +20,13 @@
                       <div class="col-md-6 card">
 
                         <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                          <h1 class="heading display-4">Corporate & Institutions</h1>
+                          <h1 class="heading display-4">Corporate and Institutions</h1>
                           <h4 class="subheading font-weight">
-                            Our corporate services are carefully planned and executed by our very capable and reliable team of project managers,
-                            engineers and technicians. Every job gets our full attention to ensure precision and timely completion.
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Fugit, error amet numquam iure
+                            provident voluptate esse quasi, veritatis totam
+                            voluptas nostrum quisquam eum porro a pariatur
+                            veniam.
                             <div class="mr-auto">
                                 <a href="#Section"><button type="button" class="btn btn-lily btn-margin btn-rounded text-white" >What We Do <i class="fas fa-caret-right ml-3"></i>
                             </button></a>

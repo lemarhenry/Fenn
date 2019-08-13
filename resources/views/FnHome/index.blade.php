@@ -212,7 +212,7 @@
                     <!--Card content-->
                     <div class="card-body">
                         <!--Title-->
-                        <h4 class="card-title">Networking & Cabling</h4>
+                        <h4 class="card-title">Networking and Cabling</h4>
                         <!--Text-->
                         <p class="card-text">
                             <li>Networking Supplies</li>
@@ -256,7 +256,7 @@
                     <!--Card content-->
                     <div class="card-body">
                         <!--Title-->
-                        <h4 class="card-title">Corporate & Institutions</h4>
+                        <h4 class="card-title">Corporate and Institutions</h4>
                         <!--Text-->
                         <p class="card-text">
                             <li>Technology Procurement</li>
@@ -295,7 +295,7 @@
                     <div class="card-body">
                         <!--Title-->
                         <h4 class="card-title">
-                            Website Design & Development
+                            Website Design and Development
                         </h4>
                         <!--Text-->
                         <p class="card-text">
