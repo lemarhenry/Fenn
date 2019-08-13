@@ -38,6 +38,8 @@ Route::get('/website', 'Fnhome\WebPageController@index')->name('website');
 
 Route::get('/repair','Fnhome\RepairPageController@index')->name('repair');
 
+Route::get('/portfolio','Fnhome\PortfolioController@index')->name('portfolio');
+
 Route::get('/admin',function(){
     return view('admin.index');
 });

@@ -21,13 +21,11 @@
 
             <div class="d-flex flex-column justify-content-center align-items-center ">
 
-              <h1 class="heading display-4">Networking and Cabling</h1>
+              <h1 class="heading display-4">Networking & Cabling</h1>
               <h4 class="subheading font-weight">
-                Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Fugit, error amet numquam iure
-                provident voluptate esse quasi, veritatis totam
-                voluptas nostrum quisquam eum porro a pariatur
-                veniam.
+                Networking, also known as computer networking, is the practice
+                of transporting and exchanging data
+                between nodes over a shared medium in an information system.
                 <div class="mr-auto">
                <a href="#section"> <button type="button" class="btn btn-lily btn-margin btn-rounded white-text " >Features <i class="fas fa-caret-right ml-3"></i>
                 </button></a>
