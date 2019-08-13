@@ -15,7 +15,7 @@
                                     <div class="mask flex-center hm-gradient"></div>
                                 </div>
                             </div>
-                    <div class="col-md-6 card-body">
+                    <div class="col-md-6 card">
                         <div
                             class="d-flex flex-column justify-content-center align-items-center "
                         >
@@ -118,7 +118,7 @@
                          order facility. We will get your motherboards, chips and other
                         parts to repair your technology. Not just “You will have to
                         replace your motherboard” like most store in Jamaica.
-                         We will fix it for less.</p>
+                         We will fix it for less.</li>
                     </div>
                   </div>
 
@@ -227,12 +227,10 @@
             <div class="card-body ">
               <h5 class="card-title">Includes:</h5>
               <p class="card-text">
-                <ol>
                <li> protect your entire system</li>
                <li>gets regularly updated</li>
                <li>offer you support  </li>
                <li>warranty on this service</li>
-                </ol>
                 </p>
 
             </div>

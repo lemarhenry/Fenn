@@ -1,5 +1,7 @@
-@extends('layouts.guest') @section('content')
+@extends('layouts.guest')
+@section('content')
 <main>
+
     <div class="container-fluid py-0">
 
 
@@ -26,50 +28,46 @@
                             voluptas nostrum quisquam eum porro a pariatur
                             veniam.
                             <div class="mr-auto">
-                                <a href="#Section"
-                                    ><button
-                                        type="button"
-                                        class="btn btn-lily btn-margin btn-rounded text-white"
-                                    >
-                                        What We Do
-                                        <i
-                                            class="fas fa-caret-right ml-3"
-                                        ></i></button
-                                ></a>
+                                <a href="#Section"><button type="button" class="btn btn-lily btn-margin btn-rounded text-white" >What We Do <i class="fas fa-caret-right ml-3"></i>
+                            </button></a>
                             </div>
                         </h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="row">
-            <div class="col-12 px-0 py-0">
-                @include('components.testimonial')
-            </div>
-        </div>
-        <div class="container-fluid pb-5">
-            <div class="container gallery-container">
-                <h1 id="Section" class="text-center " style="color:black">
-                    What We Do
-                </h1>
+                        </div>
 
-                <p class="page-description text-center" style="color:black">
-                    Long range WiFi Systems
-                </p>
+                      </div>
+
+
+
+                    </div>
+
+                  </section>
+
+
+
+    <div class="row">
+            <div class="col-12 px-0 py-0">
+
+                    @include('components.testimonial')
+
+
+                </div>
+
+    </div>
+    <div class="container-fluid pb-5">
+
+            <div class="container gallery-container">
+
+                <h1 id="Section" class="text-center "style="color:black">What We Do</h1>
+
+                <p class="page-description text-center" style="color:black">Long range WiFi Systems</p>
 
                 <div class="tz-gallery">
+
                     <div class="row mb-3">
                         <div class="col-md-4">
                             <div class="card">
-                                <a
-                                    class="lightbox"
-                                    href="{{ url('storage/images/L1.jpg') }}"
-                                >
-                                    <img
-                                        src="{{ url('storage/images/L1.jpg') }}"
-                                        alt="Park"
-                                        class="card-img-top"
-                                    />
+                                <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
+                                <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
                                 </a>
                             </div>
                         </div>
