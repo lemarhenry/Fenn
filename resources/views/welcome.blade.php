@@ -1,20 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,600"
+            rel="stylesheet"
+        />
 
         <!-- Styles -->
         <style>
-            html, body {
+            html,
+            body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Nunito', sans-serif;
+                font-family: "Nunito", sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
@@ -53,7 +57,11 @@
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
+<<<<<<< HEAD
+                letter-spacing: 0.1rem;
+=======
                 letter-spacing: .1rem;
+>>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                 text-decoration: none;
                 text-transform: uppercase;
             }
@@ -66,6 +74,18 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
+<<<<<<< HEAD
+            <div class="top-right links">
+                @auth
+                <a href="{{ url('/home') }}">Home</a>
+                @else
+                <a href="{{ route('login') }}">Login</a>
+
+                @if (Route::has('register'))
+                <a href="{{ route('register') }}">Register</a>
+                @endif @endauth
+            </div>
+=======
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -77,6 +97,7 @@
                         @endif
                     @endauth
                 </div>
+>>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
             @endif
 
             <div class="content">
