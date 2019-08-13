@@ -13,38 +13,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@index')->name('landing');
+Route::get('/','PagesController@index')->name('landing');
 
-Route::get('/fnhome', 'Fnhome\HomeController@index')->name('fnhome');
+Route::get('/fnhome','Fnhome\HomeController@index')->name('fnhome');
 
 Route::get('/about', 'PagesController@about')->name('about');
 
 
 
 Route::get('/contact', 'Fnhome\ContactController@create')->name('contact');
-Route::post('/contact', 'Fnhome\ContactController@store');
-Route::get('/admin', 'DashboardController@index')->name('admin');
+Route::post('/contact','Fnhome\ContactController@store');
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('/homeSecurity', 'PagesController@homeSecurity')->name('homeSecurity');
 
-Route::get('/networking', 'Fnhome\NetworkController@index')->name('networking');
+Route::get('/networking','Fnhome\NetworkController@index')->name('networking');
 
-Route::get('/corporate', 'Fnhome\CorporateController@index')->name('corporate');
+Route::get('/corporate','Fnhome\CorporateController@index')->name('corporate');
 
 Route::get('/website', 'Fnhome\WebPageController@index')->name('website');
 
-Route::get('/repair', 'Fnhome\RepairPageController@index')->name('repair');
-
+Route::get('/repair','Fnhome\RepairPageController@index')->name('repair');
 
 Route::get('/portfolio','Fnhome\PortfolioController@index')->name('portfolio');
 
 Route::get('/admin',function(){
     return view('admin.index');
 });
-Route::get('/carousel', 'Fnhome\ComponentsController@carouselImages');
-Route::get('/testimonial', 'Fnhome\ComponentsController@testimonial');
-
-
-Route::get('/create/testimonial', 'admin\ComponentsController@tcpage')->name('testimonial.create');
-Route::post('/create/testimonial', 'admin\ComponentsController@testimonialSave');
-Auth::routes();
