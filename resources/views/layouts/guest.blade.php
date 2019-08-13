@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" ></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -52,9 +52,5 @@
 <script src="{{asset('js/iziToast.js')}}"></script>
 <!--Custom Javascript-->
 <script src="{{asset('js/guest.js')}}"></script>
-    <script>
-        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-      </script>
-    </div>
 </body>
 </html>
