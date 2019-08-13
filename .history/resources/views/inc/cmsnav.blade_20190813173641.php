@@ -119,6 +119,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link"
+                    ><i class="fas fa-user"></i>
+                    <span class="clearfix d-none d-sm-inline-block"
+                        >Account</span
                     ></a
                 >
             </li>

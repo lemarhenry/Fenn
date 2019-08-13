@@ -101,7 +101,7 @@ testimonials = () => {
                 <div class="testimonial">
                     <div class="avatar mx-auto">
                         <img
-                            src="/storage/testimonial/${res.image}"
+                            src="./storage/testimonial/${res.image}"
                             alt="${res.client}"
                             class="img-thumbnail img-fluid rounded-circle"
                             style="width:80%"

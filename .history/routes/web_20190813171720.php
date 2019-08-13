@@ -38,10 +38,12 @@ Route::get('/repair', 'Fnhome\RepairPageController@index')->name('repair');
 
 Route::get('/portfolio','Fnhome\PortfolioController@index')->name('portfolio');
 
+Route::get('/admin',function(){
+    return view('admin.index');
+});
 Route::get('/carousel', 'Fnhome\ComponentsController@carouselImages');
 Route::get('/testimonial', 'Fnhome\ComponentsController@testimonial');
 
-Route::get('/admin','DashboardController@index');
 
 Route::get('/create/testimonial', 'admin\ComponentsController@tcpage')->name('testimonial.create');
 Route::post('/create/testimonial', 'admin\ComponentsController@testimonialSave');

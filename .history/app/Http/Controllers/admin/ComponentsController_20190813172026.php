@@ -44,6 +44,7 @@ class ComponentsController extends Controller
         $tes->fdist = htmlentities($request->sm_description);
         $tes->testimonial = htmlentities($request->testimonial);
         $tes->client = htmlentities($request->Name);
+
         $tes->save();
         return ['status' => 201];
     }

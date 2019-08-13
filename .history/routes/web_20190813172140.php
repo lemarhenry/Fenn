@@ -41,7 +41,6 @@ Route::get('/portfolio','Fnhome\PortfolioController@index')->name('portfolio');
 Route::get('/carousel', 'Fnhome\ComponentsController@carouselImages');
 Route::get('/testimonial', 'Fnhome\ComponentsController@testimonial');
 
-Route::get('/admin','DashboardController@index');
 
 Route::get('/create/testimonial', 'admin\ComponentsController@tcpage')->name('testimonial.create');
 Route::post('/create/testimonial', 'admin\ComponentsController@testimonialSave');
