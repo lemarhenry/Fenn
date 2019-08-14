@@ -92,37 +92,29 @@ testimonials = () => {
     axios
         .get("/testimonial")
         .then(res => {
-            res.data.forEach(res => {
+            console.table(res.data);
+
+            res.data.forEach((res, index) => {
+                console.log(index);
                 let des_rate = "";
+                let active = index == 0 ? "active" : "";
                 for (let i = 0; i < res.rating; i++) {
                     des_rate += "<i class='fas fa-star'> </i>";
                 }
-                output += `<div class="col-md-4 mb-md-0 mb-5">
-                <div class="testimonial">
-                    <div class="avatar mx-auto">
-                        <img
-                            src="./storage/testimonial/${res.image}"
-                            alt="${res.client}"
-                            class="img-thumbnail img-fluid rounded-circle"
-                            style="width:80%"
-                        />
-                    </div>
-                    <!--Content-->
-                    <h4 class="font-weight-bold dark-grey-text mt-4">
-                       ${res.client}
-                    </h4>
-                    <h6 class="font-weight-bold blue-text my-3">
+                output += `
+                <div class="carousel-item ${active} " >
+                    <span class="h3">${res.client}</span><br>
+                    <span class="font-weight-bold blue-text my-3">
                         ${res.fdist}
-                    </h6>
-                    <p class="font-weight-normal dark-grey-text">
-                        <i class="fas fa-quote-left pr-2"></i>
-                        ${res.testimonial}
-                    </p>
-                    <div class="orange-text">
+                    </span><br>
+                    <span class="h6">
+                    ${res.testimonial}
+                    </span><br>
+                       <span class="orange-text">
                     ${des_rate}
-                    </div>
+                    </span>
                 </div>
-            </div>`;
+                `;
             });
             if (testimonial) {
                 testimonial.innerHTML = output;

@@ -18,6 +18,11 @@ class ComponentsController extends Controller
         return view('admin.testimonial/create');
     }
 
+    public function tvpage()
+    {
+        return view('admin.testimonial/index');
+    }
+
     public function testimonialSave(Request $request)
     {
         $this->validate($request, [
@@ -28,24 +33,31 @@ class ComponentsController extends Controller
         ]);
 
         $tes = new Testimonial;
-        if ($request->image != null) {
-            //gets the image name with extension.
-            $filenameWithExt = $request->file('image')->getClientOriginalName();
-            //gets the just the file name
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            //gets extension
-            $extension = $request->file('image')->getClientOriginalExtension();
-            //new file name
-            $filenametostore = $filename . '_' . time() . '.' . $extension;
-
-            $path = $request->file('image')->storeAs('public/testimonial', $filenametostore);
-            $tes->image = $filenametostore;
-        }
         $tes->rating = htmlentities($request->rating);
         $tes->fdist = htmlentities($request->sm_description);
         $tes->testimonial = htmlentities($request->testimonial);
         $tes->client = htmlentities($request->Name);
         $tes->save();
         return ['status' => 201];
+    }
+
+    public function testimonialDelete(Testimonial $id)
+    {
+        $id->delete();
+        return ['status' => '200'];
+    }
+
+    public function testimonialSingle(Testimonial $id)
+    {
+        return $id;
+    }
+    public function testimonialUpdate(Request $request, Testimonial $id)
+    {
+        $id->rating = $request->edrating;
+        $id->fdist = $request->edsmdes;
+        $id->client = $request->edclient;
+        $id->testimonial = $request->edtest;
+        $id->save();
+        return ['status', '200'];
     }
 }

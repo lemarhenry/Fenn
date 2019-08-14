@@ -1,23 +1,68 @@
-@extends('layouts.Cms')
-@section('content')
-{{-- <div class="card-body card-body-cascade">
-
-    <!-- Label -->
-    <h5 class="pink-text pb-2 pt-1"><i class="fas fa-utensils"></i> Culinary</h5>
-    <!-- Title -->
-    <h4 class="font-weight-bold card-title">Cheat day inspirations</h4>
-    <!-- Text -->
-    <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
-    <!-- Button -->
-    <a class="btn btn-unique">Button</a>
-
-  </div>
-
-  <!-- Card footer -->
-  <div class="card-footer text-muted text-center">
-    2 days ago
-  </div>
-
-</div> --}}
-<!-- Card Narrower -->
+@extends('layouts.Cms') @section('content')
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 ">
+            <div class="card classic-admin-card bg-primary">
+                <div class="card-body">
+                    <div class="pull-right h2">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <p class="white-text">
+                        <span class="h3"
+                            >Total Testimonials &nbsp;
+                            <span class="h4" id="totalTestimonial"
+                                >5</span
+                            ></span
+                        >
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card classic-admin-card bg-primary">
+                <div class="card-body">
+                    <div class="pull-right h2">
+                        <i class="far fa-file-image"></i>
+                    </div>
+                    <p class="white-text">
+                        <span class="h3"
+                            >Total Carousel Images &nbsp;
+                            <span class="h4">5</span></span
+                        >
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mt-4">
+            <div class="card classic-admin-card bg-primary">
+                <div class="card-body">
+                    <div class="pull-right h2">
+                        <i class="far fa-images"></i>
+                    </div>
+                    <p class="white-text">
+                        <span class="h3"
+                            >Total Portfolio &nbsp;
+                            <span class="h4">5</span></span
+                        >
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mt-4">
+            <div class="card classic-admin-card bg-primary">
+                <div class="card-body">
+                    <div class="pull-right h2">
+                        <i class="far fa-envelope"> </i>
+                    </div>
+                    <p class="white-text">
+                        <span class="h3"
+                            >Total Message &nbsp;
+                            <span class="h4">5</span></span
+                        >
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

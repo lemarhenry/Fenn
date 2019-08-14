@@ -24,6 +24,7 @@
                             class="form-control mb-4 testimonial"
                             placeholder="Client name"
                             id="Name"
+                            name="Client Name"
                         />
 
                         <!-- Email -->
@@ -32,11 +33,13 @@
                             class="form-control mb-4 testimonial"
                             placeholder="Small description"
                             id="sm_description"
+                            name="Small Description"
                         />
 
                         <select
                             class="browser-default custom-select mb-4 testimonial"
                             id="rating"
+                            name="Rating"
                         >
                             <option value="" selected>Selete a rating.</option>
                             <option value="1">⭐</option>
@@ -53,13 +56,9 @@
                                 rows="3"
                                 placeholder="Testimonial"
                                 id="testimonial"
+                                name="Testimonial"
                             ></textarea>
                         </div>
-                        <div class="form-group">
-                            <label>Client Image</label><br />
-                            <input type="file" id="testimonialImage" />
-                        </div>
-
                         <div class="text-center">
                             <button class="btn btn-info" type="submit">
                                 create

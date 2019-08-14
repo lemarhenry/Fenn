@@ -4,7 +4,7 @@
             <!-- Logo -->
             <li>
                 <div class="logo-wrapper waves-light">
-                    <a href="#"
+                    <a href="/fnhome"
                         ><img
                             src="{{ url('/storage/logo.png') }}"
                             class="img-fluid flex-center"
@@ -30,14 +30,18 @@
                                     >
                                 </li>
                                 <li>
-                                    <a href="#" class="waves-effect">View</a>
+                                    <a
+                                        href="{{ route('testimonial.view') }}"
+                                        class="waves-effect"
+                                        >View</a
+                                    >
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li>
                         <a class="collapsible-header waves-effect arrow-r"
-                            ><i class="far fa-images"></i>Carousel<i
+                            ><i class="far fa-file-image"></i>Carousel<i
                                 class="fas fa-angle-down rotate-icon"
                             ></i
                         ></a>
@@ -54,10 +58,9 @@
                             </ul>
                         </div>
                     </li>
-                    {{--
                     <li>
                         <a class="collapsible-header waves-effect arrow-r"
-                            ><i class="fas fa-eye"> </i> About<i
+                            ><i class="far fa-images"></i> Portfolio<i
                                 class="fas fa-angle-down rotate-icon"
                             ></i
                         ></a>
@@ -65,18 +68,15 @@
                             <ul class="list-unstyled">
                                 <li>
                                     <a href="#" class="waves-effect"
-                                        >Introduction</a
+                                        >Add Portfolio</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="#" class="waves-effect"
-                                        >Monthly meetings</a
-                                    >
+                                    <a href="#" class="waves-effect">View</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    --}}
                     <li>
                         <a class="waves-effect arrow-r"
                             ><i class="far fa-envelope"> </i>Messages</a
@@ -104,27 +104,25 @@
         </div>
         <!-- Breadcrumb-->
         <div class="breadcrumb-dn mr-auto">
-            <p>FennTech Admin Dashboard</p>
+            <p>Dashboard</p>
         </div>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
             <li class="nav-item">
-                <a class="nav-link"
-                    ></a
-                >
+                <a class="nav-link"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"
-                    ></a
-                >
+                <a class="nav-link"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"
-                    ></a
-                >
+                <a class="nav-link">
+                    <i class="fas fa-user"></i>
+                    Account
+                </a>
             </li>
             <li class="nav-item">
                 <a
                     class="nav-link black-text"
+                    title="Logout"
                     href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();
