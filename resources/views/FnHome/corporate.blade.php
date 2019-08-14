@@ -1,31 +1,27 @@
 @extends('layouts.guest') @section('content')
 <main>
     <div class="container-fluid py-0">
-        <section class="view p-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="view">
-                        <img
-                            src="{{ url('storage/images/corpporate.jpg') }}"
-                            style="height:435px;width:870px"
-                            class="img-fluid rounded"
-                            alt="smaple image"
-                        />
-                        <div class="mask flex-center hm-gradient"></div>
-                    </div>
-                </div>
-                <div class="col-md-6 card">
-                    <div
-                        class="d-flex flex-column justify-content-center align-items-center h-100"
-                    >
-                        <h1 class="heading display-4">
-                            Corporate and Institutions
-                        </h1>
-                        <h4 class="subheading font-weight">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Fugit, error amet numquam iure provident
-                            voluptate esse quasi, veritatis totam voluptas
-                            nostrum quisquam eum porro a pariatur veniam.
+
+
+            <section class="view p-5">
+
+                    <div class="row">
+                            <div class="col-md-6">
+
+                                    <div class="view">
+                                      <img src="{{ url('storage/images/corpporate.jpg') }}" style="height:435px;width:870px" class="img-fluid rounded" alt="smaple image">
+                                      <div class="mask flex-center hm-gradient">
+                                      </div>
+                                    </div>
+
+                                  </div>
+                      <div class="col-md-6 card">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                          <h1 class="heading display-4">Corporate & Institutions</h1>
+                          <h4 class="subheading font-weight">
+                            Our corporate services are carefully planned and executed by our very capable and reliable team of project managers,
+                            engineers and technicians. Every job gets our full attention to ensure precision and timely completion.
                             <div class="mr-auto">
                                 <a href="#Section"
                                     ><button
@@ -77,110 +73,39 @@
 
                         <div class="col-md-4">
                             <div class="card">
-<<<<<<< HEAD
-                                <a
-                                    class="lightbox"
-                                    href="{{ url('storage/images/L1.jpg') }}"
-                                >
-                                    <img
-                                        src="{{ url('storage/images/L1.jpg') }}"
-                                        alt="Park"
-                                        class="card-img-top"
-                                    />
-=======
                                 <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
                                 <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
->>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                                 </a>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="card">
-<<<<<<< HEAD
-                                <a
-                                    class="lightbox"
-                                    href="{{ url('storage/images/L1.jpg') }}"
-                                >
-                                    <img
-                                        src="{{ url('storage/images/L1.jpg') }}"
-                                        alt="Park"
-                                        class="card-img-top"
-                                    />
-=======
                                 <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
                                 <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
->>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                                 </a>
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <a
-                                    class="lightbox"
-                                    href="{{ url('storage/images/L1.jpg') }}"
-                                >
-                                    <img
-                                        src="{{ url('storage/images/L1.jpg') }}"
-                                        alt="Park"
-                                        class="card-img-top"
-                                    />
-=======
                       <div class="row">
                         <div class="col-md-4">
                             <div class="card">
                                 <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
                                 <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
->>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                                 </a>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="card">
-<<<<<<< HEAD
-                                <a
-                                    class="lightbox"
-                                    href="{{ url('storage/images/L1.jpg') }}"
-                                >
-                                    <img
-                                        src="{{ url('storage/images/L1.jpg') }}"
-                                        alt="Park"
-                                        class="card-img-top"
-                                    />
-=======
                                 <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
                                 <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
->>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
                                 </a>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="card">
-<<<<<<< HEAD
-                                <a
-                                    class="lightbox"
-                                    href="{{ url('storage/images/L1.jpg') }}"
-                                >
-                                    <img
-                                        src="{{ url('storage/images/L1.jpg') }}"
-                                        alt="Park"
-                                        class="card-img-top"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-=======
                                 <a class="lightbox" href="{{ url('storage/images/L1.jpg') }}">
                                 <img src="{{ url('storage/images/L1.jpg') }}" alt="Park" class="card-img-top">
                                 </a>
@@ -196,6 +121,5 @@
 </div>
 
     </main>
->>>>>>> 3b0d2f27ab3ee9d04a7056c7435d04b1bfedc579
 
 @endsection

@@ -26,7 +26,6 @@ class ComponentsController extends Controller
             'rating' => 'required',
             'testimonial' => 'required',
         ]);
-
         $tes = new Testimonial;
         if ($request->image != null) {
             //gets the image name with extension.
@@ -45,6 +44,7 @@ class ComponentsController extends Controller
         $tes->fdist = htmlentities($request->sm_description);
         $tes->testimonial = htmlentities($request->testimonial);
         $tes->client = htmlentities($request->Name);
+
         $tes->save();
         return ['status' => 201];
     }

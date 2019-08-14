@@ -26,7 +26,6 @@ class ComponentsController extends Controller
             'rating' => 'required',
             'testimonial' => 'required',
         ]);
-
         $tes = new Testimonial;
         if ($request->image != null) {
             //gets the image name with extension.

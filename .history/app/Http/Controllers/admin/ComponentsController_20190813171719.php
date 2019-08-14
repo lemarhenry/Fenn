@@ -17,7 +17,6 @@ class ComponentsController extends Controller
     {
         return view('admin.testimonial/create');
     }
-
     public function testimonialSave(Request $request)
     {
         $this->validate($request, [
@@ -26,7 +25,6 @@ class ComponentsController extends Controller
             'rating' => 'required',
             'testimonial' => 'required',
         ]);
-
         $tes = new Testimonial;
         if ($request->image != null) {
             //gets the image name with extension.
@@ -45,6 +43,7 @@ class ComponentsController extends Controller
         $tes->fdist = htmlentities($request->sm_description);
         $tes->testimonial = htmlentities($request->testimonial);
         $tes->client = htmlentities($request->Name);
+
         $tes->save();
         return ['status' => 201];
     }
