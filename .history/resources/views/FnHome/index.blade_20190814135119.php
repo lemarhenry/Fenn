@@ -163,137 +163,125 @@
             <!-- Card deck -->
         </div>
 
-        <div class="col-12">
-            <!-- Card deck -->
-            <div class=" card-deck ">
-                <!-- Card -->
-                <div
-                    class="card mb-4  align-items-center d-flex justify-content-center"
-                >
-                    <!--Card image-->
-                    <div class="view overlay p-5 d-flex justify-content-center">
-                        <img
-                            style="width:50%;"
-                            class="card-img-top"
-                            src="{{ url('storage/images/illustrationforcabling.jpg') }}"
-                            alt=" image cap"
-                        />
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
+        <div class=" row ">
+            <div class="col-12  ">
+                <!-- Card deck -->
+                <div class="card-deck ">
+                    <!-- Card -->
+                    <div class="card mb-4  align-items-center d-flex justify-content-center">
+                        <!--Card image-->
+                        <div class="view overlay p-5 d-flex justify-content-center" >
+                            <img
 
-                    <!--Card content-->
-                    <div class="card-body ">
-                        <!--Title-->
-                        <h4 class="card-title">Networking & Cabling</h4>
-                        <!--Text-->
-                        <p class="card-text">
-                            <li>Networking Supplies</li>
-                            <li>Cables</li>
-                            <li>Networking Services</li>
-                            <li>Wireless Setup</li>
-                        </p>
-                        <div class="text-center">
-                            <button
-                                style="color:white"
-                                type="button"
-                                class="btn btn-light-blue btn-md "
-                            >
-                                <a
-                                href="{{ route('networking') }}"
-                                style="color:white"
-                                >
-                                    More
-                                </a>
-                            </button>
+                                src="{{ url('storage/images/illustrationforcabling.jpg') }}"
+                                style="width:35%"
+                                alt="Card image cap"
+                            />
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
                         </div>
-                    </div>
-                </div>
-                <!-- Card -->
 
-                <!-- Card -->
-                <div
-                    class="card mb-4  align-items-center d-flex justify-content-center"
-                >
-                    <!--Card image-->
-                    <div class="view overlay p-5 d-flex justify-content-center">
-                        <img
-                            class="card-img-top"
-                            src="{{ url('storage/images/corpporate.jpg')}}"
-                            style="width:50%"
-                            alt="Card image cap"
-                        />
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">Networking & Cabling</h4>
+                            <!--Text-->
+                            <p class="card-text">
+                                <li>Networking Supplies</li>
+                                <li>Cables</li>
+                                <li>Networking Services</li>
+                                <li>Wireless Setup</li>
 
-                    <!--Card content-->
-                    <div class="card-body">
-                        <!--Title-->
-                        <h4 class="card-title">Corporate & Institutions</h4>
-                        <!--Text-->
-                        <p class="card-text">
-                            <li>Technology Procurement</li>
-                            <li>Point-Of-Sale Solutions</li>
-                            <li>Wireless Network Development</li>
-                        </p>
-                        <div class="text-center">
-                            <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                            >
+
+                            </p>
+                            <br />
+                            <!-- buttons -->
+                            <button type="button" class="btn btn-light-blue btn-md">
                                 <a
-                                href="{{ route('corporate') }}"
-                                style="color:white"
+                                    href="{{ route('networking') }}"
+                                    style="color:white"
                                 >
                                     More</a
                                 >
                             </button>
                         </div>
                     </div>
-                </div>
-                <!-- Card -->
+                    <!-- Card -->
 
-                <!-- Card -->
-                <div
-                    class="card mb-4  align-items-center d-flex justify-content-center"
-                >
-                    <!--Card image-->
-                    <div class="view overlay p-5 d-flex justify-content-center">
-                        <img
-                            class="card-img-top"
-                            src="{{url('storage/images/web3.jpg')}}"
-                            style="width:50%"
-                            alt="Card image cap"
-                        />
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
+                    <!-- Card -->
+                    <div class="card mb-4  align-items-center d-flex justify-content-center">
+                        <!--Card image-->
+                        <div class="view overlay p-5 d-flex justify-content-center ">
+                            <img
+                                class="card-img-top"
+                                src="{{
+                                    url('storage/images/corpporate.jpg')
+                                }}"
+                                style="width:50%"
+                                alt="Card image cap"
+                            />
+                            <a href="{#!}">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
 
-                    <!--Card content-->
-                    <div class="card-body">
-                        <!--Title-->
-                        <h4 class="card-title">
-                            Website Design & Development
-                        </h4>
-                        <!--Text-->
-                        <p class="card-text">
-                            <li>Website Solutions</li>
-                            <li>Web applications</li>
-                            <li>Software Solutions</li>
-                            <li>Intranet & CMS</li>
-                        </p>
-                        <div class="text-center">
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">Corporate & Institutions</h4>
+                            <!--Text-->
+                            <p class="card-text">
+                                <li>Technology Procurement</li>
+                                <li>Point-Of-Sale Solutions</li>
+                                <li>Wireless Network Development</li>
+                            </p>
+                            <br />
                             <!-- buttons -->
-                            <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                            >
+                            <button type="button" class="btn btn-light-blue btn-md">
                                 <a
-                                href="{{ route('website') }}"
+                                    href="{{ route('corporate') }}"
+                                    style="color:white"
+                                    >More</a
+                                >
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card -->
+
+                    <!-- Card -->
+                    <div class="card mb-4  align-items-center d-flex justify-content-center">
+                        <!--Card image-->
+                        <div class="view overlay p-5 d-flex justify-content-center ">
+                            <img
+                                class="card-img-center"
+                                style="width:45%"
+                                src="{{url('storage/images/web3.jpg')}}"
+                                alt="Card image cap"
+                            />
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">
+                                Website Design & Development
+                            </h4>
+                            <!--Text-->
+                            <p class="card-text">
+                                <li>Website Solutions</li>
+                                <li>Web applications</li>
+                                <li>Software Solutions</li>
+                                <li>Intranet & CMS</li>
+                            </p>
+                            <br />
+                            <!-- buttons -->
+                            <button type="button" class="btn btn-light-blue btn-md">
+                                <a
+                                    href="{{ route('website') }}"
                                     style="color:white"
                                 >
                                     More
@@ -301,12 +289,10 @@
                             </button>
                         </div>
                     </div>
+                    <!-- Card -->
                 </div>
-                <!-- Card -->
+                <!-- Card deck -->
             </div>
-            <!-- Card deck -->
         </div>
-
-
 </div>
 @endsection
