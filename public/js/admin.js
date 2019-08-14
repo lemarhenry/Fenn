@@ -1,6 +1,7 @@
 var state = {
     image: null
 };
+
 var test = document.querySelector("#testimonialImage") || null;
 
 if (test) {
