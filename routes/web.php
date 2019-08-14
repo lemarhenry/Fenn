@@ -41,7 +41,7 @@ Route::get('/portfolio', 'Fnhome\PortfolioController@index')->name('portfolio');
 Route::get('/carousel', 'Fnhome\ComponentsController@carouselImages');
 Route::get('/testimonial', 'Fnhome\ComponentsController@testimonial');
 
-Route::get('/admin', 'DashboardController@index');
+Route::get('/admin', 'DashboardController@index')->name('dashboard');
 
 Route::get('/view/testimonials', 'admin\ComponentsController@tvpage')->name('testimonial.view');
 Route::get('/create/testimonial', 'admin\ComponentsController@tcpage')->name('testimonial.create');
@@ -49,5 +49,9 @@ Route::post('/create/testimonial', 'admin\ComponentsController@testimonialSave')
 Route::delete('/delete/testimonial/{id}', 'admin\ComponentsController@testimonialDelete');
 Route::get('/single/testimonial/{id}', "admin\ComponentsController@testimonialSingle");
 Route::put('/single/testimonial/{id}', "admin\ComponentsController@testimonialUpdate");
+Route::get('/view/carousel', 'admin\ComponentsController@Cvpage')->name('carousel.view');
+Route::get('/create/carousel', 'admin\ComponentsController@Ccpage')->name('carousel.create');
+
+Route::get('/edit/admin', 'admin\AdminController@edit')->name('admin.edit');
 
 Auth::routes(['register' => false]);

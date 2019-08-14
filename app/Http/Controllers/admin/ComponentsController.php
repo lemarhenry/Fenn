@@ -23,6 +23,16 @@ class ComponentsController extends Controller
         return view('admin.testimonial/index');
     }
 
+    public function Cvpage()
+    {
+        return view('admin.carousel/index');
+    }
+
+    public function Ccpage()
+    {
+        return view('admin.carousel/create');
+    }
+
     public function testimonialSave(Request $request)
     {
         $this->validate($request, [
