@@ -18,7 +18,7 @@
             <div class="modal-content">
                 <div class="modal-header text-center bg-primary">
                     <h4 class="modal-title w-100 font-weight-bold text-white">
-                        Edit
+                        Edit Testimonial
                     </h4>
                     <button
                     id="closeeditmodal"

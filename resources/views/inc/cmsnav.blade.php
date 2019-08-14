@@ -15,6 +15,13 @@
             <li>
                 <ul class="collapsible collapsible-accordion">
                     <li>
+                        <a
+                            class="waves-effect arrow-r"
+                            href="{{ route('dashboard') }}"
+                            ><i class="fas fa-tachometer-alt"></i>Dashboard
+                        </a>
+                    </li>
+                    <li>
                         <a class="collapsible-header waves-effect arrow-r"
                             ><i class="fas fa-book-open"></i>Testimonials<i
                                 class="fas fa-angle-down rotate-icon"
@@ -48,12 +55,16 @@
                         <div class="collapsible-body">
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="#" class="waves-effect"
+                                    <a href="{{route('carousel.create')}}" class="waves-effect"
                                         >Add Image</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="#" class="waves-effect">View</a>
+                                    <a
+                                        href="{{ route('carousel.view') }}"
+                                        class="waves-effect"
+                                        >View</a
+                                    >
                                 </li>
                             </ul>
                         </div>
@@ -114,9 +125,13 @@
                 <a class="nav-link"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">
+                <a class="nav-link text-dark"
+                href="{{route('admin.edit')}}">
                     <i class="fas fa-user"></i>
-                    Account
+                    <span
+                    class="clearfix d-none d-sm-inline-block black-text">
+                             Account
+                    </span>
                 </a>
             </li>
             <li class="nav-item">
@@ -144,5 +159,4 @@
             </li>
         </ul>
     </nav>
-    <!-- /.Navbar -->
 </header>

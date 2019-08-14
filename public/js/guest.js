@@ -103,7 +103,7 @@ testimonials = () => {
                 }
                 output += `
                 <div class="carousel-item ${active} " >
-                    <span class="h3">${res.client}</span><br>
+                    <span class="h4">${res.client}</span><br>
                     <span class="font-weight-bold blue-text my-3">
                         ${res.fdist}
                     </span><br>
