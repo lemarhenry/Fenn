@@ -8,7 +8,7 @@
                 </div>
                 <div class="card-body">
                     <form id="updateprofile">
-                        <div class="row">
+                        <div class="row text-left">
                             <div class="form-group col-6">
                                 <label for="profilename">Name</label>
                                 <input
@@ -42,7 +42,7 @@
                 <div class="card-header bg-white h3 text-center">
                     Admin Details
                 </div>
-                <div class="card-body">
+                <div class="card-body text-left">
                     <div>
                         <span class="h6">Name</span>:
                         <span id="profilecardname"></span>

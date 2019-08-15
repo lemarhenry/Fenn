@@ -1,7 +1,7 @@
 @extends('layouts.Cms') @section('content')
-<div class="container mt-5">
+<div class="container mt-2">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" id="ttcard">
             <div class="card bg-primary">
                 <div class="card-body">
                     <div class="pull-right text-white h2">

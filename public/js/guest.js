@@ -136,6 +136,11 @@ testimonials();
 
 // Media query
 window.addEventListener("resize", () => mediaQuery());
+
+if (screen.width < 654) {
+    mediaQuery();
+}
+
 /*Navbar color change */
 $(function() {
     $(document).scroll(function() {

@@ -2,6 +2,21 @@ var state = {
     edit_id: null
 };
 
+mediaQuery = () => {
+    let abh = $("#ttcard");
+    if (screen.width < 654) {
+        abh.addClass("mb-4");
+    } else {
+        abh.removeClass("mb-4");
+    }
+};
+
+window.addEventListener("resize", () => mediaQuery());
+
+if (screen.width < 654) {
+    mediaQuery();
+}
+
 var updatepasswordmodal =
     document.querySelector("#updatepasswordmodal") || null;
 if (updatepasswordmodal) {
