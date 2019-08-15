@@ -136,3 +136,19 @@ testimonials();
 
 // Media query
 window.addEventListener("resize", () => mediaQuery());
+/*Navbar color change */
+$(function () {
+    $(document).scroll(function () {
+      var $nav = $(".fixed-top");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+  });
+
+
+/******/ // SideNav Button Initialization
+$(".button-collapse").sideNav({
+    breakpoint: 1200
+  });
+  // SideNav Scrollbar Initialization
+  var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+  var ps = new PerfectScrollbar(sideNavScrollbar);

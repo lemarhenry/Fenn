@@ -36845,8 +36845,8 @@ if (token) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/json-dev/Documents/Laravel/Fenn-master/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/json-dev/Documents/Laravel/Fenn-master/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Azhar Ewers\Documents\GitHub\Fenn\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Azhar Ewers\Documents\GitHub\Fenn\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

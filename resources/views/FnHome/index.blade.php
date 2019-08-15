@@ -175,7 +175,7 @@
                         <img
                             style="width:50%;"
                             class="card-img-top"
-                            src="{{ url('storage/images/shoppingcart.png') }}"
+                            src="{{ url('storage/images/illustrationforcabling.jpg') }}"
                             alt=" image cap"
                         />
                         <a href="#!">
@@ -186,14 +186,13 @@
                     <!--Card content-->
                     <div class="card-body ">
                         <!--Title-->
-                        <h4 class="card-title">Products we sell</h4>
+                        <h4 class="card-title">Networking & Cabling</h4>
                         <!--Text-->
                         <p class="card-text">
-                            <li>Computer Systems</li>
-                            <li>Lapops</li>
-                            <li>Tablet Computers</li>
-                            <li>Accessories</li>
-                            <li>Software</li>
+                            <li>Networking Supplies</li>
+                            <li>Cables</li>
+                            <li>Networking Services</li>
+                            <li>Wireless Setup</li>
                         </p>
                         <div class="text-center">
                             <button
@@ -202,8 +201,8 @@
                                 class="btn btn-light-blue btn-md "
                             >
                                 <a
-                                    href="http://buy.fenntechltd.com/"
-                                    style="color:white"
+                                href="{{ route('networking') }}"
+                                style="color:white"
                                 >
                                     More
                                 </a>
@@ -221,7 +220,7 @@
                     <div class="view overlay p-5 d-flex justify-content-center">
                         <img
                             class="card-img-top"
-                            src="{{ url('storage/images/Repair.jpg') }}"
+                            src="{{ url('storage/images/corpporate.jpg')}}"
                             style="width:50%"
                             alt="Card image cap"
                         />
@@ -233,14 +232,12 @@
                     <!--Card content-->
                     <div class="card-body">
                         <!--Title-->
-                        <h4 class="card-title">Repair & Installation</h4>
+                        <h4 class="card-title">Corporate & Institutions</h4>
                         <!--Text-->
                         <p class="card-text">
-                            <li>General PC Repairs</li>
-                            <li>In-Home, In-Office</li>
-                            <li>Virus Removal</li>
-                            <li>Accessories</li>
-                            <li>Maintenance</li>
+                            <li>Technology Procurement</li>
+                            <li>Point-Of-Sale Solutions</li>
+                            <li>Wireless Network Development</li>
                         </p>
                         <div class="text-center">
                             <button
@@ -248,8 +245,8 @@
                                 class="btn btn-light-blue btn-md"
                             >
                                 <a
-                                    href="{{ route('repair') }}"
-                                    style="color:white"
+                                href="{{ route('corporate') }}"
+                                style="color:white"
                                 >
                                     More</a
                                 >
@@ -267,7 +264,7 @@
                     <div class="view overlay p-5 d-flex justify-content-center">
                         <img
                             class="card-img-top"
-                            src="{{ url('storage/images/security.jpg') }}"
+                            src="{{url('storage/images/web3.jpg')}}"
                             style="width:50%"
                             alt="Card image cap"
                         />
@@ -279,14 +276,15 @@
                     <!--Card content-->
                     <div class="card-body">
                         <!--Title-->
-                        <h4 class="card-title">Home & Office Security</h4>
+                        <h4 class="card-title">
+                            Website Design & Development
+                        </h4>
                         <!--Text-->
                         <p class="card-text">
-                            <li>Security Camera (CCTV)</li>
-                            <li>Alarm & Panic Setup</li>
-                            <li>Access Control</li>
-                            <li>Lapop & PC Security</li>
-                            <li>General Security Products</li>
+                            <li>Website Solutions</li>
+                            <li>Web applications</li>
+                            <li>Software Solutions</li>
+                            <li>Intranet & CMS</li>
                         </p>
                         <div class="text-center">
                             <!-- buttons -->
@@ -295,7 +293,7 @@
                                 class="btn btn-light-blue btn-md"
                             >
                                 <a
-                                    href="{{ route('homeSecurity') }}"
+                                href="{{ route('website') }}"
                                     style="color:white"
                                 >
                                     More
@@ -308,5 +306,7 @@
             </div>
             <!-- Card deck -->
         </div>
+
+
 </div>
 @endsection
