@@ -2,6 +2,21 @@ var state = {
     edit_id: null
 };
 
+var updatepasswordmodal =
+    document.querySelector("#updatepasswordmodal") || null;
+if (updatepasswordmodal) {
+    updatepasswordmodal.addEventListener("click", () => {
+        adminUpdatepassword();
+    });
+}
+var updateprofile = document.querySelector("#updateprofile") || null;
+
+if (updateprofile) {
+    updateprofile.addEventListener("submit", event => {
+        event.preventDefault();
+        adminUpdate();
+    });
+}
 var addtest = document.querySelector("#createTestimonial") || null;
 
 if (addtest) {
@@ -10,6 +25,7 @@ if (addtest) {
     });
 }
 var updateTestimonial = document.querySelector("#updateTestimonial") || null;
+
 if (updateTestimonial) {
     updateTestimonial.addEventListener("click", () => {
         updateTest();
@@ -218,5 +234,123 @@ updateTest = () => {
     }
 };
 
+AdminData = () => {
+    axios
+        .get("/admin/data")
+        .then(res => {
+            $("#profilename").val(res.data.name);
+            $("#profilemail").val(res.data.email);
+            $("#profilecardname").html(res.data.name);
+            $("#profilecardemail").html(res.data.email);
+        })
+        .catch(err => {
+            iziToast.error({
+                message: err,
+                position: "topCenter"
+            });
+        });
+};
+
+adminUpdate = () => {
+    let pass = false;
+    document.querySelectorAll(".adminupdate").forEach(up => {
+        if (up.value == "") {
+            pass = false;
+            iziToast.error({
+                position: "topCenter",
+                message: `Field ${up.name} is invalid or empty!`
+            });
+        } else {
+            pass = true;
+        }
+    });
+    if (pass) {
+        axios
+            .put("/admin/update", {
+                Name: $("#profilename").val(),
+                Email: $("#profilemail").val()
+            })
+            .then(res => {
+                if (res.status == 403) {
+                    iziToast.error({
+                        position: "topCenter",
+                        message: "Error, Email already taken!"
+                    });
+                } else {
+                    iziToast.success({
+                        position: "topCenter",
+                        message: "Account updated successfully!"
+                    });
+                    AdminData();
+                }
+            })
+            .catch(err => {
+                iziToast.error({
+                    position: "topCenter",
+                    message: err
+                });
+            });
+    }
+};
+
+adminUpdatepassword = () => {
+    let oldpassword = $("#Oldpassword").val();
+    let newpassword = $("#Newpassword").val();
+    let confirmpassword = $("#confirmpassword").val();
+
+    if (
+        oldpassword.length >= 6 &&
+        confirmpassword.length >= 6 &&
+        newpassword.length >= 6 &&
+        newpassword == confirmpassword
+    ) {
+        axios
+            .post("/admin/password/check", {
+                password: oldpassword
+            })
+            .then(res => {
+                if (res.status == 403) {
+                    iziToast.error({
+                        message:
+                            "The field Old password does not match the current password.",
+                        position: "topCenter"
+                    });
+                } else {
+                    axios
+                        .put("/admin/update/password", {
+                            password: newpassword
+                        })
+                        .then(res => {
+                            $("#closeupdatepasswordmodal").click();
+                            $("#closeupdatepasswordmodal").click();
+                            iziToast.success({
+                                message: "Password updated successfully!",
+                                position: "topCenter"
+                            });
+                        })
+                        .catch(err => {
+                            iziToast.error({
+                                message: err,
+                                position: "topCenter"
+                            });
+                        });
+                }
+            })
+            .catch(err => {
+                iziToast.error({
+                    message: err,
+                    position: "topCenter"
+                });
+            });
+    } else {
+        iziToast.error({
+            message:
+                "Either password does not match the confirm password or a field has invalid data!",
+            position: "topCenter"
+        });
+    }
+};
+
 // Function calls
 getTestimonials();
+AdminData();

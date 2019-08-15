@@ -1,11 +1,10 @@
-@extends('layouts.Cms')
-@section('content')
+@extends('layouts.Cms') @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8  mt-4">
             <div class="card">
                 <div class="card-header bg-white h3 text-center">
-                       Edit Profile
+                    Edit Profile
                 </div>
                 <div class="card-body">
                     <form id="updateprofile">
@@ -14,16 +13,18 @@
                                 <label for="profilename">Name</label>
                                 <input
                                     type="text"
-                                    class="form-control"
+                                    class="form-control adminupdate"
                                     id="profilename"
+                                    name="Name"
                                 />
                             </div>
                             <div class="form-group col-6">
                                 <label for="profilemail">Email</label>
                                 <input
-                                    type="text"
-                                    class="form-control "
+                                    type="email"
+                                    class="form-control adminupdate"
                                     id="profilemail"
+                                    name="Email"
                                 />
                             </div>
                         </div>
@@ -39,7 +40,7 @@
         <div class="col-md-4 mt-4">
             <div class="card">
                 <div class="card-header bg-white h3 text-center">
-                   Admin Details
+                    Admin Details
                 </div>
                 <div class="card-body">
                     <div>
@@ -53,36 +54,81 @@
                 </div>
                 <div class="card-footer bg-white text-center">
                     <div>
-                        <a href="#" class="btn btn-warning">Change Password</a>
+                        <a
+                            href="#"
+                            class="btn btn-warning"
+                            data-toggle="modal"
+                            data-target="#modalLoginForm"
+                            >Change Password</a
+                        >
                     </div>
                 </div>
             </div>
         </div>
     </div>
-  <div class="modal fade" id="pictureChanges" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"> <img
-            src=""
-            alt=""
-            srcset=""
-            style="width:100%"
-            id="profileimage"
-        /></h5>
-          <button type="button" class="close h6 text-danger" data-dismiss="modal" aria-label="Close" id="removeimg">
-            <i class="fas fa-trash-alt"></i>
-          </button>
+    <div
+        class="modal fade"
+        id="modalLoginForm"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center h3 bg-primary text-white">
+                    <h4 class="modal-title w-100 font-weight-bold">
+                        Edit Password
+                    </h4>
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                        id="closeupdatepasswordmodal"
+                    >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-4">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <label>Old password</label>
+                        <input
+                            type="password"
+                            id="Oldpassword"
+                            class="form-control"
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="md-form mb-4">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <label>New password</label>
+                        <input
+                            type="password"
+                            id="Newpassword"
+                            class="form-control"
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="md-form mb-4">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <label>Confirm Password</label>
+                        <input
+                            type="password"
+                            id="confirmpassword"
+                            class="form-control"
+                            autocomplete="off"
+                        />
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-warning" id="updatepasswordmodal">
+                        update password
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <input type="file" name="" id="profilepicform">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeprofilePicForm">Close</button>
-          <button class="btn btn-primary"  id="ProfilePicForm">Save changes</button>
-        </div>
-      </div>
     </div>
-  </div>
-</div
+</div>
 @endsection

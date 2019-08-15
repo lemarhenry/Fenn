@@ -53,5 +53,9 @@ Route::get('/view/carousel', 'admin\ComponentsController@Cvpage')->name('carouse
 Route::get('/create/carousel', 'admin\ComponentsController@Ccpage')->name('carousel.create');
 
 Route::get('/edit/admin', 'admin\AdminController@edit')->name('admin.edit');
+Route::get('/admin/data', 'admin\AdminController@AdminData');
+Route::put('/admin/update', 'admin\AdminController@adminUpdate');
+Route::post('/admin/password/check', 'admin\AdminController@adminCheckpassword');
+Route::put("/admin/update/password", 'admin\AdminController@updatePassword');
 
 Auth::routes(['register' => false]);
