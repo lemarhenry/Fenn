@@ -1,5 +1,4 @@
-@extends('layouts.Cms')
-@section('content')
+@extends('layouts.Cms') @section('content')
 <style>
     textarea {
         resize: none;
@@ -13,28 +12,46 @@
                     Add Carousel Image
                 </div>
                 <div class="card-body">
-                    <form
-                        class="border border-light p-3"
-                        id="addcarousel"
-                    >
-                        <div class="form-group">
-                            <textarea
-                                class="form-control rounded-0 caption"
-                                rows="3"
-                                placeholder="Caption"
-                                id="imagecaption"
-                                name="Caption"
-                            ></textarea>
+                    <div class="mb-2">
+                        <div class="mb-2">
+                            <img
+                                src=""
+                                alt=""
+                                style="width:50%"
+                                id="tempcarouselimage"
+                            />
                         </div>
-                        <div class="pb-1">
-                            <input type="file" name="Carousel image" id="carouseliamge">
+                        <div class="file-field">
+                            <div class="btn btn-primary btn-sm float-left">
+                                <span>Choose file</span>
+                                <input type="file" id="carouselimage" />
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input
+                                    class="file-path validate"
+                                    type="text"
+                                    placeholder="Upload your file"
+                                    id="carouselout"
+                                />
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <button class="btn btn-info" type="submit">
-                                create
-                            </button>
-                        </div>
-                    </form>
+                    </div>
+                    <div class="form-group">
+                        <textarea
+                            class="form-control rounded-0 caption"
+                            rows="3"
+                            placeholder="Caption"
+                            id="imagecaption"
+                            name="Caption"
+                        ></textarea>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="text-center">
+                        <button class="btn btn-success" id="submitcarousel">
+                            Add Image
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

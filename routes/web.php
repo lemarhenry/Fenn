@@ -58,4 +58,5 @@ Route::put('/admin/update', 'admin\AdminController@adminUpdate');
 Route::post('/admin/password/check', 'admin\AdminController@adminCheckpassword');
 Route::put("/admin/update/password", 'admin\AdminController@updatePassword');
 
+Route::post('/create/carousel', 'admin\ComponentsController@carouselSave');
 Auth::routes(['register' => false]);

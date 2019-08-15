@@ -1,6 +1,15 @@
 var state = {
-    edit_id: null
+    edit_id: null,
+    img: null
 };
+
+let carouselin = document.getElementById("carouselimage");
+let carouselout = $("#carouselout");
+
+carouselin.addEventListener("change", event => {
+    carouselout.val(event.target.files[0].name);
+    TemPic(event.target, "tempcarouselimage");
+});
 
 mediaQuery = () => {
     let abh = $("#ttcard");
@@ -375,6 +384,57 @@ adminUpdatepassword = () => {
             position: "topCenter"
         });
     }
+};
+
+TemPic = (img, id, abort = false) => {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        $(`#${id}`).attr("src", e.target.result);
+    };
+    if (img.files[0].size < 2000000.0) {
+        state.img = img;
+        reader.readAsDataURL(img.files[0]);
+    } else {
+        iziToast.error({
+            position: "topCenter",
+            message: `File ${
+                img.files[0].name
+            } is greater than 2mb. Please choose a smaller files.`
+        });
+    }
+    if (abort) {
+        reader.abort();
+    }
+};
+
+var submitcarousel = document.querySelector("#submitcarousel");
+if (submitcarousel) {
+    submitcarousel.addEventListener("click", () => {
+        addCarouselimage();
+    });
+}
+
+addCarouselimage = () => {
+    let fd = new FormData();
+    let caption = document.querySelector("#imagecaption");
+    if (caption.length > 0) {
+        fd.append("caption", caption.value);
+    }
+    fd.append("img", state.img.files[0]);
+    axios
+        .post("/create/carousel", fd)
+        .then(res => {
+            iziToast.success({
+                position: "topCenter",
+                message: "Carousel image added successfully!"
+            });
+            carouselout.val("");
+            caption.value = "";
+            $("#tempcarouselimage").attr("style", "display:none");
+        })
+        .catch(err => {
+            console.log(err);
+        });
 };
 
 // Function calls

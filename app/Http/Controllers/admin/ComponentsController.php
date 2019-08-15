@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Carousel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Testimonial;
@@ -61,6 +62,7 @@ class ComponentsController extends Controller
     {
         return $id;
     }
+
     public function testimonialUpdate(Request $request, Testimonial $id)
     {
         $id->rating = $request->edrating;
@@ -69,5 +71,19 @@ class ComponentsController extends Controller
         $id->testimonial = $request->edtest;
         $id->save();
         return ['status', '200'];
+    }
+
+    public function carouselSave(Request $request)
+    {
+        $caro = new Carousel;
+        $filenameWithExt = $request->file('img')->getClientOriginalName();
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension = $request->file('img')->getClientOriginalExtension();
+        $filenametostore = $filename . '_' . time() . '.' . $extension;
+        $path = $request->file('img')->storeAs('public/carousel', $filenametostore);
+        $caro->caption = htmlentities($request->caption);
+        $caro->image = $filenametostore;
+        $caro->save();
+        return ['status' => 200];
     }
 }

@@ -43,12 +43,6 @@
             @yield('content')
         </main>
 
-        <!-- JQuery -->
-        <script
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-        ></script>
-        <!-- Bootstrap tooltips -->
         <script
             type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
@@ -70,5 +64,8 @@
         <!--Custom Javascript-->
         <script src="{{ asset('js/cmsnav.js') }}"></script>
         <script src="{{asset('js/admin.js')}}"></script>
+        <noscript>
+            <h3>This website will not operate properly without javascript enabled ,please enable javascript.</h3>
+        </noscript>
     </body>
 </html>
