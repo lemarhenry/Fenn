@@ -14,18 +14,9 @@
         <link rel="icon" href="{{url('/storage/favicon.png')}}">
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Nunito"
-            rel="stylesheet"
-        />
-
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
         <!-- Font Awesome -->
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <!-- Bootstrap core CSS -->
         <link

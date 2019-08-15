@@ -31,6 +31,12 @@ if (updateTestimonial) {
         updateTest();
     });
 }
+
+validateEmail = email => {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+};
+
 createTestimonial = e => {
     e.preventDefault();
     let pass = false;
@@ -114,10 +120,10 @@ getTestimonials = () => {
                         id="ed${res.id}"
                         >Edit</a>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 text-left">
                             <a
                              href="#!"
-                            class="btn btn-danger text-center deleteTestimonial"
+                            class="btn btn-danger text-center deleteTestimonial "
                             title="delete ${res.id}"
                             id="dt${res.id}">Delete</a>
                         </div>
@@ -264,7 +270,7 @@ adminUpdate = () => {
             pass = true;
         }
     });
-    if (pass) {
+    if (pass && validateEmail($("#profilemail").val())) {
         axios
             .put("/admin/update", {
                 Name: $("#profilename").val(),
@@ -290,6 +296,11 @@ adminUpdate = () => {
                     message: err
                 });
             });
+    } else {
+        iziToast.error({
+            message: "Invalid email address",
+            position: "topCenter"
+        });
     }
 };
 

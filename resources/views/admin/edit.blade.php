@@ -92,7 +92,6 @@
                 </div>
                 <div class="modal-body mx-3">
                     <div class="md-form mb-4">
-                        <i class="fas fa-lock prefix grey-text"></i>
                         <label>Old password</label>
                         <input
                             type="password"
@@ -102,7 +101,6 @@
                         />
                     </div>
                     <div class="md-form mb-4">
-                        <i class="fas fa-lock prefix grey-text"></i>
                         <label>New password</label>
                         <input
                             type="password"
@@ -112,7 +110,6 @@
                         />
                     </div>
                     <div class="md-form mb-4">
-                        <i class="fas fa-lock prefix grey-text"></i>
                         <label>Confirm Password</label>
                         <input
                             type="password"

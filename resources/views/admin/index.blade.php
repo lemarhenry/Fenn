@@ -1,10 +1,10 @@
 @extends('layouts.Cms') @section('content')
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-6 ">
-            <div class="card classic-admin-card bg-primary">
+        <div class="col-md-6">
+            <div class="card bg-primary">
                 <div class="card-body">
-                    <div class="pull-right h2">
+                    <div class="pull-right text-white h2">
                         <i class="fas fa-book-open"></i>
                     </div>
                     <p class="white-text">
@@ -19,9 +19,9 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="card classic-admin-card bg-primary">
+            <div class="card bg-primary">
                 <div class="card-body">
-                    <div class="pull-right h2">
+                    <div class="pull-right text-white h2">
                         <i class="far fa-file-image"></i>
                     </div>
                     <p class="white-text">
@@ -34,9 +34,9 @@
             </div>
         </div>
         <div class="col-md-6 mt-4">
-            <div class="card classic-admin-card bg-primary">
+            <div class="card bg-primary">
                 <div class="card-body">
-                    <div class="pull-right h2">
+                    <div class="pull-right text-white h2">
                         <i class="far fa-images"></i>
                     </div>
                     <p class="white-text">
@@ -49,9 +49,9 @@
             </div>
         </div>
         <div class="col-md-6 mt-4">
-            <div class="card classic-admin-card bg-primary">
+            <div class="card bg-primary">
                 <div class="card-body">
-                    <div class="pull-right h2">
+                    <div class="pull-right text-white h2">
                         <i class="far fa-envelope"> </i>
                     </div>
                     <p class="white-text">
