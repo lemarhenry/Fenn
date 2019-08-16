@@ -69,9 +69,10 @@ Carousel = () => {
                 output += `<div class="carousel-item ${active}">
                 <div class="view">
                 <img
-                    class="d-block w-100 h-75"
+                    class="d-block w-100 h-50 image-responsive"
                     src="/storage/carousel/${value.image}"
                     alt="${value.image}"
+                    style="height:20%"
                 />
                 </div>
                  <div class="carousel-caption">
@@ -98,10 +99,7 @@ testimonials = () => {
     axios
         .get("/testimonial")
         .then(res => {
-            console.table(res.data);
-
             res.data.forEach((res, index) => {
-                console.log(index);
                 let des_rate = "";
                 let active = index == 0 ? "active" : "";
                 for (let i = 0; i < res.rating; i++) {
