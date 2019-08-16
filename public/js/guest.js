@@ -67,11 +67,17 @@ Carousel = () => {
             res.data.forEach((value, index) => {
                 let active = index == 0 ? "active" : "";
                 output += `<div class="carousel-item ${active}">
+                <div class="view">
                 <img
                     class="d-block w-100 h-75"
                     src="/storage/carousel/${value.image}"
                     alt="${value.image}"
                 />
+                </div>
+                 <div class="carousel-caption">
+                      <h3 class="h3-responsive">${value.caption}</h3>
+                    <!--<p><button class="btn btn-sm btn-success">Home</button></p>-->
+                 </div>
             </div>`;
             });
             if (images) {
@@ -113,6 +119,7 @@ testimonials = () => {
                        <span class="orange-text">
                     ${des_rate}
                     </span>
+
                 </div>
                 `;
             });

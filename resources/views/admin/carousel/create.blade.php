@@ -24,7 +24,11 @@
                         <div class="file-field">
                             <div class="btn btn-primary btn-sm float-left">
                                 <span>Choose file</span>
-                                <input type="file" id="carouselimage" />
+                                <input
+                                    type="file"
+                                    id="carouselimage"
+                                    required
+                                />
                             </div>
                             <div class="file-path-wrapper">
                                 <input
@@ -32,6 +36,7 @@
                                     type="text"
                                     placeholder="Upload your file"
                                     id="carouselout"
+                                    readonly
                                 />
                             </div>
                         </div>

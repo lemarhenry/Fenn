@@ -1,4 +1,4 @@
-<div class="container-fluid ">
+<div class="container-fluid mt-2">
     <section class="team-section text-center">
         <h2 class="h1-responsive font-weight-bold">"Testimonials"</h2>
         <p class="dark-grey-text w-responsive mx-auto mb-5">

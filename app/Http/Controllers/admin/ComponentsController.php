@@ -86,4 +86,15 @@ class ComponentsController extends Controller
         $caro->save();
         return ['status' => 200];
     }
+
+    public function carouselDelete(Carousel $id)
+    {
+        $id->delete();
+        return ['status' => 200];
+    }
+
+    public function carouselSingle(Carousel $id)
+    {
+        return $id;
+    }
 }

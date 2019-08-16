@@ -3,13 +3,15 @@ var state = {
     img: null
 };
 
-let carouselin = document.getElementById("carouselimage");
-let carouselout = $("#carouselout");
+let carouselin = document.getElementById("carouselimage") || null;
+let carouselout = $("#carouselout") || null;
 
-carouselin.addEventListener("change", event => {
-    carouselout.val(event.target.files[0].name);
-    TemPic(event.target, "tempcarouselimage");
-});
+if (carouselin) {
+    carouselin.addEventListener("change", event => {
+        carouselout.val(event.target.files[0].name);
+        TemPic(event.target, "tempcarouselimage");
+    });
+}
 
 mediaQuery = () => {
     let abh = $("#ttcard");
@@ -417,26 +419,124 @@ if (submitcarousel) {
 addCarouselimage = () => {
     let fd = new FormData();
     let caption = document.querySelector("#imagecaption");
-    if (caption.length > 0) {
+    if (state.img.files[0].size < 2000000.0) {
         fd.append("caption", caption.value);
-    }
-    fd.append("img", state.img.files[0]);
-    axios
-        .post("/create/carousel", fd)
-        .then(res => {
-            iziToast.success({
-                position: "topCenter",
-                message: "Carousel image added successfully!"
+        fd.append("img", state.img.files[0]);
+        axios
+            .post("/create/carousel", fd)
+            .then(res => {
+                iziToast.success({
+                    position: "topCenter",
+                    message: "Carousel image added successfully!"
+                });
+                carouselout.val("");
+                caption.value = "";
+                $("#tempcarouselimage").attr("style", "display:none");
+            })
+            .catch(err => {
+                console.log(err);
             });
-            carouselout.val("");
-            caption.value = "";
-            $("#tempcarouselimage").attr("style", "display:none");
+    }
+};
+
+getCarouselIMages = () => {
+    let allcarouselimage = document.querySelector("#allcarouselimage") || null;
+    let output = "";
+    axios
+        .get("/carousel")
+        .then(res => {
+            res.data.forEach(ca => {
+                let body =
+                    ca.caption.length > 0
+                        ? `<div class="card-body">
+                    <div class="text-center">
+                     ${ca.caption}
+                    </div>
+                </div>`
+                        : "";
+                output += `<div class="col-md-8 offset-md-2 mb-4">
+            <div class="card">
+                <div class="card-header bg-white">
+                    <div>
+                        <img
+                            src="/storage/carousel/${ca.image}"
+                            alt=""
+                            srcset=""
+                            style="width:60%"
+                        />
+                    </div>
+                </div>
+                ${body}
+                <div class="card-footer bg-white">
+                    <div class="row">
+                        <div class="col-6 text-right">
+                            <button class="btn btn-warning editcarousel"
+                            id="ce${ca.id}"
+                            title="Edit ${ca.id}"
+                            data-toggle="modal"
+                            data-target="#editcarouselmodal"
+                            >
+                                Edit
+                            </button>
+                        </div>
+                        <div class="col-6 text-left">
+                            <button
+                            class="btn btn-danger deletecarousel"
+                            title="Delete ${ca.id}"
+                            id="dc${ca.id}">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+            });
+            if (allcarouselimage) {
+                allcarouselimage.innerHTML = output;
+                document.querySelectorAll(".deletecarousel").forEach(ca => {
+                    ca.addEventListener("click", () => {
+                        deleteCarouselImage(ca.id.substring(2));
+                    });
+                });
+                document.querySelectorAll(".editcarousel").forEach(ca => {
+                    ca.addEventListener("click", () => {
+                        pcarData(ca.id.substring(2));
+                    });
+                });
+            }
         })
         .catch(err => {
             console.log(err);
         });
 };
 
+deleteCarouselImage = id => {
+    axios
+        .delete(`/delete/carousel/${id}`)
+        .then(res => {
+            iziToast.success({
+                message: "Carousel image removed successfully!",
+                position: "topCenter"
+            });
+            getCarouselIMages();
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
+
+pcarData = id => {
+    axios
+        .get(`/single/carousel/${id}`)
+        .then(res => {
+            console.table(res.data);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
 // Function calls
 getTestimonials();
+getCarouselIMages();
 AdminData();

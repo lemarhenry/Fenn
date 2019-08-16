@@ -49,8 +49,6 @@ Route::post('/create/testimonial', 'admin\ComponentsController@testimonialSave')
 Route::delete('/delete/testimonial/{id}', 'admin\ComponentsController@testimonialDelete');
 Route::get('/single/testimonial/{id}', "admin\ComponentsController@testimonialSingle");
 Route::put('/single/testimonial/{id}', "admin\ComponentsController@testimonialUpdate");
-Route::get('/view/carousel', 'admin\ComponentsController@Cvpage')->name('carousel.view');
-Route::get('/create/carousel', 'admin\ComponentsController@Ccpage')->name('carousel.create');
 
 Route::get('/edit/admin', 'admin\AdminController@edit')->name('admin.edit');
 Route::get('/admin/data', 'admin\AdminController@AdminData');
@@ -58,5 +56,12 @@ Route::put('/admin/update', 'admin\AdminController@adminUpdate');
 Route::post('/admin/password/check', 'admin\AdminController@adminCheckpassword');
 Route::put("/admin/update/password", 'admin\AdminController@updatePassword');
 
+
+Route::get('/view/carousel', 'admin\ComponentsController@Cvpage')->name('carousel.view');
+Route::get('/create/carousel', 'admin\ComponentsController@Ccpage')->name('carousel.create');
 Route::post('/create/carousel', 'admin\ComponentsController@carouselSave');
+Route::delete('/delete/carousel/{id}', 'admin\ComponentsController@carouselDelete');
+Route::get('/single/carousel/{id}', 'admin\ComponentsController@carouselSingle');
+
+
 Auth::routes(['register' => false]);

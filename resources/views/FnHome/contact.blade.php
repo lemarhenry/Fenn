@@ -38,7 +38,7 @@
                         <!-- Header -->
 
                         <p class="dark-grey-text">
-                            We'll write rarely, but only the best content.
+                            We write rarely, but only the best content.
                         </p>
                         <form id="sendmsg">
                             <div class="md-form">
