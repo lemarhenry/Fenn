@@ -115,7 +115,7 @@
         </div>
         <!-- Breadcrumb-->
         <div class="breadcrumb-dn mr-auto">
-            <p>Dashboard</p>
+            <p>Dashboard @yield('bc')</p>
         </div>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
             <li class="nav-item">

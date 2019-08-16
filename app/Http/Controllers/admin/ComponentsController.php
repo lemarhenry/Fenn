@@ -6,6 +6,7 @@ use App\Carousel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Testimonial;
+use Illuminate\Support\Facades\Storage;
 
 class ComponentsController extends Controller
 {
@@ -75,6 +76,7 @@ class ComponentsController extends Controller
 
     public function carouselSave(Request $request)
     {
+        $this->validate($request, ['img' => 'mimes:jpeg,jpg,png|max:1999|required']);
         $caro = new Carousel;
         $filenameWithExt = $request->file('img')->getClientOriginalName();
         $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
@@ -96,5 +98,26 @@ class ComponentsController extends Controller
     public function carouselSingle(Carousel $id)
     {
         return $id;
+    }
+
+    public function carouselUpdate(Request $request, Carousel $id)
+    {
+        $id->caption = htmlentities($request->caption);
+        if ($request->file('img') != null) {
+            $this->validate(
+                $request,
+                ['img' => 'mimes:jpeg,jpg,png|max:1999']
+            );
+            Storage::delete('public/carousel/' . $id->image);
+            $filenameWithExt = $request->file('img')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('img')->getClientOriginalExtension();
+            $filenametostore = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('img')->storeAs('public/carousel', $filenametostore);
+            $id->image = $filenametostore;
+            $id->save();
+        }
+        $id->save();
+        return ['status' => 200];
     }
 }

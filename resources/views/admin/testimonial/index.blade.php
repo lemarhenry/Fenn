@@ -1,4 +1,5 @@
-@extends('layouts.Cms') @section('content')
+@extends('layouts.Cms')
+@section('content')
 <style>
     textarea {
         resize: none;

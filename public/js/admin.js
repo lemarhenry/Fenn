@@ -5,11 +5,21 @@ var state = {
 
 let carouselin = document.getElementById("carouselimage") || null;
 let carouselout = $("#carouselout") || null;
+let editcarouselimagein =
+    document.querySelector("#editcarouselimagein") || null;
+let editcarouselout = $("#editcarouselout") || null;
 
 if (carouselin) {
     carouselin.addEventListener("change", event => {
         carouselout.val(event.target.files[0].name);
         TemPic(event.target, "tempcarouselimage");
+    });
+}
+
+if (editcarouselimagein) {
+    editcarouselimagein.addEventListener("change", event => {
+        editcarouselout.val(event.target.files[0].name);
+        TemPic(event.target, "editcarouselimage");
     });
 }
 
@@ -94,7 +104,7 @@ createTestimonial = e => {
             })
             .catch(err => {
                 iziToast.error({
-                    message: err,
+                    message: err.message,
                     position: "topCenter"
                 });
             });
@@ -186,7 +196,7 @@ getTestimonials = () => {
         .catch(err => {
             iziToast.error({
                 position: "topCenter",
-                message: err
+                message: err.message
             });
         });
 };
@@ -204,7 +214,7 @@ DeleteTestimonial = id => {
         .catch(err => {
             iziToast.error({
                 position: "topCenter",
-                message: err
+                message: err.message
             });
         });
 };
@@ -221,7 +231,7 @@ peditModal = id => {
         .catch(err => {
             iziToast.error({
                 position: "topCenter",
-                message: err
+                message: err.message
             });
         });
 };
@@ -260,7 +270,7 @@ updateTest = () => {
             .catch(err =>
                 iziToast({
                     position: "topCenter",
-                    message: err
+                    message: err.message
                 })
             );
     }
@@ -277,7 +287,7 @@ AdminData = () => {
         })
         .catch(err => {
             iziToast.error({
-                message: err,
+                message: err.message,
                 position: "topCenter"
             });
         });
@@ -319,7 +329,7 @@ adminUpdate = () => {
             .catch(err => {
                 iziToast.error({
                     position: "topCenter",
-                    message: err
+                    message: err.message
                 });
             });
     } else {
@@ -367,7 +377,7 @@ adminUpdatepassword = () => {
                         })
                         .catch(err => {
                             iziToast.error({
-                                message: err,
+                                message: err.message,
                                 position: "topCenter"
                             });
                         });
@@ -375,7 +385,7 @@ adminUpdatepassword = () => {
             })
             .catch(err => {
                 iziToast.error({
-                    message: err,
+                    message: err.message,
                     position: "topCenter"
                 });
             });
@@ -394,7 +404,7 @@ TemPic = (img, id, abort = false) => {
         $(`#${id}`).attr("src", e.target.result);
     };
     if (img.files[0].size < 2000000.0) {
-        state.img = img;
+        state.img = img || null;
         reader.readAsDataURL(img.files[0]);
     } else {
         iziToast.error({
@@ -434,7 +444,10 @@ addCarouselimage = () => {
                 $("#tempcarouselimage").attr("style", "display:none");
             })
             .catch(err => {
-                console.log(err);
+                iziToast.error({
+                    message: err.message,
+                    position: "topCenter"
+                });
             });
     }
 };
@@ -445,6 +458,7 @@ getCarouselIMages = () => {
     axios
         .get("/carousel")
         .then(res => {
+            $("#totalcarousel").html(res.data.length);
             res.data.forEach(ca => {
                 let body =
                     ca.caption.length > 0
@@ -501,13 +515,17 @@ getCarouselIMages = () => {
                 });
                 document.querySelectorAll(".editcarousel").forEach(ca => {
                     ca.addEventListener("click", () => {
+                        state.edit_id = ca.id.substring(2);
                         pcarData(ca.id.substring(2));
                     });
                 });
             }
         })
         .catch(err => {
-            console.log(err);
+            iziToast.error({
+                message: err.message,
+                position: "topCenter"
+            });
         });
 };
 
@@ -522,7 +540,10 @@ deleteCarouselImage = id => {
             getCarouselIMages();
         })
         .catch(err => {
-            console.log(err);
+            iziToast.error({
+                message: err.message,
+                position: "topCenter"
+            });
         });
 };
 
@@ -530,12 +551,53 @@ pcarData = id => {
     axios
         .get(`/single/carousel/${id}`)
         .then(res => {
-            console.table(res.data);
+            $("#editcarouselimage").attr(
+                "src",
+                `/storage/carousel/${res.data.image}`
+            );
+            $("#editimagecaption").val(res.data.caption);
         })
         .catch(err => {
-            console.log(err);
+            iziToast.error({
+                message: err.message,
+                position: "topCenter"
+            });
         });
 };
+
+var updatecarousel = document.querySelector("#updateCarousel") || null;
+
+if (updatecarousel) {
+    updatecarousel.addEventListener("click", () => {
+        updateCarousel();
+    });
+}
+
+updateCarousel = () => {
+    let caption = $("#editimagecaption").val();
+    let fd = new FormData();
+    fd.append("img", state.img ? state.img.files[0] : null);
+    fd.append("caption", caption);
+    axios
+        .post(`/single/carousel/${state.edit_id}`, fd)
+        .then(res => {
+            iziToast.success({
+                message: "Carousel entry updated successfully!",
+                position: "topCenter"
+            });
+            getCarouselIMages();
+            $("#closecarouselmodal").click();
+            $("#closecarouselmodal").click();
+        })
+        .catch(err => {
+            console.log(err.message);
+            iziToast.error({
+                message: err.message,
+                position: "topCenter"
+            });
+        });
+};
+
 // Function calls
 getTestimonials();
 getCarouselIMages();

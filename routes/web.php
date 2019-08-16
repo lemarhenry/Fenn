@@ -62,6 +62,7 @@ Route::get('/create/carousel', 'admin\ComponentsController@Ccpage')->name('carou
 Route::post('/create/carousel', 'admin\ComponentsController@carouselSave');
 Route::delete('/delete/carousel/{id}', 'admin\ComponentsController@carouselDelete');
 Route::get('/single/carousel/{id}', 'admin\ComponentsController@carouselSingle');
+Route::post('/single/carousel/{id}', 'admin\ComponentsController@carouselUpdate');
 
 
 Auth::routes(['register' => false]);

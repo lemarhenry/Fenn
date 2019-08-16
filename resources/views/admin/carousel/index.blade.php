@@ -13,7 +13,7 @@
             <div class="modal-content">
                 <div class="modal-header text-center bg-primary">
                     <h4 class="modal-title w-100 font-weight-bold text-white">
-                        Edit Testimonial
+                        Edit Carousel
                     </h4>
                     <button
                         id="closecarouselmodal"
@@ -32,7 +32,7 @@
                                 src=""
                                 alt=""
                                 style="width:50%"
-                                id="tempcarouselimage"
+                                id="editcarouselimage"
                             />
                         </div>
                         <div class="file-field">
@@ -40,7 +40,7 @@
                                 <span>Choose file</span>
                                 <input
                                     type="file"
-                                    id="carouselimage"
+                                    id="editcarouselimagein"
                                     required
                                 />
                             </div>
@@ -49,7 +49,7 @@
                                     class="file-path validate"
                                     type="text"
                                     placeholder="Upload your file"
-                                    id="carouselout"
+                                    id="editcarouselout"
                                     readonly
                                 />
                             </div>
@@ -60,13 +60,13 @@
                             class="form-control rounded-0 caption"
                             rows="3"
                             placeholder="Caption"
-                            id="imagecaption"
+                            id="editimagecaption"
                             name="Caption"
                         ></textarea>
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-warning" id="updateTestimonial">
+                    <button class="btn btn-warning" id="updateCarousel">
                         Update
                     </button>
                 </div>

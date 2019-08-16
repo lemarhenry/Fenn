@@ -11,7 +11,7 @@
                         <span class="h3"
                             >Total Testimonials &nbsp;
                             <span class="h4" id="totalTestimonial"
-                                >5</span
+                                >0</span
                             ></span
                         >
                     </p>
@@ -27,7 +27,7 @@
                     <p class="white-text">
                         <span class="h3"
                             >Total Carousel Images &nbsp;
-                            <span class="h4">5</span></span
+                            <span class="h4" id="totalcarousel">0</span></span
                         >
                     </p>
                 </div>
