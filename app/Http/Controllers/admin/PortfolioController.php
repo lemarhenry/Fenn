@@ -63,7 +63,7 @@ class PortfolioController extends Controller
             Storage::delete('public/' . $id->id . "/" . $d->img);
             $d->delete();
         }
-        Storage::delete('public/portfolio'  . $id->img);
+        Storage::delete('public/portfolio/' . $id->img);
         $id->delete();
         return ['status' => 200];
     }
