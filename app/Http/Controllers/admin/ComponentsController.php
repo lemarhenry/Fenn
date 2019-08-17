@@ -66,10 +66,10 @@ class ComponentsController extends Controller
 
     public function testimonialUpdate(Request $request, Testimonial $id)
     {
-        $id->rating = $request->edrating;
-        $id->fdist = $request->edsmdes;
-        $id->client = $request->edclient;
-        $id->testimonial = $request->edtest;
+        $id->rating = htmlentities($request->edrating);
+        $id->fdist = htmlentities($request->edsmdes);
+        $id->client = htmlentities($request->edclient);
+        $id->testimonial = htmlentities($request->edtest);
         $id->save();
         return ['status', '200'];
     }
@@ -91,6 +91,7 @@ class ComponentsController extends Controller
 
     public function carouselDelete(Carousel $id)
     {
+        Storage::delete('public/carousel/' . $id->image);
         $id->delete();
         return ['status' => 200];
     }
