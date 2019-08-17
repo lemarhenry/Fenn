@@ -78,7 +78,7 @@
                         <div class="collapsible-body">
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="#" class="waves-effect"
+                                    <a href="{{route('portfolio.create')}}" class="waves-effect"
                                         >Add Portfolio</a
                                     >
                                 </li>

@@ -42,7 +42,7 @@
                     <p class="white-text">
                         <span class="h3"
                             >Total Portfolio &nbsp;
-                            <span class="h4">5</span></span
+                            <span class="h4" id="totalportfolio">0</span></span
                         >
                     </p>
                 </div>

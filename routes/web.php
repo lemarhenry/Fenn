@@ -40,6 +40,7 @@ Route::get('/portfolio', 'Fnhome\PortfolioController@index')->name('portfolio');
 
 Route::get('/carousel', 'Fnhome\ComponentsController@carouselImages');
 Route::get('/testimonial', 'Fnhome\ComponentsController@testimonial');
+Route::get('/portfolio', 'Fnhome\PortfolioController@portfolio');
 
 Route::get('/admin', 'DashboardController@index')->name('dashboard');
 
@@ -64,5 +65,9 @@ Route::delete('/delete/carousel/{id}', 'admin\ComponentsController@carouselDelet
 Route::get('/single/carousel/{id}', 'admin\ComponentsController@carouselSingle');
 Route::post('/single/carousel/{id}', 'admin\ComponentsController@carouselUpdate');
 
+Route::get('/create/portfolio', 'admin\PortfolioController@Pcpage')->name('portfolio.create');
+Route::post('/create/portfolio', 'admin\PortfolioController@portfolioSave');
+Route::post('/create/portimg/{id}', 'admin\PortfolioController@portImg');
+Route::delete("/delete/portfolio/{id}", 'admin\PortfolioController@portfolioDelete');
 
 Auth::routes(['register' => false]);

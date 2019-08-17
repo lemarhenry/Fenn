@@ -590,7 +590,6 @@ updateCarousel = () => {
             $("#closecarouselmodal").click();
         })
         .catch(err => {
-            console.log(err.message);
             iziToast.error({
                 message: err.message,
                 position: "topCenter"

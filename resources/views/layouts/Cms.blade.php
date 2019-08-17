@@ -64,6 +64,7 @@
         <!--Custom Javascript-->
         <script src="{{ asset('js/cmsnav.js') }}"></script>
         <script src="{{asset('js/admin.js')}}"></script>
+        <script src="{{asset('js/portfolio.js')}}"></script>
         <noscript>
             <h3>This website will not operate properly without javascript enabled ,please enable javascript.</h3>
         </noscript>
