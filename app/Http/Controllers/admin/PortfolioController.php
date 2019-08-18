@@ -56,6 +56,7 @@ class PortfolioController extends Controller
         $pimg->save();
         return ['status' => 200];
     }
+
     public function portfolioDelete(Portfolio $id)
     {
         $del = Portimg::where("port_id", $id->id)->get();
@@ -65,6 +66,28 @@ class PortfolioController extends Controller
         }
         Storage::delete('public/portfolio/' . $id->img);
         $id->delete();
+        return ['status' => 200];
+    }
+
+    public function portfolioUpdate(Request $request, Portfolio $id)
+    {
+        if ($request->file('img') != null) {
+            $this->validate(
+                $request,
+                ['img' => 'mimes:jpeg,jpg,png|max:1999']
+            );
+            Storage::delete('public/portfolio/' . $id->img);
+            $filenameWithExt = $request->file('img')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('img')->getClientOriginalExtension();
+            $filenametostore = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('img')->storeAs('public/portfolio', $filenametostore);
+            $id->img = $filenametostore;
+            $id->save();
+        }
+        $id->name = htmlentities($request->name);
+        $id->description = htmlentities($request->description);
+        $id->save();
         return ['status' => 200];
     }
 }

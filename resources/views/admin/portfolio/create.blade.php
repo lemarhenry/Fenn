@@ -173,7 +173,7 @@
                         class="close"
                         data-dismiss="modal"
                         aria-label="Close"
-                        id="closeport"
+                        id="closeportedit"
                     >
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -207,26 +207,26 @@
                         </div>
                         <div class="form-group">
                             <input
-                                class="form-control rounded-0 portfolio"
+                                class="form-control rounded-0 portfolioedit"
                                 rows="3"
                                 placeholder=" Portfolio name."
-                                id="portname"
+                                id="portnameedit"
                                 name="name"
                             />
                         </div>
                         <div class="form-group">
                             <textarea
-                                class="form-control rounded-0 portfolio"
+                                class="form-control rounded-0 portfolioedit"
                                 rows="3"
                                 placeholder="Portfolio description."
-                                id="portdiscription"
+                                id="portdiscriptionedit"
                                 name="description"
                             ></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="">
+                    <button type="button" class="btn btn-primary" id="updateportfolioedit">
                         Save changes
                     </button>
                 </div>

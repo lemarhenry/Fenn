@@ -69,5 +69,7 @@ Route::get('/create/portfolio', 'admin\PortfolioController@Pcpage')->name('portf
 Route::post('/create/portfolio', 'admin\PortfolioController@portfolioSave');
 Route::post('/create/portimg/{id}', 'admin\PortfolioController@portImg');
 Route::delete("/delete/portfolio/{id}", 'admin\PortfolioController@portfolioDelete');
+Route::get('/single/portfolio/{id}', 'Fnhome\PortfolioController@single');
+Route::post('/single/portfolio/{id}', 'admin\PortfolioController@portfolioUpdate');
 
 Auth::routes(['register' => false]);

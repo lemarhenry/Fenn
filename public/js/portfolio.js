@@ -21,7 +21,6 @@ createportfolio = () => {
     document.querySelectorAll(".portfolio").forEach((p, index) => {
         if (index < 2) {
             if (p.value == "") {
-                console.log(index);
                 pass = false;
                 iziToast.error({
                     position: "topCenter",
@@ -139,19 +138,37 @@ getPortfolios = () => {
             if (editportfolio) {
                 editportfolio.forEach(d => {
                     d.addEventListener("click", () => {
+                        state.edit_id = d.id.substring(3);
+                        pportData();
                         $("#openaddporteditimg").click();
                     });
                 });
             }
         })
         .catch(err => {
-            // openaddporteditimg;
             iziToast.error({
                 position: "topCenter",
                 message: err.message
             });
         });
 };
+
+var addportfolioimageedit =
+    document.querySelector("#addportfolioimageedit") || null;
+if (addportfolioimageedit) {
+    addportfolioimageedit.addEventListener("change", event => {
+        TemPic(event.target, "tempportimageedit");
+        document.querySelector("#addportfoliooutedit").value =
+            event.target.files[0].name;
+    });
+}
+
+var updateportfolio = document.querySelector("#updateportfolioedit") || null;
+if (updateportfolio) {
+    updateportfolio.addEventListener("click", () => {
+        UpdatePort();
+    });
+}
 
 let addportfolioimage = document.querySelector("#addportfolioimage") || null;
 if (addportfolioimage) {
@@ -204,7 +221,69 @@ portImgdelete = id => {
                 position: "topCenter"
             });
         })
-        .catch(res => {});
+        .catch(err => {
+            iziToast.error({
+                position: "topCenter",
+                message: err.message
+            });
+        });
+};
+
+pportData = () => {
+    axios
+        .get(`/single/portfolio/${state.edit_id}`)
+        .then(res => {
+            $("#tempportimageedit").attr(
+                "src",
+                `/storage/portfolio/${res.data.img}`
+            );
+            $("#portnameedit").val(res.data.name);
+            $("#portdiscriptionedit").val(res.data.description);
+        })
+        .catch(err => {
+            iziToast.error({
+                position: "topCenter",
+                message: err.message
+            });
+        });
+};
+
+UpdatePort = () => {
+    let pass = false;
+    let fd = new FormData();
+    document.querySelectorAll(".portfolioedit").forEach(u => {
+        if (u.value == "") {
+            iziToast.error({
+                position: "topCenter",
+                message: `Error field portfolio ${u.name} is invalid or empty!`
+            });
+        } else {
+            pass = true;
+            fd.append(u.name, u.value);
+        }
+    });
+    if (state.img) {
+        fd.append("img", state.img.files[0]);
+    }
+    if (pass) {
+        axios
+            .post(`/single/portfolio/${state.edit_id}`, fd)
+            .then(res => {
+                iziToast.success({
+                    message: "Portfolio updated successfully!",
+                    position: "topCenter"
+                });
+                $("#closeportedit").click();
+                $("#closeportedit").click();
+                getPortfolios();
+            })
+            .catch(err => {
+                iziToast.error({
+                    position: "topCenter",
+                    message: err.message
+                });
+            });
+    }
 };
 
 getPortfolios();

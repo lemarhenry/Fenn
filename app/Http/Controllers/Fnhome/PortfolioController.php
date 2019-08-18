@@ -16,4 +16,8 @@ class PortfolioController extends Controller
     {
         return Portfolio::orderBy("created_at", "desc")->get();
     }
+    public function single(Portfolio $id)
+    {
+        return $id;
+    }
 }
