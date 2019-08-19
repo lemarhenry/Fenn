@@ -32,7 +32,7 @@
                                 <li>
                                     <a
                                         href="{{ route('testimonial.create') }}"
-                                        class="waves-effect"
+                                        class="waves-effect text-dark"
                                         >Create</a
                                     >
                                 </li>
@@ -90,7 +90,8 @@
                     </li>
                     <li>
                         <a class="waves-effect arrow-r"
-                            ><i class="far fa-envelope"> </i>Messages</a
+                         href="{{route('message.view')}}"
+                            ><i class="far fa-envelope" > </i>Messages</a
                         >
                     </li>
                 </ul>

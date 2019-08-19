@@ -303,9 +303,10 @@ viewPortfolio = () => {
                 .catch(err => {
                     console.log(err.message);
                 });
-            let port = JSON.parse(localStorage.getItem(`port${p.id}`));
-            port.forEach((r, i) => {
-                populate += `
+            let port = JSON.parse(localStorage.getItem(`port${p.id}`)) || null;
+            if (port) {
+                port.forEach((r, i) => {
+                    populate += `
                 <div class="col-sm-6 mb-2">
                 <div class="card classportfolioimage" id="cpi${r.id}"
                 data-toggle="modal"
@@ -323,7 +324,8 @@ viewPortfolio = () => {
                         </div>
                 </div>
                 `;
-            });
+                });
+            }
             output += `
             <div class="col-md-6 mb-2">
             <div class="card">
@@ -432,6 +434,10 @@ deletePortimage = () => {
                 position: "topCenter"
             });
             viewPortfolio();
+            // local storage caused this .
+            setTimeout(() => {
+                viewPortfolio();
+            }, 300);
         })
         .catch(err => {
             iziToast.error({
@@ -440,5 +446,10 @@ deletePortimage = () => {
             });
         });
 };
-viewPortfolio();
+
 getPortfolios();
+viewPortfolio();
+// Damn local storage ...
+setTimeout(() => {
+    viewPortfolio();
+}, 300);

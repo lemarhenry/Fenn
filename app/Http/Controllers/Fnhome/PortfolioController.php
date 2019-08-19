@@ -12,10 +12,12 @@ class PortfolioController extends Controller
     {
         return view('FnHome\portfolio');
     }
+
     public function portfolio()
     {
         return Portfolio::orderBy("created_at", "desc")->get();
     }
+
     public function single(Portfolio $id)
     {
         return $id;
