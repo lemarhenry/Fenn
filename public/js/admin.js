@@ -1,6 +1,7 @@
 var state = {
     edit_id: null,
-    img: null
+    img: null,
+    port_id: null
 };
 
 let carouselin = document.getElementById("carouselimage") || null;

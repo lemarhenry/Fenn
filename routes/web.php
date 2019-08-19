@@ -65,11 +65,18 @@ Route::delete('/delete/carousel/{id}', 'admin\ComponentsController@carouselDelet
 Route::get('/single/carousel/{id}', 'admin\ComponentsController@carouselSingle');
 Route::post('/single/carousel/{id}', 'admin\ComponentsController@carouselUpdate');
 
+
+Route::get('/view/portfoilio', 'admin\PortfolioController@Pvpage')->name('portfolio.view');
 Route::get('/create/portfolio', 'admin\PortfolioController@Pcpage')->name('portfolio.create');
 Route::post('/create/portfolio', 'admin\PortfolioController@portfolioSave');
 Route::post('/create/portimg/{id}', 'admin\PortfolioController@portImg');
 Route::delete("/delete/portfolio/{id}", 'admin\PortfolioController@portfolioDelete');
 Route::get('/single/portfolio/{id}', 'Fnhome\PortfolioController@single');
 Route::post('/single/portfolio/{id}', 'admin\PortfolioController@portfolioUpdate');
+
+Route::get('/portfolio/images/{id}', 'admin\PortimgController@portImgs');
+Route::get('/portfolio/image/{id}', 'admin\PortimgController@portImg');
+Route::delete('/delete/image/{id}', 'admin\PortimgController@delete');
+
 
 Auth::routes(['register' => false]);

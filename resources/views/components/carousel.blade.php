@@ -1,12 +1,12 @@
 <div class="col-12 px-0 py-0">
     <div
         id="carouselExampleFade"
-        class="carousel slide carousel-fade"
+        class="carousel slide"
         data-ride="carousel"
     >
         <div class="carousel-inner" id="carouselImages">
         </div>
-        <a
+        {{--  <a
             class="carousel-control-prev"
             href="#carouselExampleFade"
             role="button"
@@ -23,6 +23,6 @@
         >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-        </a>
+        </a>  --}}
     </div>
 </div>

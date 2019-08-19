@@ -83,7 +83,7 @@
                                     >
                                 </li>
                                 <li>
-                                    <a href="#" class="waves-effect">View</a>
+                                    <a href="{{route('portfolio.view')}}" class="waves-effect">View</a>
                                 </li>
                             </ul>
                         </div>

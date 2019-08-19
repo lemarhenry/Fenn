@@ -253,6 +253,7 @@ UpdatePort = () => {
     let fd = new FormData();
     document.querySelectorAll(".portfolioedit").forEach(u => {
         if (u.value == "") {
+            pass = false;
             iziToast.error({
                 position: "topCenter",
                 message: `Error field portfolio ${u.name} is invalid or empty!`
@@ -286,4 +287,158 @@ UpdatePort = () => {
     }
 };
 
+viewPortfolio = () => {
+    axios.get("/portfolio").then(res => {
+        let output = "";
+        res.data.forEach(p => {
+            let populate = "";
+            axios
+                .get(`/portfolio/images/${p.id}`)
+                .then(res => {
+                    localStorage.setItem(
+                        `port${p.id}`,
+                        JSON.stringify(res.data)
+                    );
+                })
+                .catch(err => {
+                    console.log(err.message);
+                });
+            let port = JSON.parse(localStorage.getItem(`port${p.id}`));
+            port.forEach((r, i) => {
+                populate += `
+                <div class="col-sm-6 mb-2">
+                <div class="card classportfolioimage" id="cpi${r.id}"
+                data-toggle="modal"
+                data-target="#portfoliomodal">
+                                <div class="card-body">
+                                    <div>
+                                        <img
+                                            src="/storage/${p.id}/${r.img}"
+                                            alt=""
+                                            srcset=""
+                                            style="width: 100%"
+                                        />
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                `;
+            });
+            output += `
+            <div class="col-md-6 mb-2">
+            <div class="card">
+                <div class="card-header bg-white">
+                    <div>
+                        <img
+                            src="/storage/portfolio/${p.img}"
+                            alt=""
+                            srcset=""
+                            style="width: 100%"
+                        />
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="mb-1 mt-1 h3 font-weight-bold">
+                        ${p.name}
+                    </div>
+                    <div>
+                       ${p.description}
+                    </div>
+                </div>
+                <div class="card-footer bg-white">
+                    <button
+                        class="btn btn-success openportfolio"
+                        data-toggle="collapse"
+                        id="openportfolio${p.id}"
+                        href="#collapse${p.id}"
+                    >
+                        Open
+                    </button>
+                </div>
+            </div>
+              <div
+            id="collapse${p.id}"
+            class="collapse"
+             >
+            <div class="row mt-2">
+                ${populate}
+                </div>
+            </div>
+        </div>
+       `;
+        });
+        let portfolioandpopulation =
+            document.querySelector("#portfolioandpopulation") || null;
+        if (portfolioandpopulation) {
+            portfolioandpopulation.innerHTML = output;
+        }
+
+        var classportfolioimage =
+            document.querySelectorAll(".classportfolioimage") || null;
+        if (classportfolioimage) {
+            classportfolioimage.forEach((res, index) => {
+                res.addEventListener("click", () => {
+                    viewPortimage(res.id.substring(3));
+                    state.port_id = res.id.substring(3);
+                });
+            });
+        }
+
+        var openportfolio = document.querySelectorAll(".openportfolio") || null;
+        if (openportfolio) {
+            openportfolio.forEach(o => {
+                let bol = false;
+                $(`#${o.id}`).on("click", () => {
+                    let html = $(`#${o.id}`)
+                        .html()
+                        .trim();
+                    if (html == "Open") {
+                        $(`#${o.id}`).removeClass("btn-success");
+                        $(`#${o.id}`).addClass("btn-warning");
+                        $(`#${o.id}`).html("Close");
+                    } else {
+                        $(`#${o.id}`).removeClass("btn-warning");
+                        $(`#${o.id}`).addClass("btn-success");
+                        $(`#${o.id}`).html("Open");
+                    }
+                });
+            });
+        }
+    });
+};
+
+deleteportfolioimg = document.querySelector("#deleteportfolioimg") || null;
+if (deleteportfolioimg) {
+    deleteportfolioimg.addEventListener("click", () => {
+        deletePortimage();
+    });
+}
+
+viewPortimage = id => {
+    axios.get(`/portfolio/image/${id}`).then(res => {
+        $("#viewportfolioimagemodal").attr(
+            "src",
+            `/storage/${res.data.port_id}/${res.data.img}`
+        );
+    });
+};
+
+deletePortimage = () => {
+    axios
+        .delete(`/delete/image/${state.port_id}`)
+        .then(res => {
+            iziToast.success({
+                message: "Image successfully removed from this portfolio!",
+                position: "topCenter"
+            });
+            viewPortfolio();
+        })
+        .catch(err => {
+            iziToast.error({
+                position: "topCenter",
+                message: err.message
+            });
+        });
+};
+viewPortfolio();
 getPortfolios();

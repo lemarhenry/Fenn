@@ -20,6 +20,11 @@ class PortfolioController extends Controller
         return view('admin.portfolio/create');
     }
 
+    public function Pvpage()
+    {
+        return view('admin.portfolio/index');
+    }
+
     public function portfolioSave(Request $request)
     {
         $this->validate(

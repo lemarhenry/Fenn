@@ -1,0 +1,63 @@
+
+// populatePortfolio = id => {
+//     axios.get(`/portfolio/images/${id}`).then(res => {
+//         state.port_id = id;
+//         let output = "";
+//         let empty =
+//             res.data.length < 1
+//                 ? "<div class='h5'>No images to show. <a class=`btn btn-success` href='/create/portfolio'><i class='fa fa-plus'></i></a></div> "
+//                 : "";
+//         res.data.forEach(i => {
+//             output += `
+//             <div class="col-md-4 mb-2">
+//                <div class="card">
+//                 <div class="card-body">
+//                     <div
+//                         data-toggle="modal"
+//                         data-target="#basicExampleModal"
+//                         id="pi${i.id}"
+//                         class="viewportimage"
+//                     >
+//                         <img
+//                             src="/storage/${id}/${i.img}"
+//                             alt=""
+//                             style="width: 100%"
+//                         />
+//                     </div>
+//                 </div>
+//                 <div class="card-footer bg-white">
+//                     <div class="text-center">
+//                         <button class="btn btn-danger deleteportfolioimagei" id="dip${
+//                             i.id
+//                         }">
+//                             <i class="fa fa-trash"></i>
+//                         </button>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>`;
+//         });
+//         let portfolioimages =
+//             document.querySelector("#portfolioimages") || null;
+//         if (portfolioimages) {
+//             portfolioimages.innerHTML = output || empty;
+//         }
+//         let viewportimage = document.querySelectorAll(".viewportimage") || null;
+//         if (viewportimage) {
+//             viewportimage.forEach(v => {
+//                 v.addEventListener("click", () => {
+//                     viewPortimage(v.id.substring(2));
+//                 });
+//             });
+//         }
+//         let deleteportfolioimagei =
+//             document.querySelectorAll(".deleteportfolioimagei") || null;
+//         if (deleteportfolioimagei) {
+//             deleteportfolioimagei.forEach(d => {
+//                 d.addEventListener("click", () => {
+//                     deletePortimage(d.id.substring(3));
+//                 });
+//             });
+//         }
+//     });
+// };

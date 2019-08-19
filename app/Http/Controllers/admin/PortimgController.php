@@ -12,4 +12,15 @@ class PortimgController extends Controller
     {
         return Portimg::where('port_id', $id)->orderBy("created_at", 'desc')->get();
     }
+
+    public function portImg(Portimg $id)
+    {
+        return $id;
+    }
+    public function delete(Portimg $id)
+    {
+        $this->middleware("auth");
+        $id->delete();
+        return ['status' => 200];
+    }
 }
