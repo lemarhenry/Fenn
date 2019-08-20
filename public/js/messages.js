@@ -18,6 +18,8 @@ getMessages = () => {
                     seen.length
                 }</span>
                 </a>`);
+            } else {
+                $("#newmessages").html("");
             }
             $("#unseenmessages").html(seen.length);
             $("#seenmessages").html(unseen.length);
@@ -55,7 +57,9 @@ getMessages = () => {
             });
             let allmessages = document.querySelector("#allmessages") || null;
             if (allmessages) {
-                allmessages.innerHTML = output;
+                allmessages.innerHTML =
+                    output ||
+                    "<li><div class='row'><div class='col-12 text-center text-muted'> Inbox empty</div> </div></li>";
             }
             let readmessage = document.querySelectorAll(".readmessage") || null;
             if (readmessage) {
@@ -119,6 +123,7 @@ viewMessage = id => {
             $("#messageemail").html(res.data.email);
             $("#messagesubject").html(res.data.subject);
             $("#messagesbody").html(res.data.body);
+            getMessages();
         })
         .catch(err => {
             iziToast.error({
