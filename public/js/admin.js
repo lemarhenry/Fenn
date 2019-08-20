@@ -124,6 +124,7 @@ getTestimonials = () => {
             if (totalTestimonial) {
                 totalTestimonial.innerHTML = res.data.length;
             }
+            let len = res.data.length;
             res.data.forEach(res => {
                 for (let i = 0; i < res.rating; i++) {
                     des_rate += "<i class='fas fa-star'></i>";
@@ -172,7 +173,10 @@ getTestimonials = () => {
                 des_rate = "";
             });
             if (viewtestimonail) {
-                viewtestimonail.innerHTML = output;
+                viewtestimonail.innerHTML =
+                    len > 0
+                        ? output
+                        : "<div class='col-12 text-center'>No testimonial to show.</div>";
             }
 
             let del = document.querySelectorAll(".deleteTestimonial") || null;
@@ -371,6 +375,9 @@ adminUpdatepassword = () => {
                         .then(res => {
                             $("#closeupdatepasswordmodal").click();
                             $("#closeupdatepasswordmodal").click();
+                            $("#Oldpassword").val("");
+                            $("#Newpassword").val("");
+                            $("#confirmpassword").val("");
                             iziToast.success({
                                 message: "Password updated successfully!",
                                 position: "topCenter"
@@ -460,6 +467,7 @@ getCarouselIMages = () => {
         .get("/carousel")
         .then(res => {
             $("#totalcarousel").html(res.data.length);
+            let len = res.data.length;
             res.data.forEach(ca => {
                 let body =
                     ca.caption.length > 0
@@ -508,7 +516,10 @@ getCarouselIMages = () => {
         </div>`;
             });
             if (allcarouselimage) {
-                allcarouselimage.innerHTML = output;
+                allcarouselimage.innerHTML =
+                    len > 0
+                        ? output
+                        : "<div class='col-12 text-center'>No images to show.</div>";
                 document.querySelectorAll(".deletecarousel").forEach(ca => {
                     ca.addEventListener("click", () => {
                         deleteCarouselImage(ca.id.substring(2));

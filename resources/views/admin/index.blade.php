@@ -55,10 +55,8 @@
                         <i class="far fa-envelope"> </i>
                     </div>
                     <p class="white-text">
-                        <span class="h3"
-                            >Total Message &nbsp;
-                            <span class="h4">5</span></span
-                        >
+                        <span class="h3">Total Message &nbsp;
+                            <span class="h4" id="totalmessage">0</span>
                     </p>
                 </div>
             </div>

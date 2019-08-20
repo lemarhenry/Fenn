@@ -71,6 +71,9 @@ getPortfolios = () => {
                 totalportfolio.innerHTML = res.data.length;
             }
             res.data.forEach(p => {
+                axios.get(`/portfolio/images/${p.id}`).then(res => {
+                    $(`#imgcount${p.id}`).html(res.data.length);
+                });
                 output += `   <div class="col-md-4 mb-3">
             <div class="card">
                 <div class="card-body">
@@ -81,6 +84,11 @@ getPortfolios = () => {
                     />
                     <div class="text-center font-weight-bold h4 mt-1">
                        ${p.name}
+                    </div>
+                    <div>
+                    Images <span class="badge badge-sm badge-primary" id="imgcount${
+                        p.id
+                    }"></span>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -192,6 +200,7 @@ portImg = () => {
     axios
         .post(`/create/portimg/${state.edit_id}`, fd)
         .then(res => {
+            getPortfolios();
             iziToast.success({
                 message: `Image add to portfolio ${
                     state.edit_id
@@ -301,7 +310,10 @@ viewPortfolio = () => {
                     );
                 })
                 .catch(err => {
-                    console.log(err.message);
+                    iziToast.error({
+                        position: "topCenter",
+                        message: err.message
+                    });
                 });
             let port = JSON.parse(localStorage.getItem(`port${p.id}`)) || null;
             if (port) {
@@ -372,7 +384,9 @@ viewPortfolio = () => {
         let portfolioandpopulation =
             document.querySelector("#portfolioandpopulation") || null;
         if (portfolioandpopulation) {
-            portfolioandpopulation.innerHTML = output;
+            portfolioandpopulation.innerHTML =
+                output ||
+                "<div class='col-12 text-center'>No portfolio to show.</div>";
         }
 
         var classportfolioimage =
@@ -380,6 +394,7 @@ viewPortfolio = () => {
         if (classportfolioimage) {
             classportfolioimage.forEach((res, index) => {
                 res.addEventListener("click", () => {
+                    $("#viewportfolioimagemodal").attr("src", ``);
                     viewPortimage(res.id.substring(3));
                     state.port_id = res.id.substring(3);
                 });
@@ -389,7 +404,6 @@ viewPortfolio = () => {
         var openportfolio = document.querySelectorAll(".openportfolio") || null;
         if (openportfolio) {
             openportfolio.forEach(o => {
-                let bol = false;
                 $(`#${o.id}`).on("click", () => {
                     let html = $(`#${o.id}`)
                         .html()
@@ -417,12 +431,20 @@ if (deleteportfolioimg) {
 }
 
 viewPortimage = id => {
-    axios.get(`/portfolio/image/${id}`).then(res => {
-        $("#viewportfolioimagemodal").attr(
-            "src",
-            `/storage/${res.data.port_id}/${res.data.img}`
-        );
-    });
+    axios
+        .get(`/portfolio/image/${id}`)
+        .then(res => {
+            $("#viewportfolioimagemodal").attr(
+                "src",
+                `/storage/${res.data.port_id}/${res.data.img}`
+            );
+        })
+        .catch(err => {
+            iziToast.error({
+                position: "topCenter",
+                message: err.message
+            });
+        });
 };
 
 deletePortimage = () => {
@@ -434,7 +456,7 @@ deletePortimage = () => {
                 position: "topCenter"
             });
             viewPortfolio();
-            // local storage caused this .
+            // local storage caused this ...
             setTimeout(() => {
                 viewPortfolio();
             }, 300);

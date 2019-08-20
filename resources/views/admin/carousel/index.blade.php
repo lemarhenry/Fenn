@@ -1,6 +1,7 @@
 @extends('layouts.Cms') @section('content')
 <div class="container">
-    <div class="row" id="allcarouselimage"></div>
+    <div class="row" id="allcarouselimage">
+    </div>
     <div
         class="modal fade"
         id="editcarouselmodal"

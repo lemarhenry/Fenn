@@ -165,7 +165,7 @@
                 <div class="modal-header bg-primary ">
                     <div class="modal-title">
                         <div class="text-center text-white h3">
-                            Add Image
+                          Edit Portfolio
                         </div>
                     </div>
                     <button

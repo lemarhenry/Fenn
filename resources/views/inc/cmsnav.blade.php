@@ -32,7 +32,7 @@
                                 <li>
                                     <a
                                         href="{{ route('testimonial.create') }}"
-                                        class="waves-effect text-dark"
+                                        class="waves-effect"
                                         >Create</a
                                     >
                                 </li>
