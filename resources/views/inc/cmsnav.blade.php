@@ -119,8 +119,7 @@
             <p>Dashboard @yield('bc')</p>
         </div>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
-            <li class="nav-item">
-                <a class="nav-link"></a>
+            <li class="nav-item" id="newmessages">
             </li>
             <li class="nav-item">
                 <a class="nav-link"></a>

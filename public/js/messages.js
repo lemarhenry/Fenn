@@ -10,6 +10,15 @@ getMessages = () => {
             let output = "";
             let seen = res.data.filter(s => !s.seen);
             let unseen = res.data.filter(s => s.seen);
+            if (seen.length > 0) {
+                $("#newmessages").html(`
+                <a class="nav-link text-dark" href="/view/message">
+                <i class="fa fa-envelope"></i>
+                <span class="badge badge-success badge-sm" style="font-size:8px">${
+                    seen.length
+                }</span>
+                </a>`);
+            }
             $("#unseenmessages").html(seen.length);
             $("#seenmessages").html(unseen.length);
             res.data.forEach(m => {

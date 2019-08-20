@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\contact;
 
+
 class MessagesController extends Controller
 {
     public function __construct()
