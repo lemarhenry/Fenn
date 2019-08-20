@@ -78,5 +78,9 @@ Route::delete('/delete/image/{id}', 'admin\PortimgController@delete');
 
 Route::get('/messages', 'admin\MessagesController@Messages');
 Route::get('/view/message', 'admin\MessagesController@Mvpage')->name('message.view');
+Route::put('/seen/message/{id}', 'admin\MessagesController@seen');
+Route::get('/single/message/{id}', 'admin\MessagesController@messageSingle');
+Route::delete('/delete/message/{id}', 'admin\MessagesController@messageDelete');
+Route::post('/search/messages', 'admin\MessagesController@messageSearch');
 
 Auth::routes(['register' => false]);

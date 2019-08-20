@@ -1,4 +1,13 @@
 @extends('layouts.Cms') @section('content')
+<style>
+    ul {
+        list-style: none;
+        text-align: left;
+    }
+    .cursor {
+        cursor: pointer;
+    }
+</style>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -17,7 +26,7 @@
                                         <span
                                             class="badge badge-success"
                                             id="unseenmessages"
-                                            >4</span
+                                            >0</span
                                         >
                                     </small>
                                 </div>
@@ -29,7 +38,7 @@
                                         <span
                                             class="badge badge-primary"
                                             id="seenmessages"
-                                            >3</span
+                                            >0</span
                                         >
                                     </small>
                                 </div>
@@ -40,7 +49,7 @@
                             <div class="md-form mb-0">
                                 <input
                                     type="text"
-                                    id="search"
+                                    id="messagesearch"
                                     name="search"
                                     class="form-control"
                                 />
@@ -51,10 +60,64 @@
                 </div>
                 <div class="card-body">
                     <div
-                        class="row"
-                        style="height: 375px; overflow: auto;"
-                        id="allmessages"
-                    ></div>
+                        style="height: 375px; overflow: auto; overflow-x: hidden;"
+                        class="align"
+                    >
+                        <ul id="allmessages" class="mr-4"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div
+        class="modal fade"
+        id="viewmessage"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header bg-white text-dark">
+                    <h5 class="modal-title h3 " id="exampleModalLabel">
+                        Message
+                    </h5>
+                    <span id="messagedate"></span>
+                </div>
+                <div class="modal-body text-left">
+                    <div>
+                        <span class="font-weight-bold">Name </span>:
+                        <span id="messagename"></span>
+                    </div>
+                    <div>
+                        <span class="font-weight-bold">Email </span>:
+                        <span id="messageemail"></span>
+                    </div>
+                    <br />
+                    <div>
+                        <span id="messagesubject" class="h6"></span>
+                        <br />
+                        <span id="messagesbody"> </span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                        id="deletemessage"
+                        data-dismiss="modal"
+                    >
+                        <i class="fa fa-trash"></i>
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-dismiss="modal"
+                    >
+                        Close
+                    </button>
                 </div>
             </div>
         </div>
