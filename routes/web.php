@@ -23,6 +23,7 @@ Route::get('/about', 'PagesController@about')->name('about');
 
 Route::get('/contact', 'Fnhome\ContactController@create')->name('contact');
 Route::post('/contact', 'Fnhome\ContactController@store');
+
 Route::get('/admin', 'DashboardController@index')->name('admin');
 
 Route::get('/homeSecurity', 'PagesController@homeSecurity')->name('homeSecurity');
@@ -82,5 +83,14 @@ Route::put('/seen/message/{id}', 'admin\MessagesController@seen');
 Route::get('/single/message/{id}', 'admin\MessagesController@messageSingle');
 Route::delete('/delete/message/{id}', 'admin\MessagesController@messageDelete');
 Route::post('/search/messages', 'admin\MessagesController@messageSearch');
+
+Route::get('/view/job', 'admin\JobController@Jvpage')->name('job.view');
+Route::get('/create/job', 'admin\JobController@Jcpage')->name('job.create');
+Route::post('/create/job', 'admin\JobController@jobSave');
+Route::get('/single/job/{id}', 'admin\JobController@jobSingle');
+Route::put('/single/job/{id}', 'admin\JobController@jobUpdate');
+Route::delete('/delete/job/{id}', 'admin\JobController@jobDelete');
+
+Route::get('/jobs', 'Fnhome\JobController@index');
 
 Auth::routes(['register' => false]);

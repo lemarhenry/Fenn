@@ -66,6 +66,7 @@
         <script src="{{asset('js/admin.js')}}"></script>
         <script  defer src="{{asset('js/portfolio.js')}}"></script>
          <script  defer src="{{asset('js/messages.js')}}"></script>
+          <script  defer src="{{asset('js/job.js')}}"></script>
         <noscript>
             <h3>This website will not operate properly without javascript enabled ,please enable javascript.</h3>
         </noscript>

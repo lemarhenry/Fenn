@@ -33,7 +33,7 @@
                                     <a
                                         href="{{ route('testimonial.create') }}"
                                         class="waves-effect"
-                                        >Create</a
+                                        >Add testimonial</a
                                     >
                                 </li>
                                 <li>
@@ -55,7 +55,9 @@
                         <div class="collapsible-body">
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="{{route('carousel.create')}}" class="waves-effect"
+                                    <a
+                                        href="{{ route('carousel.create') }}"
+                                        class="waves-effect"
                                         >Add Image</a
                                     >
                                 </li>
@@ -78,20 +80,52 @@
                         <div class="collapsible-body">
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="{{route('portfolio.create')}}" class="waves-effect"
+                                    <a
+                                        href="{{ route('portfolio.create') }}"
+                                        class="waves-effect"
                                         >Add Portfolio</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="{{route('portfolio.view')}}" class="waves-effect">View</a>
+                                    <a
+                                        href="{{ route('portfolio.view') }}"
+                                        class="waves-effect"
+                                        >View</a
+                                    >
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <a class="waves-effect arrow-r"
-                         href="{{route('message.view')}}"
-                            ><i class="far fa-envelope" > </i>Messages</a
+                        <a class="collapsible-header waves-effect arrow-r"
+                            ><i class="fas fa-tasks"></i>Job<i
+                                class="fas fa-angle-down rotate-icon"
+                            ></i
+                        ></a>
+                        <div class="collapsible-body">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a
+                                        href="{{ route('job.create') }}"
+                                        class="waves-effect"
+                                        >Add Job</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="{{ route('job.view') }}"
+                                        class="waves-effect"
+                                        >View</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a
+                            class="waves-effect arrow-r"
+                            href="{{ route('message.view') }}"
+                            ><i class="far fa-envelope"> </i>Messages</a
                         >
                     </li>
                 </ul>
@@ -119,18 +153,15 @@
             <p>Dashboard @yield('bc')</p>
         </div>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
-            <li class="nav-item" id="newmessages">
-            </li>
+            <li class="nav-item" id="newmessages"></li>
             <li class="nav-item">
                 <a class="nav-link"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark"
-                href="{{route('admin.edit')}}">
+                <a class="nav-link text-dark" href="{{ route('admin.edit') }}">
                     <i class="fas fa-user"></i>
-                    <span
-                    class="clearfix d-none d-sm-inline-block black-text">
-                             Account
+                    <span class="clearfix d-none d-sm-inline-block black-text">
+                        Account
                     </span>
                 </a>
             </li>

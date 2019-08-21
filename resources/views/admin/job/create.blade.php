@@ -1,0 +1,53 @@
+@extends('layouts.Cms') @section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 mb-3">
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <div class="text-center h3 text-white">
+                        Create Job
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form
+                        class="text-center border border-light p-5"
+                        id="createjob"
+                    >
+                        <input
+                            type="text"
+                            class="form-control mb-4 job"
+                            placeholder="Job name"
+                            id="jname"
+                            name="job name"
+                        />
+                        <input
+                            type="text"
+                            class="form-control mb-4 job"
+                            placeholder="Requisite 1"
+                            id="prereq1"
+                            name="Requisite 1"
+                        />
+                        <input
+                            type="text"
+                            class="form-control mb-4 job"
+                            placeholder="Requisite 2"
+                            id="prereq2"
+                            name="Requisite 2"
+                        />
+                        <input
+                            type="text"
+                            class="form-control mb-4 job"
+                            placeholder="Requisite 3"
+                            id="prereq3"
+                            name="Requisite 3"
+                        />
+                        <button class="btn btn-primary" type="submit">
+                            Create
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
