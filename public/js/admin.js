@@ -423,9 +423,6 @@ TemPic = (img, id, abort = false) => {
             } is greater than 2mb. Please choose a smaller files.`
         });
     }
-    if (abort) {
-        reader.abort();
-    }
 };
 
 var submitcarousel = document.querySelector("#submitcarousel");
@@ -438,26 +435,33 @@ if (submitcarousel) {
 addCarouselimage = () => {
     let fd = new FormData();
     let caption = document.querySelector("#imagecaption");
-    if (state.img.files[0].size < 2000000.0) {
-        fd.append("caption", caption.value);
-        fd.append("img", state.img.files[0]);
-        axios
-            .post("/create/carousel", fd)
-            .then(res => {
-                iziToast.success({
-                    position: "topCenter",
-                    message: "Carousel image added successfully!"
+    if (state.img == null) {
+        iziToast.error({
+            message: "An image is required!",
+            position: "topCenter"
+        });
+    } else {
+        if (state.img.files[0].size < 2000000.0) {
+            fd.append("caption", caption.value);
+            fd.append("img", state.img.files[0]);
+            axios
+                .post("/create/carousel", fd)
+                .then(res => {
+                    iziToast.success({
+                        position: "topCenter",
+                        message: "Carousel image added successfully!"
+                    });
+                    carouselout.val("");
+                    caption.value = "";
+                    $("#tempcarouselimage").attr("style", "display:none");
+                })
+                .catch(err => {
+                    iziToast.error({
+                        message: err.message,
+                        position: "topCenter"
+                    });
                 });
-                carouselout.val("");
-                caption.value = "";
-                $("#tempcarouselimage").attr("style", "display:none");
-            })
-            .catch(err => {
-                iziToast.error({
-                    message: err.message,
-                    position: "topCenter"
-                });
-            });
+        }
     }
 };
 
