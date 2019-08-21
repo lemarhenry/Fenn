@@ -63,7 +63,7 @@
                                 name="description"
                             ></textarea>
                         </div>
-                        <button class="btn btn-info" type="submit">
+                        <button class="btn btn-success" type="submit">
                             Create
                         </button>
                     </form>
@@ -136,7 +136,7 @@
                 <div class="modal-footer bg-white">
                     <button
                         type="button"
-                        class="btn btn-primary"
+                        class="btn btn-success"
                         id="saveportimg"
                     >
                         Save changes
@@ -226,7 +226,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="updateportfolioedit">
+                    <button type="button" class="btn btn-success" id="updateportfolioedit">
                         Save changes
                     </button>
                 </div>

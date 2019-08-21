@@ -64,7 +64,7 @@
                             name="Requisite 3"
                         />
                         <button class="btn btn-success" type="submit">
-                            Update
+                            Save changes
                         </button>
                     </form>
                 </div>

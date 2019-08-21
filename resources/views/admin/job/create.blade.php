@@ -41,7 +41,7 @@
                             id="prereq3"
                             name="Requisite 3"
                         />
-                        <button class="btn btn-primary" type="submit">
+                        <button class="btn btn-success" type="submit">
                             Create
                         </button>
                     </form>

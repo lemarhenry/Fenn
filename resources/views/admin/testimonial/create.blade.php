@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <div class="card">
-                <div class="card-header bg-info">
+                <div class="card-header bg-primary">
                     <div class="text-center h3 text-white">
                         Create Testimonial
                     </div>
@@ -61,7 +61,7 @@
                             ></textarea>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-info" type="submit">
+                            <button class="btn btn-success" type="submit">
                                 create
                             </button>
                         </div>

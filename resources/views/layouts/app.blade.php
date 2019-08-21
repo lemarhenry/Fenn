@@ -27,7 +27,7 @@
         <div id="app">
             <!-- Just an image -->
             <nav class="navbar navbar-dark white-color">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/fnhome">
                     <img
                         src="{{ url('/storage/logo.png') }}"
                         width="40%"
