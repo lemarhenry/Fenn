@@ -128,6 +128,13 @@
                             ><i class="far fa-envelope"> </i>Messages</a
                         >
                     </li>
+                     <li>
+                        <a
+                            class="waves-effect arrow-r"
+                            href="{{route('digify.view')}}"
+                            ><i class="fas fa-dollar-sign"></i>Digify & Dan prices</a
+                        >
+                    </li>
                 </ul>
             </li>
             <!--/. Side navigation links -->

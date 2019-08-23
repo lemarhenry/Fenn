@@ -93,4 +93,8 @@ Route::delete('/delete/job/{id}', 'admin\JobController@jobDelete');
 
 Route::get('/jobs', 'Fnhome\JobController@index');
 
+Route::get('/view/digify', 'admin\DigifyDanPriceController@Dvpage')->name("digify.view");
+Route::post('/update/digify', 'admin\DigifyDanPriceController@digifyUpdate');
+Route::get('/digify', 'admin\DigifyDanPriceController@digify');
+
 Auth::routes(['register' => false]);

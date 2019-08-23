@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePortfoliosTable extends Migration
+class CreateDansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreatePortfoliosTable extends Migration
      */
     public function up()
     {
-        Schema::create('portfolios', function (Blueprint $table) {
+        Schema::create('dans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('img');
-            $table->string("name");
-            $table->text("description");
+            $table->string('basic')->nullable();
+            $table->integer('bprice')->nullable();
+            $table->string('premium')->nullable();
+            $table->integer('pprice')->nullable();
+            $table->string('elite')->nullable();
+            $table->integer('eprice')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ class CreatePortfoliosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('portfolios');
+        Schema::dropIfExists('dans');
     }
 }

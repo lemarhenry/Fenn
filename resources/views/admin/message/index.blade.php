@@ -16,21 +16,31 @@
                     <div class="row">
                         <div class="col-md-4 pt-4">
                             <div class="row">
-                                <div
-                                    class="col-6 text-center pr-5 font-weight-bold"
-                                >
+                                <div class="col-4 text-center font-weight-bold">
+                                    <span class="h3">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <small>
+                                        <span
+                                            class="badge badge-success"
+                                            id="allcountmessages"
+                                            >0</span
+                                        >
+                                    </small>
+                                </div>
+                                <div class="col-4 text-center font-weight-bold">
                                     <span class="h3">
                                         <i class="far fa-envelope"></i>
                                     </span>
                                     <small>
                                         <span
-                                            class="badge badge-success"
+                                            class="badge badge-warning"
                                             id="unseenmessages"
                                             >0</span
                                         >
                                     </small>
                                 </div>
-                                <div class="col-6 tex-center font-weight-bold">
+                                <div class="col-4 text-center font-weight-bold">
                                     <span class="h3">
                                         <i class="far fa-envelope-open"></i>
                                     </span>

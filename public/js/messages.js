@@ -4,12 +4,12 @@ getMessages = () => {
         .then(res => {
             setInterval(() => {
                 getNewmsg(res.data.length);
-                return;
             }, 10000);
             $("#totalmessage").html(res.data.length);
             let output = "";
             let seen = res.data.filter(s => !s.seen);
             let unseen = res.data.filter(s => s.seen);
+            let allcountmessages = res.data.length;
             if (seen.length > 0) {
                 $("#newmessages").html(`
                 <a class="nav-link text-dark" href="/view/message">
@@ -23,6 +23,7 @@ getMessages = () => {
             }
             $("#unseenmessages").html(seen.length);
             $("#seenmessages").html(unseen.length);
+            $("#allcountmessages").html(allcountmessages);
             res.data.forEach(m => {
                 let mcl = !m.seen ? "blue lighten-4" : "";
                 let message =
@@ -85,11 +86,7 @@ getMessages();
 getNewmsg = msg => {
     axios
         .get("/messages")
-        .then(res => {
-            if (res.data.length != msg) {
-                getMessages();
-            }
-        })
+        .then(res => (res.data.length != msg ? getMessages() : ""))
         .catch(err => {
             iziToast.error({
                 position: "topCenter",

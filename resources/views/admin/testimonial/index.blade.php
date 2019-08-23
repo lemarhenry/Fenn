@@ -33,9 +33,6 @@
                 </div>
                 <div class="modal-body mx-3">
                     <div class="md-form mb-4">
-                        <label for="edclient" class="text-black"
-                            >Client Name</label
-                        >
                         <input
                             type="text"
                             id="edclient"
@@ -45,7 +42,6 @@
                     </div>
 
                     <div class="md-form mb-4">
-                        <label for="edsmdes">Small Description</label>
                         <input
                             type="text"
                             id="edsmdes"
