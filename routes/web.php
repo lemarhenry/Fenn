@@ -96,5 +96,6 @@ Route::get('/jobs', 'Fnhome\JobController@index');
 Route::get('/view/digify', 'admin\DigifyDanPriceController@Dvpage')->name("digify.view");
 Route::post('/update/digify', 'admin\DigifyDanPriceController@digifyUpdate');
 Route::get('/digify', 'admin\DigifyDanPriceController@digify');
-
+Route::post('/update/dan', 'admin\DigifyDanPriceController@danUpdate');
+Route::get('/dan', 'admin\DigifyDanPriceController@Dan');
 Auth::routes(['register' => false]);

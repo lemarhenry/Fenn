@@ -94,71 +94,71 @@
                             </form>
                         </div>
                            <div class="col-6">
-                            <form action="">
+                            <form id="danform">
                                 <div class="col-12 mb-3">
-                                    <div class="text-center font-weight-bold">
+                                    <div class="text-center font-weight-bold" id="dbtname">
                                         Basic Tier
                                     </div>
                                     <div class="col-12 mb-2">
                                         <input
                                             type="text"
                                             id="dbasic"
-                                            class="form-control"
-                                            name=""
+                                            class="form-control dan"
+                                            name="basic tier"
                                             placeholder="Tier name"
                                         />
                                     </div>
                                     <div class="col-12">
                                         <input
-                                            type="text"
+                                            type="number"
                                             id="dbasicprice"
-                                            class="form-control"
+                                            class="form-control dan"
                                             placeholder="price"
                                             name="Basic price"
                                         />
                                     </div>
                                 </div>
                                 <div class="col-12 mb-3">
-                                    <div class="text-center font-weight-bold">
+                                    <div class="text-center font-weight-bold" id="dptname">
                                         Premium Tier
                                     </div>
                                     <div class=" col-12 mb-2">
                                         <input
                                             type="text"
                                             id="dpremium"
-                                            class="form-control"
-                                            name="Tier name"
+                                            class="form-control dan"
+                                            name="Premium Tier"
                                             placeholder="Tier name"
                                         />
                                     </div>
                                 <div class=" col-12">
                                         <input
-                                            type="text"
-                                            id="premiumprice"
-                                            class="form-control"
+                                            type="number"
+                                            id="dpremiumprice"
+                                            class="form-control dan"
                                             name="Premium price"
                                             placeholder="price"
                                         />
                                     </div>
                                 </div>
                                 <div class="col-12  mb-3">
-                                    <div class="text-center font-weight-bold">
+                                    <div class="text-center font-weight-bold" id="detname">
                                         Elite Tier
                                     </div>
                                     <div class=" col-12 mb-2">
                                         <input
                                             type="text"
                                             id="delite"
-                                            class="form-control"
-                                            name="Tier name"
+                                            class="form-control dan"
+                                            name="Elite Tier"
                                             placeholder="Tier name"
                                         />
                                     </div>
                                     <div class="col-12">
                                         <input
-                                            type="text"
+                                            type="number"
                                             id="deliteprice"
-                                            class="form-control"
+                                            class="form-control dan"
                                             name="Elite price"
                                             placeholder="price"
                                         />
