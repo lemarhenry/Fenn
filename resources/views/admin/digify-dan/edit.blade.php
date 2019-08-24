@@ -87,8 +87,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn btn-success">
-                                        Edit
+                                    <button class="btn btn-success" id="digifysubmitbtn">
                                     </button>
                                 </div>
                             </form>
@@ -165,8 +164,8 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn btn-success">
-                                        Edit
+                                    <button class="btn btn-success" id="dansubmitbtn">
+
                                     </button>
                                 </div>
                             </form>

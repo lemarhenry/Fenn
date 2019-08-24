@@ -48,6 +48,11 @@ getDigify = () => {
     axios
         .get("/digify")
         .then(res => {
+            if (res.data.length == 0) {
+                $("#digifysubmitbtn").html("Create");
+            } else {
+                $("#digifysubmitbtn").html("Edit");
+            }
             $("#btname").html(res.data.basic);
             $("#basic").val(res.data.basic);
             $("#basicprice").val(res.data.bprice);
@@ -119,6 +124,11 @@ getDan = () => {
     axios
         .get("/dan")
         .then(res => {
+            if (res.data.length == 0) {
+                $("#dansubmitbtn").html("Create");
+            } else {
+                $("#dansubmitbtn").html("Edit");
+            }
             $("#dbtname").html(res.data.basic);
             $("#dbasic").val(res.data.basic);
             $("#dbasicprice").val(res.data.bprice);
