@@ -87,7 +87,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn btn-success" id="digifysubmitbtn">
+                                    <button class="btn" id="digifysubmitbtn">
                                     </button>
                                 </div>
                             </form>
@@ -103,7 +103,7 @@
                                             type="text"
                                             id="dbasic"
                                             class="form-control dan"
-                                            name="basic tier"
+                                            name="Basic Tier"
                                             placeholder="Tier name"
                                         />
                                     </div>
@@ -164,8 +164,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn btn-success" id="dansubmitbtn">
-
+                                    <button class="btn" id="dansubmitbtn">
                                     </button>
                                 </div>
                             </form>

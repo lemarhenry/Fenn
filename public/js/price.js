@@ -50,8 +50,12 @@ getDigify = () => {
         .then(res => {
             if (res.data.length == 0) {
                 $("#digifysubmitbtn").html("Create");
+                $("#digifysubmitbtn").addClass("btn-success");
+                $("#digifysubmitbtn").removeClass("btn-warning");
             } else {
                 $("#digifysubmitbtn").html("Edit");
+                $("#digifysubmitbtn").removeClass("btn-success");
+                $("#digifysubmitbtn").addClass("btn-warning");
             }
             $("#btname").html(res.data.basic);
             $("#basic").val(res.data.basic);
@@ -126,8 +130,12 @@ getDan = () => {
         .then(res => {
             if (res.data.length == 0) {
                 $("#dansubmitbtn").html("Create");
+                $("#dansubmitbtn").addClass("btn-success");
+                $("#dansubmitbtn").removeClass("btn-warning");
             } else {
                 $("#dansubmitbtn").html("Edit");
+                $("#dansubmitbtn").removeClass("btn-success");
+                $("#dansubmitbtn").addClass("btn-warning");
             }
             $("#dbtname").html(res.data.basic);
             $("#dbasic").val(res.data.basic);
