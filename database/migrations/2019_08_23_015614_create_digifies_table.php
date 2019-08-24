@@ -15,12 +15,12 @@ class CreateDigifiesTable extends Migration
     {
         Schema::create('digifies', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('basic')->nullable();
-            $table->integer('bprice')->nullable();
-            $table->string('premium')->nullable();
-            $table->integer('pprice')->nullable();
-            $table->string('elite')->nullable();
-            $table->integer('eprice')->nullable();
+            $table->string('basic')->nullable()->default("basic");
+            $table->integer('bprice')->nullable()->default(0);
+            $table->string('premium')->nullable()->default("premium");
+            $table->integer('pprice')->nullable()->default(0);
+            $table->string('elite')->nullable()->default("elite");
+            $table->integer('eprice')->nullable()->default(0);
             $table->timestamps();
         });
     }

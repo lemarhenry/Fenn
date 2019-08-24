@@ -8,26 +8,39 @@ if (digifyform) {
 
 updateDigify = () => {
     let fd = new FormData();
+    let pass = false;
     let digify = document.querySelectorAll(".digify") || null;
     if (digify) {
         digify.forEach(d => {
-            fd.append(d.id, d.value);
-        });
-        axios
-            .post("/update/digify", fd)
-            .then(res => {
-                iziToast.success({
-                    message: "Digify prices updated successfully!",
-                    position: "topCenter"
-                });
-                getDigify();
-            })
-            .catch(err => {
+            if (d.value == "") {
+                pass = false;
                 iziToast.error({
-                    message: err.message,
+                    message: `${d.name} field is required .`,
                     position: "topCenter"
                 });
-            });
+                return;
+            } else {
+                pass = true;
+                fd.append(d.id, d.value);
+            }
+        });
+        if (pass) {
+            axios
+                .post("/update/digify", fd)
+                .then(res => {
+                    iziToast.success({
+                        message: "Digify prices updated successfully!",
+                        position: "topCenter"
+                    });
+                    getDigify();
+                })
+                .catch(err => {
+                    iziToast.error({
+                        message: err.message,
+                        position: "topCenter"
+                    });
+                });
+        }
     }
 };
 
@@ -68,25 +81,37 @@ if (danform) {
 updateDan = () => {
     let fd = new FormData();
     let dan = document.querySelectorAll(".dan") || null;
+    let pass = false;
     if (dan) {
         dan.forEach(d => {
-            fd.append(d.id, d.value);
-        });
-        axios
-            .post("/update/dan", fd)
-            .then(res => {
-                iziToast.success({
-                    message: "Dan prices updated successfully!",
-                    position: "topCenter"
-                });
-                getDan();
-            })
-            .catch(err => {
+            if (d.value == "") {
+                pass = false;
                 iziToast.error({
-                    message: err.message,
+                    message: `${d.name} field is required .`,
                     position: "topCenter"
                 });
-            });
+            } else {
+                pass = true;
+                fd.append(d.id, d.value);
+            }
+        });
+        if (pass) {
+            axios
+                .post("/update/dan", fd)
+                .then(res => {
+                    iziToast.success({
+                        message: "Dan prices updated successfully!",
+                        position: "topCenter"
+                    });
+                    getDan();
+                })
+                .catch(err => {
+                    iziToast.error({
+                        message: err.message,
+                        position: "topCenter"
+                    });
+                });
+        }
     }
 };
 
