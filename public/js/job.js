@@ -47,6 +47,7 @@ getJobs = () => {
     axios
         .get("/jobs")
         .then(res => {
+            $("#totaljobs").html(res.data.length);
             res.data.forEach(j => {
                 output += `
                       <div class="col-md-8 offset-md-2 mb-3">

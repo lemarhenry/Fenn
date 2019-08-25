@@ -26,7 +26,7 @@
                                             type="text"
                                             id="basic"
                                             class="form-control digify"
-                                            name=""
+                                            name="Tier name"
                                             placeholder="Tier name"
                                         />
                                     </div>

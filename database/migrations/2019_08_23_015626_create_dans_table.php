@@ -15,12 +15,12 @@ class CreateDansTable extends Migration
     {
         Schema::create('dans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('basic')->nullable();
-            $table->integer('bprice')->nullable();
-            $table->string('premium')->nullable();
-            $table->integer('pprice')->nullable();
-            $table->string('elite')->nullable();
-            $table->integer('eprice')->nullable();
+            $table->string('basic')->nullable()->default("Basic");
+            $table->integer('bprice')->nullable()->default(0);
+            $table->string('premium')->nullable()->default("Premium");
+            $table->integer('pprice')->nullable()->default(0);
+            $table->string('elite')->nullable()->default("Elite");
+            $table->integer('eprice')->nullable()->default(0);
             $table->timestamps();
         });
     }

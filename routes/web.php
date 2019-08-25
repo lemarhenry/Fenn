@@ -42,6 +42,7 @@ Route::get('/repair', 'Fnhome\RepairPageController@index')->name('repair');
 Route::get('/carousel', 'Fnhome\ComponentsController@carouselImages');
 Route::get('/testimonial', 'Fnhome\ComponentsController@testimonial');
 Route::get('/portfolio', 'Fnhome\PortfolioController@portfolio');
+Route::get('/team', 'TeamController@Team');
 
 Route::get('/admin', 'DashboardController@index')->name('dashboard');
 
@@ -98,4 +99,10 @@ Route::post('/update/digify', 'admin\DigifyDanPriceController@digifyUpdate');
 Route::get('/digify', 'admin\DigifyDanPriceController@digify');
 Route::post('/update/dan', 'admin\DigifyDanPriceController@danUpdate');
 Route::get('/dan', 'admin\DigifyDanPriceController@Dan');
+
+Route::get('/view/team', 'admin\TeamController@Tvpage')->name('team.view');
+Route::get('/create/team', 'admin\TeamController@Tcpage')->name('team.create');
+Route::post('/create/team', 'admin\TeamController@teamSave');
+Route::delete('/delete/team/{id}', 'admin\TeamController@teamDelete');
+
 Auth::routes(['register' => false]);

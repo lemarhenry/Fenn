@@ -10290,7 +10290,7 @@
    z-index: -1
  }
 
- .sn-bg-1 {
+ /* .sn-bg-1 {
    background-image: url(https://images.unsplash.com/photo-1557163123-abbafe113238?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80)
  }
 
@@ -10304,7 +10304,24 @@
 
  .sn-bg-4 {
    background-image: url(https://images.unsplash.com/photo-1557163123-abbafe113238?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80)
+ } */
+
+  .sn-bg-1 {
+   background-color: grey
  }
+
+ .sn-bg-2 {
+   background-color: grey
+}
+
+ .sn-bg-3 {
+   background-color: grey
+}
+
+ .sn-bg-4 {
+   background-color: grey
+}
+
 
  .side-nav {
    position: fixed;

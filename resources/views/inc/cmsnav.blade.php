@@ -1,12 +1,12 @@
 <header>
-    <div id="slide-out" class="side-nav sn-bg-4 fixed">
+    <div id="slide-out" class="side-nav bg-primary fixed">
         <ul class="custom-scrollbar">
             <!-- Logo -->
             <li>
                 <div class="logo-wrapper waves-light">
                     <a href="/fnhome"
                         ><img
-                            src="{{ url('/storage/logo.png') }}"
+                            src="{{ url('/storage/cms_logo.png') }}"
                             class="img-fluid flex-center"
                     /></a>
                 </div>
@@ -114,6 +114,31 @@
                                 <li>
                                     <a
                                         href="{{ route('job.view') }}"
+                                        class="waves-effect"
+                                        >View</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                      <li>
+                        <a class="collapsible-header waves-effect arrow-r"
+                            ><i class="fas fa-users"></i>Team<i
+                                class="fas fa-angle-down rotate-icon"
+                            ></i
+                        ></a>
+                        <div class="collapsible-body">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a
+                                        href="{{route('team.create')}}"
+                                        class="waves-effect"
+                                        >Add Member</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="{{route('team.view')}}"
                                         class="waves-effect"
                                         >View</a
                                     >

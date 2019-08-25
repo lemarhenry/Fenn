@@ -34,6 +34,20 @@ mediaQuery = () => {
     }
 };
 
+onLine = () => {
+    if (!navigator.onLine) {
+        iziToast.error({
+            position: "topCenter",
+            message:
+                "You are currently offline, please get some internet access for this site to work."
+        });
+    }
+};
+
+setInterval(() => {
+    onLine();
+}, 30000);
+
 window.addEventListener("resize", () => mediaQuery());
 
 if (screen.width < 654) {
@@ -407,7 +421,7 @@ adminUpdatepassword = () => {
     }
 };
 
-TemPic = (img, id, abort = false) => {
+TemPic = (img, id) => {
     var reader = new FileReader();
     reader.onload = function(e) {
         $(`#${id}`).attr("src", e.target.result);
@@ -418,9 +432,7 @@ TemPic = (img, id, abort = false) => {
     } else {
         iziToast.error({
             position: "topCenter",
-            message: `File ${
-                img.files[0].name
-            } is greater than 2mb. Please choose a smaller files.`
+            message: `File ${img.files[0].name} is greater than 2mb. Please choose a smaller files.`
         });
     }
 };

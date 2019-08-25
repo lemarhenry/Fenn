@@ -11,13 +11,16 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
-        <link rel="icon" href="{{url('/storage/favicon.png')}}">
+        <link rel="icon" href="{{ url('/storage/favicon.png') }}" />
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        />
         <!-- Bootstrap core CSS -->
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
@@ -63,13 +66,17 @@
         <script src="{{ asset('js/iziToast.js') }}"></script>
         <!--Custom Javascript-->
         <script src="{{ asset('js/cmsnav.js') }}"></script>
-        <script src="{{asset('js/admin.js')}}"></script>
-        <script  defer src="{{asset('js/portfolio.js')}}"></script>
-         <script  defer src="{{asset('js/messages.js')}}"></script>
-          <script  defer src="{{asset('js/job.js')}}"></script>
-           <script  defer src="{{asset('js/price.js')}}"></script>
+        <script src="{{ asset('js/admin.js') }}"></script>
+        <script defer src="{{ asset('js/portfolio.js') }}"></script>
+        <script defer src="{{ asset('js/messages.js') }}"></script>
+        <script defer src="{{ asset('js/job.js') }}"></script>
+        <script defer src="{{ asset('js/price.js') }}"></script>
+        <script defer src="{{ asset('js/team.js') }}"></script>
         <noscript>
-            <h3>This website will not operate properly without javascript enabled ,please enable javascript.</h3>
+            <h3>
+                This website will not operate properly without javascript
+                enabled ,please enable javascript.
+            </h3>
         </noscript>
     </body>
 </html>

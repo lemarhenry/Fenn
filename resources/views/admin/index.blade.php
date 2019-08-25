@@ -61,6 +61,32 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-6 mt-4">
+            <div class="card bg-primary">
+                <div class="card-body">
+                    <div class="pull-right text-white h2">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <p class="white-text">
+                        <span class="h3">Total Jobs &nbsp;
+                            <span class="h4" id="totaljobs">0</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mt-4 mb-4">
+            <div class="card bg-primary">
+                <div class="card-body">
+                    <div class="pull-right text-white h2">
+                        <i class="fas fa-users"></i>
+                   </div>
+                    <p class="white-text">
+                        <span class="h3">Total Team Members &nbsp;
+                            <span class="h4" id="totalteammembers">0</span>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
