@@ -171,14 +171,13 @@ getTestimonials = () => {
                         data-toggle="modal"
                         data-target="#edittestimonialmodal"
                         id="ed${res.id}"
-                        >Edit</a>
+                        ><i class="fa fa-edit"></i></a>
                         </div>
                         <div class="col-6 text-left">
                             <a
                              href="#!"
                             class="btn btn-danger text-center deleteTestimonial "
-                            title="delete ${res.id}"
-                            id="dt${res.id}">Delete</a>
+                            id="dt${res.id}"><i class="fa fa-trash"></i></a>
                         </div>
                     </div>
                 </div>
@@ -516,7 +515,7 @@ getCarouselIMages = () => {
                             data-toggle="modal"
                             data-target="#editcarouselmodal"
                             >
-                                Edit
+                                <i class="fa fa-edit"></i>
                             </button>
                         </div>
                         <div class="col-6 text-left">
@@ -524,7 +523,7 @@ getCarouselIMages = () => {
                             class="btn btn-danger deletecarousel"
                             title="Delete ${ca.id}"
                             id="dc${ca.id}">
-                                Delete
+                                <i class="fa fa-trash"></i>
                             </button>
                         </div>
                     </div>

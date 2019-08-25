@@ -49,11 +49,11 @@ getDigify = () => {
         .get("/digify")
         .then(res => {
             if (res.data.length == 0) {
-                $("#digifysubmitbtn").html("Create");
+                $("#digifysubmitbtn").html("<i class='fa fa-plus'></i>");
                 $("#digifysubmitbtn").addClass("btn-success");
                 $("#digifysubmitbtn").removeClass("btn-warning");
             } else {
-                $("#digifysubmitbtn").html("Edit");
+                $("#digifysubmitbtn").html("<i class='fa fa-edit'></i>");
                 $("#digifysubmitbtn").removeClass("btn-success");
                 $("#digifysubmitbtn").addClass("btn-warning");
             }
@@ -129,11 +129,11 @@ getDan = () => {
         .get("/dan")
         .then(res => {
             if (res.data.length == 0) {
-                $("#dansubmitbtn").html("Create");
+                $("#dansubmitbtn").html("<i class='fa fa-plus'></i>");
                 $("#dansubmitbtn").addClass("btn-success");
                 $("#dansubmitbtn").removeClass("btn-warning");
             } else {
-                $("#dansubmitbtn").html("Edit");
+                $("#dansubmitbtn").html("<i class='fa fa-edit'></i>");
                 $("#dansubmitbtn").removeClass("btn-success");
                 $("#dansubmitbtn").addClass("btn-warning");
             }

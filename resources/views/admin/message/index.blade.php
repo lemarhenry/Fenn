@@ -108,8 +108,71 @@
                     <br />
                     <div>
                         <span id="messagesubject" class="h6"></span>
-                        <br />
-                        <span id="messagesbody"> </span>
+                        <div>
+                            <span
+                                id="messagesbody"
+                                class=""
+                                data-toggle="collapse"
+                                href="#reply"
+                                style="cursor: pointer"
+                            >
+                            </span>
+                            <br />
+                            <div id="reply" class="collapse mt-2">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form id="replymsg">
+                                            <div class="md-form">
+                                                <i
+                                                    class="fas fa-tag prefix grey-text"
+                                                ></i>
+                                                <input
+                                                    type="text"
+                                                    id="formSubject"
+                                                    class="form-control reply"
+                                                    name="subject"
+                                                />
+                                                <label for="formSubject"
+                                                    >Subject</label
+                                                >
+                                            </div>
+                                            <div class="md-form">
+                                                <i
+                                                    class="fas fa-pencil-alt prefix grey-text"
+                                                ></i>
+                                                <textarea
+                                                    id="formtext"
+                                                    class="form-control md-textarea reply"
+                                                    rows="2"
+                                                    name="body"
+                                                ></textarea>
+                                                <label for="formtext"
+                                                    >Body</label
+                                                >
+                                            </div>
+                                            <div class="text-center">
+                                                <button
+                                                    class="btn btn-success"
+                                                    type="submit"
+                                                >
+                                                    reply
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div
+                                        class="col-md-12 text-center mt-3"
+                                        id="rsttg"
+                                    >
+                                        Replies sent to this guest
+                                    </div>
+                                    <div
+                                        class="mt-3 col-md-12"
+                                        id="replies"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

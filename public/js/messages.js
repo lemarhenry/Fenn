@@ -14,9 +14,7 @@ getMessages = () => {
                 $("#newmessages").html(`
                 <a class="nav-link text-dark" href="/view/message">
                 <i class="fa fa-envelope"></i>
-                <span class="badge badge-success badge-sm" style="font-size:8px">${
-                    seen.length
-                }</span>
+                <span class="badge badge-success badge-sm" style="font-size:8px">${seen.length}</span>
                 </a>`);
             } else {
                 $("#newmessages").html("");
@@ -37,15 +35,15 @@ getMessages = () => {
                                         ${m.name}
                                     </span>
                                     </div>
-                                    <div class="col-6 cursor readmessage" id="rm${
-                                        m.id
-                                    }"
+                                    <div class="col-6 cursor readmessage" id="rm${m.id}"
                                      data-toggle="modal"
                                      data-target="#viewmessage"
                                      >
-                                    <span class="text-left">
+                                    <span class="text-left"
+                                    >
                                     ${message}
                                     </span>
+
                                     </div>
                                     <div class="col-3">
                                         <span class="text-left">
@@ -121,6 +119,8 @@ viewMessage = id => {
             $("#messagesubject").html(res.data.subject);
             $("#messagesbody").html(res.data.body);
             getMessages();
+            getReplies(res.data.id);
+            state.msg_id = res.data.id;
         })
         .catch(err => {
             iziToast.error({
@@ -189,9 +189,7 @@ searchMessage = search => {
                                         ${m.name}
                                     </span>
                                     </div>
-                                    <div class="col-6 cursor readmessage" id="rm${
-                                        m.id
-                                    }"
+                                    <div class="col-6 cursor readmessage" id="rm${m.id}"
                                      data-toggle="modal"
                                      data-target="#viewmessage"
                                      >
@@ -231,4 +229,129 @@ searchMessage = search => {
     } else {
         getMessages();
     }
+};
+
+var replymsg = document.querySelector("#replymsg") || null;
+if (replymsg) {
+    replymsg.addEventListener("submit", e => {
+        e.preventDefault();
+        replyMessage();
+    });
+}
+
+replyMessage = () => {
+    let fields = document.querySelectorAll(".reply") || null;
+    let fd = new FormData();
+    let pass = false;
+    if (fields) {
+        fields.forEach(r => {
+            if (r.value == "") {
+                pass = false;
+                iziToast.error({
+                    message: `${r.name} field is empty or invalid !`,
+                    position: "topCenter"
+                });
+            } else {
+                pass = true;
+                fd.append(r.name, r.value);
+            }
+        });
+    }
+    if (pass) {
+        axios
+            .post(`/reply/message/${state.msg_id}`, fd)
+            .then(res => {
+                fields.forEach(r => {
+                    r.value = "";
+                });
+                iziToast.success({
+                    message: "Reply sent successfully!",
+                    position: "topCenter"
+                });
+                getReplies(state.msg_id);
+            })
+            .catch(err => {
+                console.log(err.message);
+            });
+    }
+};
+
+getReplies = id => {
+    let output = "";
+    axios.get(`/replies/messages/${id}`).then(res => {
+        if (res.data.length < 1) {
+            $("#rsttg").attr("style", "display:none");
+        } else {
+            $("#rsttg").attr("style", "display:block");
+        }
+        res.data.forEach(r => {
+            created_at = new Date(`${r.created_at}`);
+            created = created_at.toString().slice(0, 24);
+            output += `<div class="col-12 mb-3">
+                    <div class="card z-depth-0">
+                        <div
+                            class="card-header bg-white"
+                        >
+                        <div class="row">
+                        <div class="col-md-6 text-left">
+                        <div>
+                            <span
+                                class="font-weight-bold"
+                            >
+                                Subject
+                            </span>
+                            : ${r.subject}
+                        </div>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            ${created}
+                        </div>
+                        </div>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                               ${r.body}
+                            </div>
+                        </div>
+                        <div class="card-footer text-right bg-white">
+                        <button class="btn btn-sm btn-danger deletereply" id="dr${r.id}">
+                        <i class="fa fa-trash "></i>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+               <hr>
+                `;
+        });
+        let replies = document.querySelector("#replies") || null;
+        if (replies) {
+            replies.innerHTML = output || "";
+        }
+        let deletereply = document.querySelectorAll(".deletereply") || null;
+        if (deletereply) {
+            deletereply.forEach(d => {
+                d.addEventListener("click", () => {
+                    replyDelete(d.id.substring(2));
+                });
+            });
+        }
+    });
+};
+
+replyDelete = id => {
+    axios
+        .delete(`/delete/reply/${id}`)
+        .then(res => {
+            iziToast.success({
+                message: "Reply deleted successfully!",
+                position: "topCenter"
+            });
+            getReplies(state.msg_id);
+        })
+        .catch(err => {
+            iziToast.error({
+                message: err.message,
+                position: "topCenter"
+            });
+        });
 };
