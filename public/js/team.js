@@ -6,11 +6,28 @@ if (memberimage) {
     });
 }
 
+var ememberimage = document.querySelector("#ememberimage") || null;
+if (ememberimage) {
+    ememberimage.addEventListener("change", event => {
+        TemPic(event.target, "etempMemberimage");
+        document.querySelector("#ememberout").value =
+            event.target.files[0].name;
+    });
+}
+
 var createmember = document.querySelector("#createmember") || null;
 if (createmember) {
     createmember.addEventListener("submit", event => {
         event.preventDefault();
         memberCreate();
+    });
+}
+
+var ecreatemember = document.querySelector("#ecreatemember") || null;
+if (ecreatemember) {
+    ecreatemember.addEventListener("submit", event => {
+        event.preventDefault();
+        memberUpdate();
     });
 }
 
@@ -91,7 +108,8 @@ getMembers = () => {
                 <div class="card-footer bg-white">
                     <div class="row">
                         <div class="col-6">
-                            <button class="btn btn-warning tedit" id="te${t.id}">
+                            <button class="btn btn-warning tedit" id="te${t.id}"
+                            >
                                 <i class="fa fa-edit"> </i>
                             </button>
                         </div>
@@ -119,6 +137,15 @@ getMembers = () => {
                     });
                 });
             }
+            let tedit = document.querySelectorAll(".tedit") || null;
+            if (tedit) {
+                tedit.forEach(e => {
+                    e.addEventListener("click", () => {
+                        memberData(e.id.substring(2));
+                        state.edit_id = e.id.substring(2);
+                    });
+                });
+            }
         })
         .catch(err => {
             iziToast.error({
@@ -139,6 +166,73 @@ memberDelete = id => {
                 position: "topCenter"
             });
             getMembers();
+        })
+        .catch(err => {
+            iziToast.error({
+                message: err.message,
+                position: "topCenter"
+            });
+        });
+};
+
+memberUpdate = () => {
+    let pass = false;
+    let fd = new FormData();
+    let team = document.querySelectorAll(".eteam") || null;
+    if (state.img) {
+        fd.append("img", state.img.files[0]);
+    }
+    if (team) {
+        team.forEach(t => {
+            if (t.value == "") {
+                pass = false;
+                iziToast.error({
+                    message: `${t.name} field is required!`,
+                    position: "topCenter"
+                });
+            } else {
+                pass = true;
+                fd.append(t.id, t.value);
+            }
+        });
+    }
+    if (pass) {
+        axios
+            .post(`/update/team/${state.edit_id}`, fd)
+            .then(res => {
+                console.log(res.data);
+                iziToast.success({
+                    position: "topCenter",
+                    message: "Team member updated successfully!"
+                });
+                team.forEach(t => {
+                    t.value = "";
+                });
+                document.querySelector("#ememberout").value = "";
+                $("#etempMemberimage").attr("src", "");
+                $("#teameditclosemodal").click();
+                $("#teameditclosemodal").click();
+
+                getMembers();
+            })
+            .catch(err => {
+                iziToast.error({
+                    message: err.message,
+                    position: "topCenter"
+                });
+            });
+    }
+};
+
+memberData = id => {
+    axios
+        .get(`/single/team/${id}`)
+        .then(res => {
+            console.table(res.data);
+            $("#teameditbtn").click();
+            $("#etempMemberimage").attr("src", `/storage/team/${res.data.img}`);
+            $("#etname").val(res.data.name);
+            $("#etposition").val(res.data.position);
         })
         .catch(err => {
             iziToast.error({

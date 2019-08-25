@@ -24,9 +24,7 @@ createportfolio = () => {
                 pass = false;
                 iziToast.error({
                     position: "topCenter",
-                    message: `Error field portfolio ${
-                        p.name
-                    } is invalid or empty!`
+                    message: `Error field portfolio ${p.name} is invalid or empty!`
                 });
             } else {
                 pass = true;
@@ -86,9 +84,7 @@ getPortfolios = () => {
                        ${p.name}
                     </div>
                     <div>
-                    Images <span class="badge badge-sm badge-primary" id="imgcount${
-                        p.id
-                    }"></span>
+                    Images <span class="badge badge-sm badge-primary" id="imgcount${p.id}"></span>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -108,9 +104,7 @@ getPortfolios = () => {
                             </button>
                         </div>
                         <div class="col-4 text-right">
-                            <button class="btn btn-danger btn-sm deleteportimg" id="pdd${
-                                p.id
-                            }">
+                            <button class="btn btn-danger btn-sm deleteportimg" id="pdd${p.id}">
                                 <i class="fa fa-trash"></i>
                             </button>
                         </div>
@@ -202,9 +196,7 @@ portImg = () => {
         .then(res => {
             getPortfolios();
             iziToast.success({
-                message: `Image add to portfolio ${
-                    state.edit_id
-                } successfully!`,
+                message: `Image add to portfolio ${state.edit_id} successfully!`,
                 position: "topCenter"
             });
             $("tempportimage").attr("src", "");

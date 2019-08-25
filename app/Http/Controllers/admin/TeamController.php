@@ -24,6 +24,11 @@ class TeamController extends Controller
         return view('admin.team/create');
     }
 
+    public function teamSingle(Team $id)
+    {
+        return $id;
+    }
+
     public function teamSave(Request $request)
     {
         $this->validate($request, [
@@ -48,6 +53,27 @@ class TeamController extends Controller
     {
         Storage::delete('public/team/' . $id->img);
         $id->delete();
+        return ['status' => 200];
+    }
+
+    public function teamUpdate(Request $request, Team $id)
+    {
+        if ($request->file('img') != null) {
+            $this->validate(
+                $request,
+                ['img' => 'mimes:jpeg,jpg,png|max:1999']
+            );
+            Storage::delete('public/team/' . $id->img);
+            $filenameWithExt = $request->file('img')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('img')->getClientOriginalExtension();
+            $filenametostore = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('img')->storeAs('public/team', $filenametostore);
+            $id->img = $filenametostore;
+        }
+        $id->name = htmlentities($request->etname);
+        $id->position = htmlentities($request->etposition);
+        $id->save();
         return ['status' => 200];
     }
 }

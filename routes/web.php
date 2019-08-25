@@ -104,5 +104,7 @@ Route::get('/view/team', 'admin\TeamController@Tvpage')->name('team.view');
 Route::get('/create/team', 'admin\TeamController@Tcpage')->name('team.create');
 Route::post('/create/team', 'admin\TeamController@teamSave');
 Route::delete('/delete/team/{id}', 'admin\TeamController@teamDelete');
+Route::get('/single/team/{id}', 'admin\TeamController@teamSingle');
+Route::post('/update/team/{id}', 'admin\TeamController@teamUpdate');
 
 Auth::routes(['register' => false]);
