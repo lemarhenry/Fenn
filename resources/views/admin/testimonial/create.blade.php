@@ -1,5 +1,4 @@
-@extends('layouts.Cms')
-@section('content')
+@extends('layouts.Cms') @section('content')
 <style>
     textarea {
         resize: none;
@@ -16,26 +15,29 @@
                 </div>
                 <div class="card-body">
                     <form
-                        class="text-center border border-light p-5"
+                        class="text-center border border-light pl-5 pr-5"
                         id="createTestimonial"
                     >
                         <!-- Name -->
-                        <input
-                            type="text"
-                            class="form-control mb-4 testimonial"
-                            placeholder="Client name"
-                            id="Name"
-                            name="Client Name"
-                        />
+                        <div class="md-form">
+                            <input
+                                type="text"
+                                class="form-control mb-4 testimonial"
+                                placeholder="Client name"
+                                id="Name"
+                                name="Client Name"
+                            />
+                        </div>
 
-                        <!-- Email -->
-                        <input
-                            type="text"
-                            class="form-control mb-4 testimonial"
-                            placeholder="Small description"
-                            id="sm_description"
-                            name="Small Description"
-                        />
+                        <div class="md-form">
+                            <input
+                                type="text"
+                                class="form-control mb-4 md-form testimonial"
+                                placeholder="Small description"
+                                id="sm_description"
+                                name="Small Description"
+                            />
+                        </div>
 
                         <select
                             class="browser-default custom-select mb-4 testimonial"
@@ -51,11 +53,11 @@
                         </select>
 
                         <!-- Message -->
-                        <div class="form-group">
+                        <div class="form-group md-form">
                             <textarea
                                 class="form-control rounded-0 testimonial"
                                 rows="3"
-                                placeholder="Testimonial"
+                                placeholder=" Testimonial"
                                 id="testimonial"
                                 name="Testimonial"
                             ></textarea>

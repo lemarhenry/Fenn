@@ -94,7 +94,7 @@ getJobs = () => {
             if (alljobs) {
                 alljobs.innerHTML =
                     output ||
-                    "   <div class='col-md-8 offset-md-2 mb-3'>No jobs to show</div>";
+                    "   <div class='col-md-8 offset-md-2 mb-3 text-center'>No jobs to show</div>";
             }
             let editjob = document.querySelectorAll(".editjob") || null;
             if (editjob) {

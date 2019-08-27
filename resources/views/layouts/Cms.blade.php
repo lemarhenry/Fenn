@@ -39,7 +39,6 @@
             href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css"
         />
         <link rel="stylesheet" href="{{ asset('css/iziToast.css') }}" />
-        <link rel="stylesheet" href="{{asset('css/animate.css')}}">
     </head>
     <body class="fixed-sn">
         @include('inc.cmsnav')

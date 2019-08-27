@@ -60,7 +60,6 @@ memberCreate = () => {
             axios
                 .post("/create/team", fd)
                 .then(res => {
-                    console.log(res.data);
                     iziToast.success({
                         position: "topCenter",
                         message: "Team member added successfully!"
@@ -90,7 +89,7 @@ getMembers = () => {
             res.data.forEach(t => {
                 output += `<div class="col-md-4 mb-3">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header bg-white">
                     <div>
                         <img
                             src="/storage/team/${t.img}"
@@ -200,7 +199,6 @@ memberUpdate = () => {
         axios
             .post(`/update/team/${state.edit_id}`, fd)
             .then(res => {
-                console.log(res.data);
                 iziToast.success({
                     position: "topCenter",
                     message: "Team member updated successfully!"
@@ -228,7 +226,6 @@ memberData = id => {
     axios
         .get(`/single/team/${id}`)
         .then(res => {
-            console.table(res.data);
             $("#teameditbtn").click();
             $("#etempMemberimage").attr("src", `/storage/team/${res.data.img}`);
             $("#etname").val(res.data.name);

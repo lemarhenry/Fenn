@@ -10,37 +10,45 @@
                 </div>
                 <div class="card-body">
                     <form
-                        class="text-center border border-light p-5"
+                        class="text-center border border-light pl-5 pr-5"
                         id="createjob"
                     >
-                        <input
-                            type="text"
-                            class="form-control mb-4 job"
-                            placeholder="Job name"
-                            id="jname"
-                            name="job name"
-                        />
-                        <input
-                            type="text"
-                            class="form-control mb-4 job"
-                            placeholder="Requisite 1"
-                            id="prereq1"
-                            name="Requisite 1"
-                        />
-                        <input
-                            type="text"
-                            class="form-control mb-4 job"
-                            placeholder="Requisite 2"
-                            id="prereq2"
-                            name="Requisite 2"
-                        />
-                        <input
-                            type="text"
-                            class="form-control mb-4 job"
-                            placeholder="Requisite 3"
-                            id="prereq3"
-                            name="Requisite 3"
-                        />
+                        <div class="md-form">
+                            <input
+                                type="text"
+                                class="form-control mb-4 job"
+                                placeholder="Job name"
+                                id="jname"
+                                name="job name"
+                            />
+                        </div>
+                        <div class="md-form">
+                            <input
+                                type="text"
+                                class="form-control mb-4 job"
+                                placeholder="Requisite 1"
+                                id="prereq1"
+                                name="Requisite 1"
+                            />
+                        </div>
+                        <div class="md-form">
+                            <input
+                                type="text"
+                                class="form-control mb-4 job"
+                                placeholder="Requisite 2"
+                                id="prereq2"
+                                name="Requisite 2"
+                            />
+                        </div>
+                        <div class="md-form">
+                            <input
+                                type="text"
+                                class="form-control mb-4 job"
+                                placeholder="Requisite 3"
+                                id="prereq3"
+                                name="Requisite 3"
+                            />
+                        </div>
                         <button class="btn btn-success" type="submit">
                             Create
                         </button>

@@ -9,8 +9,7 @@
                 <div class="card-body">
                     <form id="updateprofile">
                         <div class="row text-left">
-                            <div class="form-group col-6">
-                                <label for="profilename">Name</label>
+                            <div class="form-group md-form col-6">
                                 <input
                                     type="text"
                                     class="form-control adminupdate"
@@ -18,8 +17,7 @@
                                     name="Name"
                                 />
                             </div>
-                            <div class="form-group col-6">
-                                <label for="profilemail">Email</label>
+                            <div class="form-group md-form col-6">
                                 <input
                                     type="email"
                                     class="form-control adminupdate"
