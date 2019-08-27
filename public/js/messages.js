@@ -288,7 +288,7 @@ getReplies = id => {
             created_at = new Date(`${r.created_at}`);
             created = created_at.toString().slice(0, 24);
             output += `<div class="col-12 mb-3">
-                    <div class="card z-depth-0">
+                    <div class="card z-depth-0 border-light">
                         <div
                             class="card-header bg-white"
                         >

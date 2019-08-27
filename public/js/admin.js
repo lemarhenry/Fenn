@@ -496,7 +496,7 @@ getCarouselIMages = () => {
                 output += `<div class="col-md-8 offset-md-2 mb-4">
             <div class="card">
                 <div class="card-header bg-white">
-                    <div>
+                    <div class="text-center">
                         <img
                             src="/storage/carousel/${ca.image}"
                             alt=""

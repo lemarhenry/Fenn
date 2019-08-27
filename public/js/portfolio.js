@@ -83,7 +83,7 @@ getPortfolios = () => {
                     <div class="text-center font-weight-bold h4 mt-1">
                        ${p.name}
                     </div>
-                    <div>
+                    <div class="text-center">
                     Images <span class="badge badge-sm badge-primary" id="imgcount${p.id}"></span>
                     </div>
                 </div>
@@ -344,14 +344,14 @@ viewPortfolio = () => {
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="mb-1 mt-1 h3 font-weight-bold">
+                    <div class="mb-1 mt-1 h3 font-weight-bold text-center">
                         ${p.name}
                     </div>
-                    <div>
+                    <div class="text-center">
                        ${p.description}
                     </div>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white text-center">
                     <button
                         class="btn btn-success openportfolio"
                         data-toggle="collapse"

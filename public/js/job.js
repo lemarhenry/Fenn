@@ -58,7 +58,7 @@ getJobs = () => {
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="font-weight-bold h5 text-left">
+                    <div class="font-weight-bold h6 text-left">
                         Requisite Skills and Background
                     </div>
                     <ul class="">

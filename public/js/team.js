@@ -107,13 +107,13 @@ getMembers = () => {
                 </div>
                 <div class="card-footer bg-white">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-6 text-right">
                             <button class="btn btn-warning tedit" id="te${t.id}"
                             >
                                 <i class="fa fa-edit"> </i>
                             </button>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 text-left">
                             <button class="btn btn-danger tdelete" id="td${t.id}">
                                 <i class="fa fa-trash"> </i>
                             </button>
@@ -127,7 +127,7 @@ getMembers = () => {
             if (teamMembers) {
                 teamMembers.innerHTML =
                     output ||
-                    "<div class='col-md-12'>No team members to show.</div>";
+                    "<div class='col-md-12 text-center'>No team members to show.</div>";
             }
             let tdelete = document.querySelectorAll(".tdelete") || null;
             if (tdelete) {

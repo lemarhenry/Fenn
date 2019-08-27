@@ -28,7 +28,7 @@
                 </div>
                 <div class="modal-body mx-3">
                     <div class="mb-2">
-                        <div class="mb-2">
+                        <div class="mb-2 text-center">
                             <img
                                 src=""
                                 alt=""

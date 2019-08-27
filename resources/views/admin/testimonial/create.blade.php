@@ -42,7 +42,7 @@
                             id="rating"
                             name="Rating"
                         >
-                            <option value="" selected>Selete a rating.</option>
+                            <option value="" selected>Rating</option>
                             <option value="1">⭐</option>
                             <option value="2">⭐⭐</option>
                             <option value="3">⭐⭐⭐</option>

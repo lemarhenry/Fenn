@@ -9,7 +9,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="mb-2">
+                    <div class="mb-2 text-center">
                         <img
                             src=""
                             alt=""

@@ -163,7 +163,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-primary ">
-                    <div class="modal-title">
+                    <div class="modal-title w-100">
                         <div class="text-center text-white h3">
                           Edit Portfolio
                         </div>
@@ -179,7 +179,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-2">
+                    <div class="mb-2 text-center">
                         <img
                             src=""
                             alt=""

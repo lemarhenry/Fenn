@@ -19,8 +19,8 @@
     >
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
-                    <h3 class="modal-title text-white">
+                <div class="modal-header bg-primary text-center">
+                    <h3 class="modal-title text-white w-100 font-weight-bold">
                         Edit Team Member
                     </h3>
                     <button
@@ -34,7 +34,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-2">
+                    <div class="mb-2 text-center">
                         <img
                             src=""
                             alt=""

@@ -2,9 +2,9 @@
 <div class="container mt-2">
     <div class="row">
         <div class="col-md-6" id="ttcard">
-            <div class="card bg-primary">
+            <div class="card bg-primary text-center">
                 <div class="card-body">
-                    <div class="pull-right text-white h2">
+                    <div class="pull-right text-white h2 ">
                         <i class="fas fa-book-open"></i>
                     </div>
                     <p class="white-text">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="card bg-primary">
+            <div class="card bg-primary  text-center">
                 <div class="card-body">
                     <div class="pull-right text-white h2">
                         <i class="far fa-file-image"></i>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="col-md-6 mt-4">
-            <div class="card bg-primary">
+            <div class="card bg-primary  text-center">
                 <div class="card-body">
                     <div class="pull-right text-white h2">
                         <i class="far fa-images"></i>
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="col-md-6 mt-4">
-            <div class="card bg-primary">
+            <div class="card bg-primary  text-center">
                 <div class="card-body">
                     <div class="pull-right text-white h2">
                         <i class="far fa-envelope"> </i>
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="col-md-6 mt-4">
-            <div class="card bg-primary">
+            <div class="card bg-primary  text-center">
                 <div class="card-body">
                     <div class="pull-right text-white h2">
                         <i class="fas fa-tasks"></i>
@@ -75,7 +75,7 @@
             </div>
         </div>
         <div class="col-md-6 mt-4 mb-4">
-            <div class="card bg-primary">
+            <div class="card bg-primary  text-center">
                 <div class="card-body">
                     <div class="pull-right text-white h2">
                         <i class="fas fa-users"></i>

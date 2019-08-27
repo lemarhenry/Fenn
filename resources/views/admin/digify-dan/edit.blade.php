@@ -5,10 +5,10 @@
             <div class="card">
                 <div class="card-header h3 font-weight-bold bg-primary text-white">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-6 text-center">
                            Digify Tv Prices
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 text-center">
                              D.A.N Prices
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                                         />
                                     </div>
                                 </div>
-                                <div>
+                                <div class="text-center">
                                     <button class="btn" id="digifysubmitbtn">
                                     </button>
                                 </div>
@@ -163,7 +163,7 @@
                                         />
                                     </div>
                                 </div>
-                                <div>
+                                <div class="text-center">
                                     <button class="btn" id="dansubmitbtn">
                                     </button>
                                 </div>
