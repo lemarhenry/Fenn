@@ -75,7 +75,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
                     <button class="btn btn-warning" id="updateTestimonial">
-                        Update
+                        <i class="fa fa-edit"></i>
                     </button>
                 </div>
             </div>

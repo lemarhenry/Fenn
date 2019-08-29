@@ -17,7 +17,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center bg-primary">
-                    <h4 class="modal-title w-100 font-weight-bold text-white">
+                    <h4 class="modal-title w-100 font-weight-bold text-white h3">
                         Edit Job
                     </h4>
                     <button
@@ -32,7 +32,7 @@
                 </div>
                 <div class="modal-body mx-3">
                     <form
-                        class="text-center border border-light p-5"
+                        class="text-center pl-5 pr-5 pt-2"
                         id="editJobform"
                     >
                         <input
@@ -63,8 +63,8 @@
                             id="editprereq3"
                             name="Requisite 3"
                         />
-                        <button class="btn btn-success" type="submit">
-                            Save changes
+                        <button class="btn btn-warning" type="submit">
+                            <i class="fa fa-edit"></i>
                         </button>
                     </form>
                 </div>

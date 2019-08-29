@@ -12,7 +12,7 @@
                     Add Carousel Image
                 </div>
                 <div class="card-body">
-                    <div class="mb-2">
+                    <div class="mb-2 text-center">
                         <div class="mb-2">
                             <img
                                 src=""
@@ -54,7 +54,7 @@
                 <div class="card-footer">
                     <div class="text-center">
                         <button class="btn btn-success" id="submitcarousel">
-                            Add Image
+                            <i class="fa fa-plus"></i>
                         </button>
                     </div>
                 </div>

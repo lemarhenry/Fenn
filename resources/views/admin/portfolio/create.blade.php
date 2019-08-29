@@ -64,7 +64,7 @@
                             ></textarea>
                         </div>
                         <button class="btn btn-success" type="submit">
-                            Create
+                            <i class="fa fa-plus"></i>
                         </button>
                     </form>
                 </div>
@@ -89,7 +89,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-primary ">
-                    <div class="modal-title">
+                    <div class="modal-title w-100">
                         <div class="text-center text-white h3">
                             Add Image
                         </div>
@@ -105,7 +105,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-2">
+                    <div class="mb-2 text-center">
                         <img
                             src=""
                             alt=""
@@ -139,7 +139,7 @@
                         class="btn btn-success"
                         id="saveportimg"
                     >
-                        Save changes
+                        <i class="fa fa-plus"></i>
                     </button>
                 </div>
             </div>
@@ -165,7 +165,7 @@
                 <div class="modal-header bg-primary ">
                     <div class="modal-title w-100">
                         <div class="text-center text-white h3">
-                          Edit Portfolio
+                            Edit Portfolio
                         </div>
                     </div>
                     <button
@@ -224,11 +224,15 @@
                             ></textarea>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" id="updateportfolioedit">
-                        Save changes
-                    </button>
+                    <div class="text-center">
+                        <button
+                            type="button"
+                            class="btn btn-warning"
+                            id="updateportfolioedit"
+                        >
+                            <i class="fa fa-edit"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

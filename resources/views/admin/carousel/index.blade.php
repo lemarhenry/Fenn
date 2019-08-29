@@ -1,4 +1,9 @@
 @extends('layouts.Cms') @section('content')
+<style>
+    textarea {
+        resize: none;
+    }
+</style>
 <div class="container">
     <div class="row" id="allcarouselimage">
     </div>
@@ -68,7 +73,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
                     <button class="btn btn-warning" id="updateCarousel">
-                        Update
+                       <i class="fa fa-edit"></i>
                     </button>
                 </div>
             </div>

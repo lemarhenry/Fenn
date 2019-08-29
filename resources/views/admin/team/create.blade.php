@@ -52,7 +52,7 @@
                             />
                         </div>
                         <button class="btn btn-success" type="submit">
-                            Create
+                           <i class="fa fa-plus"></i>
                         </button>
                     </form>
                 </div>

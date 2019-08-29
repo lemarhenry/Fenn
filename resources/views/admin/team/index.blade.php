@@ -76,17 +76,12 @@
                                 name="position"
                             />
                         </div>
-                        <button class="btn btn-success" type="submit">
-                            Save changes
+                        <button class="btn btn-warning" type="submit">
+                            <i class="fa fa-edit"></i>
                         </button>
                     </form>
                 </div>
             </div>
-            <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-success">
-                    Save changes
-                </button>
-            </div> -->
         </div>
     </div>
 </div>
