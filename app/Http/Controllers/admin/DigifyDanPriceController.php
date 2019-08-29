@@ -33,19 +33,43 @@ class DigifyDanPriceController extends Controller
             $d =  new Digify;
             $d->basic = htmlentities($request->basic);
             $d->bprice = htmlentities($request->basicprice);
+            $d->bduration = htmlentities($request->basicduration);
+            $d->bscreens = htmlentities($request->basicscreen);
+            $d->bpviewers = htmlentities($request->basicviewers);
+
             $d->premium = htmlentities($request->premium);
             $d->pprice = htmlentities($request->premiumprice);
+            $d->pduration = htmlentities($request->premiumduration);
+            $d->pscreens = htmlentities($request->premiumscreen);
+            $d->ppviewers = htmlentities($request->premiumviewers);
+
+
             $d->elite = htmlentities($request->elite);
             $d->eprice = htmlentities($request->eliteprice);
+            $d->eduration = htmlentities($request->eliteduration);
+            $d->escreens = htmlentities($request->elitescreen);
+            $d->epviewers = htmlentities($request->eliteviewers);
             $d->save();
         } else {
             $d = Digify::find(1);
             $d->basic = htmlentities($request->basic);
             $d->bprice = htmlentities($request->basicprice);
+            $d->bduration = htmlentities($request->basicduration);
+            $d->bscreens = htmlentities($request->basicscreen);
+            $d->bpviewers = htmlentities($request->basicviewers);
+
             $d->premium = htmlentities($request->premium);
             $d->pprice = htmlentities($request->premiumprice);
+            $d->pduration = htmlentities($request->premiumduration);
+            $d->pscreens = htmlentities($request->premiumscreen);
+            $d->ppviewers = htmlentities($request->premiumviewers);
+
+
             $d->elite = htmlentities($request->elite);
             $d->eprice = htmlentities($request->eliteprice);
+            $d->eduration = htmlentities($request->eliteduration);
+            $d->escreens = htmlentities($request->elitescreen);
+            $d->epviewers = htmlentities($request->eliteviewers);
             $d->save();
         }
         return ['status' => 200];

@@ -60,14 +60,23 @@ getDigify = () => {
             $("#btname").html(res.data.basic);
             $("#basic").val(res.data.basic);
             $("#basicprice").val(res.data.bprice);
+            $("#basicduration").val(res.data.bduration);
+            $("#basicscreen").val(res.data.bscreens);
+            $("#basicviewers").val(res.data.bpviewers);
 
             $("#ptname").html(res.data.premium);
             $("#premium").val(res.data.premium);
             $("#premiumprice").val(res.data.pprice);
+            $("#premiumduration").val(res.data.pduration);
+            $("#premiumscreen").val(res.data.pscreens);
+            $("#premiumviewers").val(res.data.ppviewers);
 
             $("#etname").html(res.data.elite);
             $("#elite").val(res.data.elite);
             $("#eliteprice").val(res.data.eprice);
+            $("#eliteduration").val(res.data.eduration);
+            $("#elitescreen").val(res.data.escreens);
+            $("#eliteviewers").val(res.data.epviewers);
         })
         .catch(err => {
             iziToast.error({
