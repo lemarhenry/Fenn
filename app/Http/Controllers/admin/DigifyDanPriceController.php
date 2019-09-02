@@ -82,19 +82,41 @@ class DigifyDanPriceController extends Controller
             $d =  new Dan;
             $d->basic = htmlentities($request->dbasic);
             $d->bprice = htmlentities($request->dbasicprice);
+            $d->bduration = htmlentities($request->dbasicduration);
+            $d->bscreens = htmlentities($request->dbasicscreen);
+            $d->bpviewers = htmlentities($request->dbasicviewers);
+
             $d->premium = htmlentities($request->dpremium);
             $d->pprice = htmlentities($request->dpremiumprice);
+            $d->pduration = htmlentities($request->dpremiumduration);
+            $d->pscreens = htmlentities($request->dpremiumscreen);
+            $d->ppviewers = htmlentities($request->dpremiumviewers);
+
             $d->elite = htmlentities($request->delite);
             $d->eprice = htmlentities($request->deliteprice);
+            $d->eduration = htmlentities($request->deliteduration);
+            $d->escreens = htmlentities($request->delitescreen);
+            $d->epviewers = htmlentities($request->deliteviewers);
             $d->save();
         } else {
             $d = Dan::find(1);
             $d->basic = htmlentities($request->dbasic);
             $d->bprice = htmlentities($request->dbasicprice);
+            $d->bduration = htmlentities($request->dbasicduration);
+            $d->bscreens = htmlentities($request->dbasicscreen);
+            $d->bpviewers = htmlentities($request->dbasicviewers);
+
             $d->premium = htmlentities($request->dpremium);
             $d->pprice = htmlentities($request->dpremiumprice);
+            $d->pduration = htmlentities($request->dpremiumduration);
+            $d->pscreens = htmlentities($request->dpremiumscreen);
+            $d->ppviewers = htmlentities($request->dpremiumviewers);
+
             $d->elite = htmlentities($request->delite);
             $d->eprice = htmlentities($request->deliteprice);
+            $d->eduration = htmlentities($request->deliteduration);
+            $d->escreens = htmlentities($request->delitescreen);
+            $d->epviewers = htmlentities($request->deliteviewers);
             $d->save();
         }
         return ['status' => 200];
