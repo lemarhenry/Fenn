@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use App\Dan;
 use App\Digify;
 use App\Http\Resources\json;
