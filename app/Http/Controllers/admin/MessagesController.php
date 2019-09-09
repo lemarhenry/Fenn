@@ -69,7 +69,7 @@ class MessagesController extends Controller
         $reply->subject = htmlentities($request->subject);
         $reply->body = htmlentities($request->body);
         $reply->message_id = $id->id;
-        // Mail::to($id->email)->send(new r($request->subject, $request->body));
+        Mail::to($id->email)->send(new r($request->subject, $request->body));
         $reply->save();
         return ['status' => 200];
     }

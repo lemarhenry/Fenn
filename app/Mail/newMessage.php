@@ -28,6 +28,6 @@ class newMessage extends Mailable
      */
     public function build()
     {
-        return $this->view('components.newMessage')->with("name", $name);
+        return $this->view('components.newMessage')->with("name", $this->name);
     }
 }

@@ -30,7 +30,7 @@ class ContactController extends Controller
         $store->subject = htmlentities($request->subject);
         $store->body = htmlentities($request->body);
         $store->save();
-        // Mail::to($email->email)->send(new newMessage($request->name));
+        Mail::to($email->email)->send(new newMessage($request->name));
         return ['status' => 201];
     }
 }
