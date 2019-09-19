@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\contact;
 use App\Mail\newMessage;
 use App\User;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -30,7 +31,7 @@ class ContactController extends Controller
         $store->subject = htmlentities($request->subject);
         $store->body = htmlentities($request->body);
         $store->save();
-        Mail::to($email->email)->send(new newMessage($request->name));
+        // Mail::to($email->email)->send(new newMessage($request->name));
         return ['status' => 201];
     }
 }

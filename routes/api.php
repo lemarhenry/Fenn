@@ -13,3 +13,5 @@ Route::get('/dan', function () {
 Route::get('/digify', function () {
     return new json(Digify::find(1));
 });
+
+Route::post('/contact', 'Fnhome\ContactController@store');
