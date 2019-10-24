@@ -27,8 +27,8 @@
                             </div>
                         </div>
                         <div class="col-12 text-center">
-                            <button class="btn btn-success" type="submit">
-                                Update
+                            <button class="btn btn-warning" type="submit">
+                                <i class="fa fa-edit"></i>
                             </button>
                         </div>
                     </form>

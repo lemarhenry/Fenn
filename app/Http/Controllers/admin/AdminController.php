@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -28,7 +28,7 @@ class AdminController extends Controller
     public function adminUpdate(Request $request)
     {
         $this->validate($request, [
-            'Email' => 'required|email'
+            'Email' => 'required|email',
         ]);
         $admin = User::find(Auth::user()->id);
         $like = User::where('email', htmlentities($request->Email))->first();
@@ -52,17 +52,17 @@ class AdminController extends Controller
             return 0;
         }
     }
+
     public function updatePassword(Request $request)
     {
         $this->validate($request, [
-            'password' => 'required'
+            'password' => 'required',
         ]);
         $admin = User::find(Auth::user()->id);
         $admin->password = Hash::make(htmlentities($request->password));
         $admin->save();
         return ['status' => 200];
     }
-
 
     public function adminCheckpassword(Request $request)
     {

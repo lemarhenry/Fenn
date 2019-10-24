@@ -134,13 +134,15 @@
                     </div>
                 </div>
                 <div class="modal-footer bg-white">
+                 <div class="text-center col-12">
                     <button
-                        type="button"
-                        class="btn btn-success"
-                        id="saveportimg"
-                    >
-                        <i class="fa fa-plus"></i>
-                    </button>
+                    type="button"
+                    class="btn btn-success"
+                    id="saveportimg"
+                >
+                    <i class="fa fa-plus"></i>
+                </button>
+                 </div>
                 </div>
             </div>
         </div>

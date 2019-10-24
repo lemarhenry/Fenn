@@ -167,7 +167,7 @@ if (messagesearch) {
 searchMessage = search => {
     if (search != "") {
         axios
-            .post("/search/messages", { search: search })
+            .post("/search/messages", { search })
             .then(res => {
                 let output = "";
                 let seen = res.data.filter(s => !s.seen);
@@ -224,7 +224,7 @@ searchMessage = search => {
                 }
             })
             .catch(err => {
-                console.log(err.message);
+                throw err;
             });
     } else {
         getMessages();
