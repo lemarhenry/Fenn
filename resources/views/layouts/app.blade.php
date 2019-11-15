@@ -22,11 +22,12 @@
         <!-- Styles -->
         <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+         <link href="{{ asset('css/landing.css') }}" rel="stylesheet" />
     </head>
     <body>
         <div id="app">
             <!-- Just an image -->
-            <nav class="navbar navbar-dark white-color">
+            <nav class="navbar navbar-dark ">
                 <a class="navbar-brand" href="/fnhome">
                     <img
                         src="{{ url('/storage/logo.png') }}"

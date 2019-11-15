@@ -77,7 +77,6 @@ Carousel = () => {
                 </div>
                  <div class="carousel-caption">
                       <h3 class="h3-responsive">${value.caption}</h3>
-                    <!--<p><button class="btn btn-sm btn-success">Home</button></p>-->
                  </div>
             </div>`;
             });
