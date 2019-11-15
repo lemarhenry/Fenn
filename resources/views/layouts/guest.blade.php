@@ -51,7 +51,7 @@
     </head>
     <body>
         <div id="app">
-            @include('inc.navbar')
+             {{-- @include('inc.navbar') --}}
             <main class="pt-2">
                 @yield('content')
             </main>

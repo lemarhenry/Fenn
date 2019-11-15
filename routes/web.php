@@ -11,15 +11,13 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', 'PagesController@index')->name('landing');
 
 Route::get('/fnhome', 'Fnhome\HomeController@index')->name('fnhome');
 
 Route::get('/about', 'PagesController@about')->name('about');
-
-
 
 Route::get('/contact', 'Fnhome\ContactController@create')->name('contact');
 Route::post('/contact', 'Fnhome\ContactController@store');
@@ -35,7 +33,6 @@ Route::get('/corporate', 'Fnhome\CorporateController@index')->name('corporate');
 Route::get('/website', 'Fnhome\WebPageController@index')->name('website');
 
 Route::get('/repair', 'Fnhome\RepairPageController@index')->name('repair');
-
 
 // Route::get('/portfolio', 'Fnhome\PortfolioController@index')->name('portfolio');
 
@@ -88,7 +85,6 @@ Route::post('/reply/message/{id}', 'admin\MessagesController@messageReply');
 Route::get('/replies/messages/{id}', 'admin\MessagesController@messageReplies');
 Route::delete('/delete/reply/{id}', 'admin\MessagesController@replyDelete');
 
-
 Route::get('/view/job', 'admin\JobController@Jvpage')->name('job.view');
 Route::get('/create/job', 'admin\JobController@Jcpage')->name('job.create');
 Route::post('/create/job', 'admin\JobController@jobSave');
@@ -112,3 +108,15 @@ Route::get('/single/team/{id}', 'admin\TeamController@teamSingle');
 Route::post('/update/team/{id}', 'admin\TeamController@teamUpdate');
 
 Auth::routes(['register' => false]);
+
+Route::get('/networking', function () {
+    return view('FnNetworking.index');
+});
+
+Route::get('/software', function () {
+    return view('FnSoftware.index');
+});
+
+Route::get('/corporate', function () {
+    return view('FnCorporate.index');
+});

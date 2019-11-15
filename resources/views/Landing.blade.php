@@ -1,7 +1,7 @@
 @extends('layouts.landing') @section('content')
 
-<div class="container-fluid">
-    <div class="row">
+
+    {{--  <div class="row">
         <div class="col-6 pb-3 pr-0" id="c1">
             <!-- just for space-->
             <br />
@@ -15,13 +15,13 @@
                     <div>
                         <h5 class="green-text ">
                             <i class="fas fa-home"></i>Home
-                        </h5>
+                        </h5>  --}}
                         {{--
                         <h3 class="card-title pt-2">
                             <strong>This is the card title</strong>
                         </h3>
                         --}}
-                        <p>
+                        {{--  <p>
                             FennTech Ltd is an IT solutions provider with over
                             14 years experience in crafting solutions for home,
                             office, schools and government. The company was
@@ -51,13 +51,13 @@
                     <div>
                         <h5 class="pink-text">
                             <i class="far fa-building left"></i>Corporate
-                        </h5>
+                        </h5>  --}}
                         {{--
                         <h3 class="card-title pt-2">
                             <strong>This is the card title</strong>
                         </h3>
                         --}}
-                        <p>
+                        {{--  <p>
                             FennTech Ltd is an IT solutions provider with over
                             14 years experience in crafting solutions for home,
                             office, schools and government. The company was
@@ -87,13 +87,13 @@
                         <h5 class="red-text">
                             <i class="fas fa-toolbox"></i> Repair and
                             Installations
-                        </h5>
+                        </h5>  --}}
                         {{--
                         <h3 class="card-title pt-2">
                             <strong>This is the card title</strong>
                         </h3>
                         --}}
-                        <p>
+                        {{--  <p>
                             FennTech Ltd is an IT solutions provider with over
                             14 years experience in crafting solutions for home,
                             office, schools and government. The company was
@@ -123,13 +123,13 @@
                         <h5 class="blue-text">
                             <i class="fas fa-network-wired"></i
                             ><b>Networking and Cabling</b>
-                        </h5>
+                        </h5>  --}}
                         {{--
                         <h3 class="card-title pt-2">
                             <strong>This is the card title</strong>
                         </h3>
                         --}}
-                        <p>
+                        {{--  <p>
                             FennTech Ltd is an IT solutions provider with over
                             14 years experience in crafting solutions for home,
                             office, schools and government. The company was
@@ -147,7 +147,54 @@
         <!-- just for space-->
         <br />
         <br />
-    </div>
+    </div>  --}}
+
+<div class="accordion">
+  <ul>
+    <li><a href="#">
+      <div>
+        <h1>FennTech Home</h1>
+        <p>
+                            FennTech Ltd is an IT solutions provider with over
+                            14 years experience in crafting solutions for home,
+                            office, schools and government. The company was
+                            founded on the premiseh that you don’t just need a
+                            computer, nor a fax machine, but a solution for all
+                            your technology needs.
+                        </p>
+        </div>
+      </a> </li>
+    <li><a href="#">
+      <div>
+        <h1>FennTech Corporate</h1>
+        <p>
+                            FennTech Ltd is an IT solutions provider with over
+                            14 years experience in crafting solutions for home,
+                            office, schools and government. The company was
+                            founded on the premiseh that you don’t just need a
+                            computer, nor a fax machine, but a solution for all
+                            your technology needs.
+                        </p>
+                        <a class="btn btn-blue" href="{{ route('networking') }}"
+                            ><i class="fas fa-network-wired"></i> Network</a
+                        >
+        </div>
+      </a> </li>
+    <li><a href="#">
+      <div>
+        <h1>FennTech Software Design</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      </a> </li>
+      <li><a href="#">
+      <div>
+        <h1>FennTech Networking</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      </a> </li>
+  </ul>
 </div>
+
+
 
 @endsection
