@@ -26,9 +26,9 @@ Route::get('/admin', 'DashboardController@index')->name('admin');
 
 Route::get('/homeSecurity', 'PagesController@homeSecurity')->name('homeSecurity');
 
-Route::get('/networking', 'Fnhome\NetworkController@index')->name('networking');
+// Route::get('/networking', 'Fnhome\NetworkController@index')->name('networking');
 
-Route::get('/corporate', 'Fnhome\CorporateController@index')->name('corporate');
+// Route::get('/corporate', 'Fnhome\CorporateController@index')->name('corporate');
 
 Route::get('/website', 'Fnhome\WebPageController@index')->name('website');
 
@@ -111,7 +111,7 @@ Auth::routes(['register' => false]);
 
 Route::get('/networking', function () {
     return view('FnNetworking.index');
-});
+})->name('networking');
 
 Route::get('/software', function () {
     return view('FnSoftware.index');

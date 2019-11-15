@@ -43,7 +43,7 @@
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="{{route('homeSecurity')}}">Home & Office Security</a>
                             <a class="dropdown-item" href="{{route('repair')}}">Repair & Installation</a>
-                            <a class="dropdown-item" href="{{route('corporate')}}">Corporate & Institutions</a>
+                            <a class="dropdown-item" href="/corporate">Corporate & Institutions</a>
                             <a class="dropdown-item" href="{{route('website')}}">Website Design</a>
                             <a class="dropdown-item" href="{{route('networking')}}">Networking & Cabling</a>
                     </div>
@@ -82,7 +82,7 @@
       <!--/.Navbar -->
     <br>
     <br>
-    
+
 
     <!-- Intro Section -->
     <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}'>

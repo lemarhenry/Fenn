@@ -162,6 +162,7 @@
                             computer, nor a fax machine, but a solution for all
                             your technology needs.
                         </p>
+                <div class="col-md-12 text-center"><a href="/fnhome" class="btn btn-primary"> <i class="fas fa-home"></i>Home</a></div>
         </div>
       </a> </li>
     <li><a href="#">
@@ -175,8 +176,8 @@
                             computer, nor a fax machine, but a solution for all
                             your technology needs.
                         </p>
-                        <a class="btn btn-blue" href="{{ route('networking') }}"
-                            ><i class="fas fa-network-wired"></i> Network</a
+                        <a class="btn btn-blue" href="/corporate"
+                            ><i class="fas fa-building"></i> Corporate</a
                         >
         </div>
       </a> </li>
@@ -184,13 +185,15 @@
       <div>
         <h1>FennTech Software Design</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
+        <div class="col-md-12 text-center"><a href="/software" class="btn btn-primary"><i class="fas fa-tv"></i> Software</a></div>
+    </div>
       </a> </li>
       <li><a href="#">
       <div>
         <h1>FennTech Networking</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
+    <div class="col-md-12"><a href="/networking" class="btn btn-primary"><i class="fas fa-network"></i>Networking</a></div>
+    </div>
       </a> </li>
   </ul>
 </div>
