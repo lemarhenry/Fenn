@@ -1,6 +1,6 @@
+@extends('layouts.guest') @section('content')
 
-
-<style>
+ <style>
         html,
         body,
         header,
@@ -25,9 +25,13 @@
     <header>
 
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light primary-color fixed-top scrolling-navbar">
             <div class="container">
-                <a class="navbar-brand" href="#">Navbar</a>
+                  <a class="navbar-brand" href="{{route('landing')}}"><img src="{{ url('storage/logo.png') }}" alt="" srcset="" style="width:40%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+          aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -37,43 +41,33 @@
                             <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about" data-offset="100">About</a>
+                            <a class="nav-link" href="#about" data-offset="100">About Us </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#skills" data-offset="100">Skills</a>
+                            <a class="nav-link" href="#skills" data-offset="100">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#works" data-offset="100">Works</a>
+                            <a class="nav-link" href="#works" data-offset="100">Our Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact" data-offset="100">Contact</a>
+                            <a class="nav-link" href="#contact" data-offset="100">Contact Us</a>
                         </li>
                     </ul>
-                    <!-- Social Icon  -->
-                    <ul class="navbar-nav nav-flex-icons">
-                        <li class="nav-item">
-                            <a class="nav-link"><i class="fab fa-facebook-f light-green-text-2"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"><i class="fab fa-twitter light-green-text-2"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"><i class="fab fa-instagram light-green-text-2"></i></a>
-                        </li>
+                    
                     </ul>
                 </div>
             </div>
         </nav>
 
         <!-- Intro Section -->
-        <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('https://mdbootstrap.com/img/Photos/Others/forest1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2066&q=80'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <div class="mask rgba-white-strong">
                 <div class="container h-100 d-flex justify-content-center align-items-center">
                     <div class="row smooth-scroll">
                         <div class="col-md-12 pt-3">
                             <div class="white-text text-center pt-5">
-                                <h1 class="display-2 mb-4 dark-grey-text wow fadeIn">I am <strong>John Doe</strong></h1>
-                                <h5 class="text-uppercase font-weight-bold wow fadeIn" data-wow-delay="0.4s"><mark>Web developer & graphic designer</mark></h5>
+                                <h1 class="display-2 mb-4 dark-grey-text wow fadeIn">Welcome To <br><strong>FennTech Software</strong></h1>
+                                <h5 class="text-uppercase font-weight-bold wow fadeIn" data-wow-delay="0.4s"><mark>Our Software and Graphic Design Division</mark></h5>
                                 <a href="#about" class="btn btn-floating btn-large wow fadeIn" data-wow-delay="0.4s" data-offset="100"><i class="fas fa-angle-down" aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -95,9 +89,9 @@
             <section id="about" class="section feature-box mb-5">
 
                 <!-- Section title -->
-                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">About <strong>me</strong></h2>
+                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">About <strong>Us</strong></h2>
 
-                <p class="text-center w-responsive mx-auto wow fadeIn my-5" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quas, eos officia maiores ipsam ipsum dolores reiciendis ad voluptas, animi obcaecati adipisci sapiente mollitia.</p>
+                <p class="text-center w-responsive mx-auto wow fadeIn my-5" data-wow-delay="0.2s">FennTech Software is the division of the company that caters to all your software needs. </p>
 
                 <!-- First row -->
                 <div class="row features-big text-center wow fadeIn" data-wow-delay="0.4s">
@@ -108,8 +102,8 @@
                         <!--Panel-->
                         <div class="card card-body hoverable">
                             <i class="fas fa-laptop fa-3x mb-4" aria-hidden="true"></i>
-                            <h5 class="font-weight-bold text-uppercase mb-4">Freelancer</h5>
-                            <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <h5 class="font-weight-bold text-uppercase mb-4">Maintenance</h5>
+                            <p class="dark-grey-text">If you have pre existing software that you need maintained we are the ones for the job.</p>
                         </div>
                         <!--/.Panel-->
 
@@ -122,10 +116,10 @@
                         <!--Panel-->
                         <div class="card card-body yellow hoverable">
                             <i class="fas fa-code fa-3x mb-4" aria-hidden="true"></i>
-                            <h5 class="font-weight-bold text-uppercase mb-4">Developer</h5>
-                            <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <h5 class="font-weight-bold text-uppercase mb-4">Development</h5>
+                            <p class="dark-grey-text">We can develop custom software for any business or use case. </p>
                         </div>
-                        <!--/.Panel-->
+                        {{-- <!--/.Panel--> --}}
 
                     </div>
                     <!-- /.Second column -->
@@ -136,8 +130,8 @@
                         <!--Panel-->
                         <div class="card card-body hoverable">
                             <i class="fas fa-pencil-alt fa-3x mb-4" aria-hidden="true"></i>
-                            <h5 class="font-weight-bold text-uppercase mb-4">Designer</h5>
-                            <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <h5 class="font-weight-bold text-uppercase mb-4">Pre Designed</h5>
+                            <p class="dark-grey-text">FennTech also develops pre-built software solutions to improve your business process.</p>
                         </div>
                         <!--/.Panel-->
 
@@ -159,84 +153,58 @@
 
                 <!-- Second section -->
                 <section id="skills">
-
-                    <!-- First row -->
-                    <div class="row py-5">
-
-                        <!--First column-->
-                        <div class="col-lg-6 col-md-12 mb-3 wow fadeIn" data-wow-delay="0.4s">
-
-                        <!--Section heading-->
-                        <div class="d-flex justify-content-start">
-                            <h4 class="text-center text-uppercase mb-5 pb-3 mt-4 wow fadeIn" data-wow-delay="0.2s">My <strong>experience</strong></h4>
-                        </div>
-
-                                <!--Description-->
-                                <blockquote class="blockquote bq-warning mb-4">
-                                    <div class="row"> <i class="fas fa-briefcase fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
-                                        <h5 class="font-weight-bold mb-3">Senior developer</h5>
-                                    </div>
-                                    <p class="font-weight-bold ml-1 dark-grey-text mb-2">July, 2013 - Present (4 years)</p>
-                                    <p class="mb-0 ml-1 light-grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                </blockquote>
-
-                                <blockquote class="blockquote bq-warning mt-1 mb-4">
-                                    <div class="row"> <i class="fas fa-briefcase fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
-                                        <h5 class="font-weight-bold mb-3">JavaScript developer</h5> </div>
-                                    <p class="font-weight-bold ml-1 dark-grey-text mb-2">March 2011 - June 2012 (1 year, 3 Month)</p>
-                                    <p class="mb-0 ml-1 light-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quas, eos officia maiores ipsam ipsum dolores. </p>
-                                </blockquote>
-
-                                <blockquote class="blockquote bq-warning">
-                                    <div class="row"> <i class="fas fa-briefcase fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
-                                        <h5 class="font-weight-bold mb-3">Web developer</h5> </div>
-                                    <p class="font-weight-bold ml-1 dark-grey-text mb-2"><strong>March 2005 - May 2011 (6 years, 2 Month)</strong></p>
-                                    <p class="mb-0 ml-1 light-grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit integer posuere.</p>
-                                </blockquote>
-
-                        </div>
-                        <!--/First column-->
-
-                        <!--Second column-->
-                        <div class="col-lg-5 offset-lg-1 col-md-12 mb-4 wow fadeIn" data-wow-delay="0.4s">
-
-                        <!--Second heading-->
-                        <div class="d-flex justify-content-start">
-                            <h4 class="text-center text-uppercase mb-5 pb-3 mt-4 wow fadeIn" data-wow-delay="0.2s">Development <strong>Skills</strong></h4>
-                        </div>
-
-                            <!--Description-->
-                            <p class="black-text text-uppercase font-weight-bold" align="justify">Java Script</p>
-                                <div class="md-progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                            <p class="black-text text-uppercase font-weight-bold pt-3" align="justify">CSS3</p>
-                                <div class="md-progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                            <p class="black-text text-uppercase font-weight-bold pt-3" align="justify">HTML5</p>
-                                <div class="md-progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                            <p class="black-text text-uppercase font-weight-bold pt-3" align="justify">Bootstrap</p>
-                                <div class="md-progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                            <p class="black-text text-uppercase font-weight-bold pt-3" align="justify">PHP</p>
-                                <div class="md-progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 53%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                        </div>
-                        <!--/Second column-->
-
-                    </div>
-                    <!--/First row-->
-
+<!-- Second container -->
+    <div class="container mb-5">
+      <!--Secion heading-->
+      <h2 class="text-uppercase text-center font-weight-bold my-4 pt-5 wow fadeIn" data-wow-delay="0.2s">What I do</h2>
+      <hr class="between-sections pb-5">
+      <!--First row-->
+      <div class="row  wow fadeIn" data-wow-delay="0.2s">
+        <div class="col-lg-3 col-md-6 text-center mt-1">
+          <div class="icon-area">
+            <div class="circle-icon">
+              <i class="fas fa-desktop fa-4x"></i>
+            </div>
+            <br>
+            <strong>WEB DESIGN</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center mt-1">
+          <div class="icon-area">
+            <div class="circle-icon ">
+              <i class="fas fa-pencil-alt fa-4x"></i>
+            </div>
+            <br>
+            <strong>BRANDING</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center mt-1">
+          <div class="icon-area">
+            <div class="circle-icon ">
+              <i class="fas fa-paint-brush  fa-4x"></i>
+            </div>
+            <br>
+            <strong>PRINT DESIGN</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center mt-1">
+          <div class="icon-area">
+            <div class="circle-icon">
+              <i class="fas fa-laptop  fa-4x"></i>
+            </div>
+            <br>
+            <strong>UI/UX</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          </div>
+        </div>
+      </div>
+      <!--/First row-->
+    </div>
+    <!-- Second container -->
+                    
                 </section>
                 <!-- /.Second section -->
 
@@ -528,3 +496,37 @@
             <li class="nav-item"><a class="nav-link" href="#contact"><span></span></a></li>
         </ul>
     </div>
+@endsection
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+
+    <script>
+        // initialize scrollspy
+        $('body').scrollspy({
+            target: '.dotted-scrollspy'
+        });
+
+        // initialize lightbox
+        $(function () {
+            $("#mdb-lightbox-ui").load("../mdb-addons/mdb-lightbox-ui.html");
+        });
+
+        $('.navbar-collapse a').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
+
+        /* WOW.js init */
+        new WOW().init();
+
+    </script>
