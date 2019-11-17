@@ -91,7 +91,7 @@
                 <!-- Section title -->
                 <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">About <strong>Us</strong></h2>
 
-                <p class="text-center w-responsive mx-auto wow fadeIn my-5" data-wow-delay="0.2s">FennTech Software is the division of the company that caters to all your software needs. </p>
+                <p class="text-center w-responsive mx-auto wow fadeIn my-5" data-wow-delay="0.2s">FennTech Software is the division of the company that caters to all your software needs. If you get it right, your website will be the best tool you have for promoting your business. Your website will essentially become an online shop-window, accessible to customers all over the world, which means the better it looks and more and up-to-date it is, the better impression it will make on consumers. We have designed many practical websites for businesses, personal and online shopping. </p>
 
                 <!-- First row -->
                 <div class="row features-big text-center wow fadeIn" data-wow-delay="0.4s">
@@ -167,7 +167,7 @@
             </div>
             <br>
             <strong>WEB DESIGN</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <p>We can design cutting edge websites to improve your business process or to market your brand or event to the fullest. </p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center mt-1">
@@ -176,18 +176,18 @@
               <i class="fas fa-pencil-alt fa-4x"></i>
             </div>
             <br>
-            <strong>BRANDING</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <strong>Content Writing</strong>
+            <p>Not sure what to write on your website? No need to fret we have a team of qualified writers who can coin the right terms to make your business stand out from the rest. </p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center mt-1">
           <div class="icon-area">
             <div class="circle-icon ">
-              <i class="fas fa-paint-brush  fa-4x"></i>
+              <i class="fas fa-store  fa-4x"></i>
             </div>
             <br>
-            <strong>PRINT DESIGN</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <strong>E-Commerce</strong>
+            <p>Want to start selling online? No problem, we got you covered. With over 5 years of ecommerce deployment experience we can have your online store up and earning in no time. </p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center mt-1">
@@ -197,7 +197,7 @@
             </div>
             <br>
             <strong>UI/UX</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <p>We have an expert team trained to create the best user experience for your users and also to create the best interfaces that are visually appealing to your viewers.  </p>
           </div>
         </div>
       </div>
@@ -211,73 +211,6 @@
           </div>
         </div>
         <!--/Second container-->
-
-        <!-- Third container -->
-        <div class="container">
-
-            <!-- Section About -->
-            <section class="section feature-box my-5 pb-5">
-
-                <!-- Section title -->
-                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">Process of <strong>creating</strong></h2>
-                <p class="text-center w-responsive mx-auto wow fadeIn my-5" data-wow-delay="0.2s"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quas, eos officia maiores ipsam ipsum dolores reiciendis ad voluptas, animi obcaecati adipisci sapiente mollitia.</p>
-
-                    <!-- Nav tabs -->
-                    <ul class="nav md-tabs nav-justified blue" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">01. Research</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">02. Design</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">03. Development</a>
-                        </li>
-                    </ul>
-                    <!-- Tab panels -->
-                    <div class="tab-content card">
-                        <!--Panel 1-->
-                        <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
-                            <br>
-                            <div class="row mt-2">
-                                <div class="col-2 text-center"> <i class="fas fa-search fa-3x mb-1 grey-text" aria-hidden="true"></i> </div>
-                                <div class="col-9 mb-2">
-                                    <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.Panel 1-->
-
-                        <!--Panel 2-->
-                        <div class="tab-pane fade" id="panel2" role="tabpanel">
-                            <br>
-                            <div class="row mt-2">
-                                <div class="col-2 text-center"> <i class="fas fa-pencil-alt fa-3x mb-1 grey-text" aria-hidden="true"></i> </div>
-                                <div class="col-9 mb-2">
-                                    <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.Panel 2-->
-
-                        <!--Panel 3-->
-                        <div class="tab-pane fade" id="panel3" role="tabpanel">
-                            <br>
-                            <div class="row mt-2">
-                                <div class="col-2 text-center"> <i class="fas fa-code fa-3x mb-1 grey-text" aria-hidden="true"></i> </div>
-                                <div class="col-9 mb-2">
-                                    <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.Panel 3-->
-                    </div>
-                <!-- /.Tab panels -->
-            </section>
-            <!-- /.Section -->
-
-        </div>
-        <!-- /.Third container -->
 
         <!-- Streak -->
         <div class="streak streak-photo streak-md" style="background-image:url('https://mdbootstrap.com/img/Photos/Horizontal/Work/12-col/img%20%2811%29.jpg')">
@@ -297,76 +230,67 @@
             <section id="works" class="section mb-5">
 
                 <!-- Section title -->
-                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">My <strong>projects</strong></h2>
+                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">Our <strong>Projects</strong></h2>
 
                 <!-- Section description -->
-                <p class="text-center w-responsive mx-auto wow fadeIn my-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iste provident, voluptatum voluptatibus aut modi aspernatur autem impedit, eius, debitis earum voluptatem. Quaerat hic aspernatur laborum magni earum. At, officiis!</p>
+                <p class="text-center w-responsive mx-auto wow fadeIn my-5">Here are a few of the businesses we have helped come online through our services.</p>
 
                 <!-- First row -->
                 <div class="row wow fadeIn" data-wow-delay="0.4s">
 
                     <!-- First column -->
-                    <div class="col-md-12 mb-5">
+                    <div class="col-md-12 mb-4">
 
                         <!-- Lightbox -->
                         <div id="mdb-lightbox-ui"></div>
 
                         <div class="mdb-lightbox">
+<div class="container">
+  <div class="row">
+      {{-- image 1 --}}
+    <div class="col-sm">
+      <div class="card">
 
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(63).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(63).jpg" class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
 
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(66).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(66).jpg" class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
+  </div>
+    </div>
+    {{-- image 2 --}}
+    <div class="col-sm">
+      <div class="card">
 
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(65).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(65).jpg" class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
 
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(67).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
+  </div>
+    </div>
+    {{-- image 2 --}}
+    <div class="col-sm">
+     <div class="card">
 
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(68).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(68).jpg" class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(64).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(64).jpg" class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(69).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(69).jpg" class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(59).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(59).jpg" class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(70).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(70).jpg" class="img-fluid z-depth-1">
-                                </a>
-                            </figure>
-
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+                    
                         </div>
                         <!-- /.Lightbox -->
 
@@ -390,9 +314,9 @@
             <!--Section: Contact v.2-->
             <section class="section contact-section mt-4 mb-5">
                 <!--Section heading-->
-                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">Contact <strong>me</strong></h2>
+                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">Contact <strong>Us </strong></h2>
                 <!--Section sescription-->
-                <p class="text-center w-responsive mx-auto mb-5 pb-4 wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. </p>
+                <p class="text-center w-responsive mx-auto mb-5 pb-4 wow fadeIn" data-wow-delay="0.2s">It is pivotal for every business in the 21st century to have a website, do not get left behind contact us to get light years ahead today. </p>
                 <div class="row wow fadeIn" data-wow-delay="0.4s">
 
                     <!--First column-->
@@ -436,7 +360,7 @@
                             <!--Third row-->
                             <div class="row">
                                 <!--First column-->
-                                <div class="col-md-12">
+                                <div class="col-lg-12">
                                     <div class="md-form mb-0">
                                         <textarea type="text" id="form76" class="md-textarea form-control" rows="3"></textarea>
                                         <label for="form76">Your message</label>
@@ -449,21 +373,7 @@
                     </div>
                     <!--.First column-->
 
-                    <!--Second column-->
-                    <div class="col-md-4">
-                        <ul class="contact-icons list-unstyled text-center">
-                            <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                                <p>New York, NY 10012, USA</p>
-                            </li>
-                            <li><i class="fas fa-phone fa-2x"></i>
-                                <p>+ 01 234 567 89</p>
-                            </li>
-                            <li><i class="fas fa-envelope fa-2x"></i>
-                                <p>contact@mdbootstrap.com</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--.Second column-->
+                    
                 </div>
 
             </section>
@@ -472,14 +382,7 @@
         </div>
         <!-- Contact form -->
 
-        <div class="streak1">
-            <div class="flex-center">
-                <ul class="list-unstyled">
-                    <li><h2 class="h2-responsive mt-5 wow fadeIn">Want an outstanding project?</h2></li>
-                    <li><h5 class="h5-responsive wow fadeIn" data-wow-delay="0.2s">Just send me a message!</h5></li>
-                </ul>
-            </div>
-        </div>
+        
 
         <!-- /.Customers carousel -->
 
