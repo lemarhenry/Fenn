@@ -73,7 +73,7 @@
 			<section id="about" class="section my-5 pb-4">
 
 				<!-- Section title -->
-				<h1 class="section-heading text-center mb-5 mt-5 pt-4 wow fadeIn">Who am I?</h1>
+				<h1 class="section-heading text-center mb-5 mt-5 pt-4 wow fadeIn">About Us</h1>
 
 				<!-- First row -->
 				<div class="row wow fadeIn" data-wow-delay="0.2s">
@@ -85,7 +85,7 @@
 
 					<!-- Text content -->
 					<div class="col-lg-8 pb-4">
-						<p class="lead">Im a photographer with 8+ years of experience, based in San Francisco</p>
+						<p class="lead">I</p>
 						<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi soluta ratione quisquam, dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit eaque delectus, beatae maxime temporibus maiores quibusdam quasi.</span><span>Rem magnam ad perferendis iusto sint tempora ea voluptatibus iure, animi excepturi modi aut possimus in hic molestias repellendus illo ullam odit quia velit. Qui expedita sit quo, maxime molestiae.</span></p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi sapiente, consequuntur dolore praesentium non suscipit minus repudiandae, nesciunt placeat, vel nostrum magni pariatur.</p>
 					</div>
