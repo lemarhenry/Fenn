@@ -32,9 +32,7 @@
           aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav mr-auto smooth-scroll">
                         <li class="nav-item">
@@ -53,7 +51,7 @@
                             <a class="nav-link" href="#contact" data-offset="100">Contact Us</a>
                         </li>
                     </ul>
-                    
+
                     </ul>
                 </div>
             </div>
@@ -204,7 +202,7 @@
       <!--/First row-->
     </div>
     <!-- Second container -->
-                    
+
                 </section>
                 <!-- /.Second section -->
 
@@ -290,7 +288,7 @@
     </div>
   </div>
 </div>
-                    
+
                         </div>
                         <!-- /.Lightbox -->
 
@@ -373,7 +371,7 @@
                     </div>
                     <!--.First column-->
 
-                    
+
                 </div>
 
             </section>
@@ -382,7 +380,7 @@
         </div>
         <!-- Contact form -->
 
-        
+
 
         <!-- /.Customers carousel -->
 
