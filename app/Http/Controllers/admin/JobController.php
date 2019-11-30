@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\job;
+use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
