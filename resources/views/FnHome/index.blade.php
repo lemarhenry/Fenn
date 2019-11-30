@@ -1,56 +1,45 @@
-@extends('layouts.guest')
- @section('content')
-
-  <style>
-    html,
-    body,
-    header,
-    .view.jarallax {
-      height: 100%;
-      min-height: 100%;
+@extends('layouts.guest') @section('content')
+<style>
+     html,
+		    body,
+		    header,
+		    .jarallax {
+		      height: 100%;
+		    }
+            .navbar {
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12) !important;
+        }
     }
-
   </style>
 </head>
 
-<body class="construction-lp">
-
+<body class="agency">
   <!-- Navigation & Intro -->
   <header>
-
-    <!--Navbar -->
-<Header class="pb-2 nav" >
-    <nav class="mb-1 navbar navbar-expand-lg  navbar-light fixed-top ">
-    <a class="navbar-brand" href="{{route('landing')}}"><img src="{{ url('storage/logo.png') }}" alt="" srcset="" style="width:40%"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
-          aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top scrolling-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="{{route('landing')}}"><img src="{{ url('storage/logo.png') }}" alt="" srcset="" style="width:40%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item ">
-                <a class="nav-link"  href="{{route('fnhome')}}">
-                    Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('about')}}">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">Services</a>
-                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{route('homeSecurity')}}">Home & Office Security</a>
-                            <a class="dropdown-item" href="{{route('repair')}}">Repair & Installation</a>
-                            <a class="dropdown-item" href="/corporate">Corporate & Institutions</a>
-                            <a class="dropdown-item" href="{{route('website')}}">Website Design</a>
-                            <a class="dropdown-item" href="{{route('networking')}}">Networking & Cabling</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto smooth-scroll">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-offset="100">About Us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services" data-offset="20">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio" data-offset="100">Portfolio</a>
+            </li>
 
-              <!-- Dropdown -->
+                <!-- Dropdown -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">Products</a>
@@ -70,1266 +59,537 @@
                   <a class="dropdown-item" href="http://buy.fenntechltd.com/index.php?main_page=index&cPath=43">UPS & Power</a>
                 </div>
               </li>
-              <li class="nav-item">
-                {{--  <a class="nav-link" href="{{route('portfolio')}}">Portfolio</a>  --}}
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
-              </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="#contact" data-offset="100">Contact Us</a>
+            </li>
           </ul>
-        </div>
-      </nav>
-      <!--/.Navbar -->
-    <br>
-    <br>
 
-
-    <!-- Intro Section -->
-    <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}'>
-      <div class="mask rgba-indigo-light">
-        <div class="container h-100 d-flex justify-content-center align-items-center">
-          <div class="row smooth-scroll">
-            <div class="col-md-12 text-center">
-              <div class="text-white wow fadeInDown">
-                <h1 class="display-4 text-uppercase font-weight-bold mt-5 mt-xl-2">Building</h1>
-                <hr class="hr-light my-4">
-                <h4 class="subtext-header white-text mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  <p class="clearfix d-none d-md-block">Deleniti consequuntur, nihil voluptatem modi nobis veniam.</p>
-                </h4>
-              </div>
-              <a href="#features" data-offset="100" class="btn blue-gradient btn-rounded wow fadeInUp"
-                data-wow-delay="0.2s">Welcome</a>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+    </nav>
+    <!-- Intro Section -->
+		<div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('https://images.unsplash.com/photo-1562447208-3d5f81e66179?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+		    <div class="mask rgba-black-strong">
+		        <div class="container h-100 d-flex justify-content-center align-items-center">
+		            <div class="row smooth-scroll">
+		                <div class="col-md-12">
+		                    <div class="blue-text text-center">
+								<h2 class="display-3 font-weight-bold pb-4 mb-2 wow fadeIn ">Welcome To FennTech</h2>
+								<h3 class="intro-subtext wow fadeIn green-text" data-wow-delay="0.2s">One stop Shop for all things Technology</h3>
+							</div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
 
+    </section>
   </header>
   <!-- Navigation & Intro -->
-
-  <!-- Main content -->
+  <!--Main layout-->
   <main>
-
+    <!-- First container -->
     <div class="container">
-
-      <!-- Section: Features -->
-      <section id="features" class="mb-3 mt-5 pt-4 pb-3">
-
-        <!-- Section heading -->
-        <h3 class="text-center text-uppercase font-weight-bold mb-5 mt-4 wow fadeIn" data-wow-delay="0.2s">We Build Your
-          Dream House</h3>
-
-        <!-- Section description -->
-        <p class="text-center grey-text my-5 w-responsive mx-auto wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Laborum quas, eos officia maiores ipsam ipsum dolores reiciendis ad
-          voluptas, animi obcaecati adipisci sapiente mollitia? Autem delectus quod accusamus tempora, aperiam minima
-          assumenda deleniti.</p>
-
-        <!-- Grid row -->
-        <div class="row text-center">
-
-          <!-- Grid column -->
-          <div class="col-md-4 mb-1 mt-1 wow fadeIn" data-wow-delay="0.4s">
-            <i class="fas fa-cubes orange-text-2 fa-4x mb-4"></i>
-            <h5 class="font-weight-bold mb-4">Perfection</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
-              aperiam minima assumenda deleniti hic.</p>
+      <!--Section: About-->
+      <section id="about" class="section mt-5 mb-5">
+        <!--Secion heading-->
+        <h2 class="blue-text text-center text-uppercase font-weight-bold my-5 pb-3 pt-5 wow fadeIn" data-wow-delay="0.2s">About
+          us <i class="fas fa-users"></i></h2>
+        <!-- First row -->
+        <div class="row features-big wow fadeIn" data-wow-delay="0.4s">
+          <!-- First column -->
+          <div class="col-md-4 mb-5">
+            <!--Title-->
+            <h5 class="feature-title font-weight-bold mb-1 green-text">01 | Where we started. <i class="fas fa-brain"></i></h5>
+            <!-- Text -->
+            <p class="grey-text">FennTech started out as Compu-Worx in 2001 on the campus of Northern Caribbean
+University in Mandeville, Manchester. Compu-Worx focused on computer sales and services
+to students, staff and other persons in the Mandeville and Linstead area; at times operating
+from a car, classrooms, clients home and anywhere the services could be rendered.
+FennTech Limited was incorporated in February 2007 under the Companies Act of Jamaica
+and is a limited liability company. The company has made a paradigm shift to take on new
+challenges, reinvented itself, expanded and earned an admirable reputation of service
+excellence, increase customers’ experience and expanding the horizon of possibilities of any
+sized enterprise to exploit new opportunities in technology.</p>
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-4 mb-1 mt-1 wow fadeIn" data-wow-delay="0.4s">
-            <i class="fas fa-users orange-text-2 fa-4x mb-4"></i>
-            <h5 class="font-weight-bold mb-4">Safety</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
-              aperiam minima assumenda deleniti hic.</p>
+          <!-- /.First column -->
+          <!-- Second column -->
+          <div class="col-md-4 mb-5">
+            <!--Title-->
+            <h5 class="feature-title font-weight-bold mb-1 green-text">02 | Who we are. <i class="fas fa-puzzle-piece"></i></h5>
+            <!-- Text -->
+            <p class="grey-text">FennTech has been forward-thinking in its approach to business solutions. Albeit we are
+suppliers of branded and OEM desktop, Laptops, industry standard components, and
+accessories, our company is a diversified technology solutions provider whose core
+business model is providing a wide range of cutting-edge, innovative and diverse business
+solutions and other value added service to enable any small, medium and large
+organizations to take advantage of new business opportunities at an affordable cost.</p>
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-4 mb-1 mt-1 wow fadeIn" data-wow-delay="0.4s">
-            <i class="fas fa-magic orange-text-2 fa-4x mb-4"></i>
-            <h5 class="font-weight-bold mb-4">Flexibility</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
-              aperiam minima assumenda deleniti hic.</p>
+          <!-- /.Second column -->
+          <!-- Third column -->
+          <div class="col-md-4 mb-5">
+            <!--Title-->
+            <h5 class="feature-title font-weight-bold mb-1 green-text">03 | We are experienced <i class="fas fa-lightbulb"></i></h5>
+            <!-- Text -->
+            <p class="grey-text">With clients such as Juici Patties, CVM, Kings's Chemical and others let's just say we know a thing or two about technology.</p>
           </div>
-          <!-- Grid column -->
-
+          <!-- /.Third column -->
         </div>
-        <!-- Grid row -->
-
+        <!-- /.First row -->
       </section>
-      <!-- Section: Features -->
-
-      <hr class="mt-5 pb-4">
-
-      <!-- Section: Services -->
-      <section id="services" class="mb-5">
-
-        <!-- Section heading -->
-        <h3 class="text-center text-uppercase font-weight-bold mb-5 mt-5 pt-4 wow fadeIn" data-wow-delay="0.2s">Check
-          our services</h3>
-
-        <!-- Section description -->
-        <p class="text-center grey-text mt-5 w-responsive mx-auto wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Laborum quas, eos officia maiores ipsam ipsum dolores reiciendis ad
-          voluptas, animi obcaecati adipisci sapiente mollitia? Autem delectus quod accusamus tempora, aperiam minima
-          assumenda deleniti.</p>
-
-        <!-- Grid row -->
-        <div class="row wow fadeIn" data-wow-delay="0.4s">
-
-          <!-- Grid column -->
-          <div class="col-md-12">
-
-            <!--  Nav tabs  -->
-            <ul class="nav md-pills flex-center flex-wrap mx-0 mb-4" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active font-weight-bold text-uppercase" data-toggle="tab" href="#panel31"
-                  role="tab"><br>construction</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#panel33"
-                  role="tab"><br>painting</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#panel32"
-                  role="tab"><br>architecture</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#panel34"
-                  role="tab"><br>renovation</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Tab panels -->
-          <div class="tab-content pt-0">
-
-            <!-- Panel 1 -->
-            <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
-              <br>
-
-              <!-- Grid row -->
-              <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%281%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%282%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%283%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-              </div>
-              <!-- Grid row -->
-
-            </div>
-            <!-- Panel 1 -->
-
-            <!-- Panel 2 -->
-            <div class="tab-pane fade" id="panel32" role="tabpanel">
-              <br>
-
-              <!-- Grid row -->
-              <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%286%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%285%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%284%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-              </div>
-              <!-- Grid row -->
-
-            </div>
-            <!-- Panel 2 -->
-
-            <!-- Panel 3 -->
-            <div class="tab-pane fade" id="panel33" role="tabpanel">
-              <br>
-
-              <!-- Grid row -->
-              <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%2810%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%2813%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%2814%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-              </div>
-              <!-- Grid row -->
-
-            </div>
-            <!-- Panel 3 -->
-
-            <!-- Panel 4 -->
-            <div class="tab-pane fade" id="panel34" role="tabpanel">
-              <br>
-
-              <!-- Grid row -->
-              <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%289%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%288%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-5">
-
-                  <!-- Featured image -->
-                  <div class="view overlay z-depth-1 zoom">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/4-col/img%20%286%29.jpg"
-                      class="img-fluid">
-                  </div>
-
-                </div>
-                <!-- Grid column -->
-
-              </div>
-              <!-- Grid row -->
-
-            </div>
-            <!-- Panel 4 -->
-
-          </div>
-          <!-- Tab panels -->
-
-        </div>
-        <!-- Grid row -->
-
-      </section>
-      <!-- Section: Services -->
-
+      <!-- /.Section About -->
     </div>
-
-    <!-- Streak -->
-    <div class="streak streak-photo streak-md"
-      style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/City/12-col/img%20%2822%29.jpg');">
-      <div class="flex-center mask rgba-indigo-strong">
-        <div class="text-center white-text">
-          <h2 class="h2-responsive mb-5"><i class="fas fa-quote-left" aria-hidden="true"></i> Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. <i class="fas fa-quote-right" aria-hidden="true"></i></h2>
-          <h5 class="text-center font-italic wow fadeIn" data-wow-delay="0.2s">~ Erich Fromm</h5>
-        </div>
+    <!-- /.First container -->
+    <!--Second container-->
+    <div class="container-fluid" style="background-image: url('https://images.unsplash.com/photo-1478800907959-cd1621fbd465?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')">
+      <div class="container py-5">
+        <!-- Text -->
+        <p class="blue-text text-center mt-5"><strong>SINCE 2001</strong> <i class="far fa-calendar-alt"></i></p>
+        <h3 class="text-center green-text text-uppercase font-weight-bold my-4 mt-2 ml-3 mr-3 wow fadeIn" data-wow-delay="0.2s">We
+          create extraordinary projects for our clients</h3>
+        <!-- Text -->
+        <p class="blue-text text-center ml-5 mr-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
+          animi soluta ratione quisquam, dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit eaque
+          delectus, beatae maxime temporibus maiores quibusdam quasi. Rem magnam ad perferendis iusto sint tempora ea
+          voluptatibus iure, animi excepturi modi aut possimus.</p>
       </div>
     </div>
-    <!-- Streak -->
-
+    <!--/Second container-->
+    <!--Third container -->
     <div class="container">
-
-      <!-- Section: Pricing -->
-      <section class="mt-4 mb-5">
-
-        <!-- Section heading -->
-        <h3 class="text-center text-uppercase font-weight-bold mb-5 mt-5 pt-5 wow fadeIn" data-wow-delay="0.2s">Our
-          pricing plans</h3>
-
-        <!-- Section description -->
-        <p class="text-center grey-text my-5 w-responsive mx-auto wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Laborum quas, eos officia maiores ipsam ipsum dolores reiciendis ad
-          voluptas, animi obcaecati adipisci sapiente mollitia? Autem delectus quod accusamus tempora, aperiam minima
-          assumenda deleniti.</p>
-
-        <!-- Grid row -->
-        <div class="row pt-4 wow fadeIn" data-wow-delay="0.4s">
-
-          <!-- Grid column -->
-          <div class="col-lg-4 col-md-12 mt-1 mb-4">
-            <!-- Card -->
-            <div class="card">
-
-              <!-- Content -->
-              <div class="text-center">
-                <div class="card-body">
-                  <h5>Basic plan</h5>
-                  <div class="d-flex justify-content-center">
-                    <div class="card-circle d-flex justify-content-center align-items-center">
-                      <i class="fas fa-home orange-text-2"></i>
-                    </div>
-                  </div>
-
-                  <!-- Price -->
-                  <h2 class="my-3"><strong>159$</strong></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa pariatur id nobis accusamus
-                    deleniti cumque hic laborum.</p>
-                  <a class="btn btn-orange-2 text-white btn-rounded">Buy now</a>
-                </div>
-              </div>
-
+      <!-- Second section -->
+      <section id="services" class="section feature-box pt-4 pb-5">
+        <!--Secion heading-->
+        <h2 class="blue-text text-center text-uppercase font-weight-bold my-5 pb-3 pt-4 wow fadeIn" data-wow-delay="0.2s">What
+          we do <i class="fas fa-briefcase"></i></h2>
+        <!-- First row -->
+        <div class="row text-center wow fadeIn" data-wow-delay="0.4s">
+          <!-- First column -->
+          <div class="col-md-3 mb-5 pt-1">
+            <!--Panel-->
+            <div class="card card-body hoverable">
+              <i class="fas fa-laptop fa-3x mb-4 grey-text" aria-hidden="true"></i>
+              <h5 class="feature-title mb-4">Web design</h5>
+              <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-            <!-- Card -->
+            <!--/.Panel-->
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-lg-4 col-md-12 mt-1 mb-4">
-            <!-- Card -->
-            <div class="card blue-gradient">
-
-              <!-- Content -->
-              <div class="text-center white-text">
-                <div class="card-body">
-                  <h5>Premium plan</h5>
-                  <div class="d-flex justify-content-center">
-                    <div class="card-circle d-flex justify-content-center align-items-center">
-                      <i class="fas fa-users white-text"></i>
-                    </div>
-                  </div>
-
-                  <!-- Price -->
-                  <h2 class="my-3"><strong>499$</strong></h2>
-                  <p>Esse corporis saepe laudantium velit adipisci cumque iste ratione facere non distinctio cupiditate
-                    sequi atque.</p>
-                  <a class="btn btn-outline-white btn-rounded">Buy now</a>
-                </div>
-              </div>
-
+          <!-- /First column -->
+          <!-- Second column -->
+          <div class="col-md-3 mb-5">
+            <!--Panel-->
+            <div class="card card-body hoverable">
+              <i class="far fa-newspaper grey-text fa-3x mb-4" aria-hidden="true"></i>
+              <h5 class="feature-title mb-4">Marketing</h5>
+              <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-            <!-- Card -->
+            <!--/.Panel-->
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-lg-4 col-md-12 mt-1 ">
-            <!-- Card -->
-            <div class="card">
-
-              <!-- Content -->
-              <div class="text-center">
-                <div class="card-body">
-                  <h5>Advanced plan</h5>
-                  <div class="d-flex justify-content-center">
-                    <div class="card-circle d-flex justify-content-center align-items-center">
-                      <i class="fas fa-chart-bar orange-text-2"></i>
-                    </div>
-                  </div>
-
-                  <!-- Price -->
-                  <h2 class="my-3"><strong>1799$</strong></h2>
-                  <p>At ab ea a molestiae corrupti numquam quo beatae minima ratione magni accusantium repellat eveniet
-                    quia vitae.</p>
-                  <a class="btn btn-orange-2 text-white btn-rounded">Buy now</a>
-                </div>
-              </div>
-
+          <!-- /.Second column -->
+          <!-- Third column -->
+          <div class="col-md-3 mb-5">
+            <!--Panel-->
+            <div class="card card-body hoverable">
+              <i class="fas fa-pencil-alt grey-text fa-3x mb-4" aria-hidden="true"></i>
+              <h5 class="feature-title mb-4">Branding</h5>
+              <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-            <!-- Card -->
+            <!--/.Panel-->
           </div>
-          <!-- Grid column -->
-
+          <!-- /.Third column -->
+          <!-- Fourth column -->
+          <div class="col-md-3 mb-5">
+            <!--Panel-->
+            <div class="card card-body hoverable">
+              <i class="fas fa-camera-retro grey-text fa-3x mb-4" aria-hidden="true"></i>
+              <h5 class="feature-title mb-4">Photography</h5>
+              <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <!--/.Panel-->
+          </div>
+          <!-- /.Fourth column -->
         </div>
-        <!-- Grid row -->
-
+        <!-- /.First row -->
       </section>
-      <!-- Section: Pricing -->
-
-      <hr class="mt-5 mb-5">
-
-      <!-- Section: Portfolio -->
-      <section id="portfolio" class="mb-3">
-
-        <!-- Section heading -->
-        <h3 class="text-center text-uppercase font-weight-bold mb-5 mt-5 pt-5 wow fadeIn" data-wow-delay="0.2s">Our
-          projects</h3>
-
-        <!-- Section description -->
-        <p class="text-center grey-text my-5 w-responsive mx-auto wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Laborum quas, eos officia maiores ipsam ipsum dolores reiciendis ad
-          voluptas, animi obcaecati adipisci sapiente mollitia? Autem delectus quod accusamus tempora, aperiam minima
-          assumenda deleniti.</p>
-
-      </section>
-      <!-- Section: Portfolio -->
-
+      <!-- /.Second section -->
     </div>
-
-    <div class="container-fluid">
-
-      <div class="row mb-5 wow fadeIn" data-wow-delay="0.4s">
-
-        <!-- Grid column -->
-        <div class="col-md-12 mb-5">
-
-          <div id="mdb-lightbox-ui"></div>
-
-          <!-- Full width lightbox -->
-          <div class="mdb-lightbox">
-
-            <figure class="col-md-3">
-              <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(1).jpg" data-size="1600x1067">
-                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(1).jpg"
-                  class="img-fluid z-depth-1">
-              </a>
-            </figure>
-
-            <figure class="col-md-3">
-              <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(136).jpg" data-size="1600x1067">
-                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(136).jpg"
-                  class="img-fluid z-depth-1">
-              </a>
-            </figure>
-
-            <figure class="col-md-3">
-              <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(7).jpg" data-size="1600x1067">
-                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(7).jpg"
-                  class="img-fluid z-depth-1">
-              </a>
-
-            </figure>
-            <figure class="col-md-3">
-              <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(137).jpg" data-size="1600x1067">
-                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(137).jpg"
-                  class="img-fluid z-depth-1">
-              </a>
-            </figure>
-
-            <figure class="col-md-3">
-              <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(132).jpg" data-size="1600x1067">
-                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(132).jpg"
-                  class="img-fluid z-depth-1">
-              </a>
-            </figure>
-
-            <figure class="col-md-3">
-              <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(131).jpg" data-size="1600x1067">
-                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(131).jpg"
-                  class="img-fluid z-depth-1">
-              </a>
-            </figure>
-
-            <figure class="col-md-3">
-              <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(3).jpg" data-size="1600x1067">
-                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(3).jpg"
-                  class="img-fluid z-depth-1">
-              </a>
-            </figure>
-
-            <figure class="col-md-3">
-              <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(134).jpg" data-size="1600x1067">
-                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(134).jpg"
-                  class="img-fluid z-depth-1">
-              </a>
-            </figure>
-          </div>
-          <!-- Full width lightbox -->
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-
-    </div>
-
-    <div class="container-fluid background-grey">
-
-      <div class="container">
-
-        <!-- Section: Testimonials v.1 -->
-        <section id="testimonials" class="mb-0 py-5">
-
-          <!-- Section heading -->
-          <h3 class="text-center text-uppercase font-weight-bold mt-5 mb-5 wow fadeIn" data-wow-delay="0.2s">What
-            clients said:</h3>
-
-          <!-- Section description -->
-          <p class="text-center grey-text my-5 w-responsive mx-auto wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Laborum quas, eos officia maiores ipsam ipsum dolores reiciendis ad
-            voluptas, animi obcaecati adipisci sapiente mollitia? Autem delectus quod accusamus tempora, aperiam minima
-            assumenda deleniti.</p>
-
-          <!-- Grid row -->
-          <div class="row mt-1-half mb-4">
-
-            <!-- Grid column  -->
-            <div class="col-lg-4 col-md-12 mt-2">
-
-              <!-- Card -->
-              <div class="card testimonial-card mb-4">
-
-                <!-- Background color -->
-                <div class="card-up info-color">
-                </div>
-
-                <!-- Avatar -->
-                <div class="avatar mx-auto white"><img
-                    src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg"
-                    class="rounded-circle img-responsive">
-                </div>
-
-                <div class="card-body">
-                  <!-- Name -->
-                  <h4 class="card-title mt-2"><strong>Anna Doe</strong></h4>
-                  <hr class="mb-3">
-                  <!-- Quotation -->
-                  <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-                    adipisci.</p>
-                </div>
-
-              </div>
-              <!-- Card -->
-
-            </div>
-            <!-- Grid column  -->
-
-            <!-- Grid column -->
-            <div class="col-lg-4 col-md-12 mt-2">
-
-              <!-- Card -->
-              <div class="card testimonial-card mb-4">
-
-                <!-- Background color -->
-                <div class="card-up blue-gradient">
-                </div>
-
-                <!-- Avatar -->
-                <div class="avatar mx-auto white"><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-11.jpg"
-                    class="rounded-circle img-responsive">
-                </div>
-
-                <div class="card-body">
-                  <!-- Name -->
-                  <h4 class="card-title mt-2"><strong>Kate Aston</strong></h4>
-                  <hr class="mb-3">
-                  <!-- Quotation -->
-                  <p><i class="fas fa-quote-left"></i> Neque cupiditate assumenda in maiores repudiandae mollitia
-                    architecto.</p>
-                </div>
-
-              </div>
-              <!-- Card -->
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-lg-4 col-md-12 mt-2">
-
-              <!-- Card -->
-              <div class="card testimonial-card">
-
-                <!-- Background color -->
-                <div class="card-up indigo"></div>
-
-                <!-- Avatar -->
-                <div class="avatar mx-auto white"><img
-                    src="https://mdbootstrap.com/img/Photos/Avatars/img%20%282%29.jpg"
-                    class="rounded-circle img-responsive">
-                </div>
-
-                <div class="card-body">
-                  <!-- Name -->
-                  <h4 class="card-title mt-2"><strong>Maria Kate</strong></h4>
-                  <hr class="mb-3">
-                  <!-- Quotation -->
-                  <p><i class="fas fa-quote-left"></i> Delectus impedit saepe officiis ab aliquam repellat, rem totam
-                    unde ducimus.</p>
-                </div>
-
-              </div>
-              <!-- Card -->
-
-            </div>
-            <!-- Grid column -->
-
-          </div>
-          <!-- Grid row -->
-
-        </section>
-        <!-- Section: Testimonials v.1 -->
-
-      </div>
-
-    </div>
-
-    <!-- Streak -->
-    <div class="streak streak-photo streak-long-2"
-      style="background-image:url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img%20%2818%29.jpg')">
-      <div class="mask flex-center rgba-black-strong">
+    <!--Third container -->
+    <!--Streak-->
+    <div class="streak streak-photo streak-long-2" style="background-image:url('https://mdbootstrap.com/img/Photos/Horizontal/Things/full page/img%20%287%29.jpg')">
+      <div class="mask flex-center rgba-gradient">
         <div class="container">
-
-          <h3 class="text-center text-white mb-5 text-uppercase font-weight-bold wow fadeIn" data-wow-delay="0.2s">Great
-            people trusted our services</h3>
-
+          <h3 class="text-center blue-text mb-5 text-uppercase font-weight-bold wow fadeIn" data-wow-delay="0.2s">Just a few stats about us!</h3>
           <!--First row-->
-          <div class="row text-white text-center wow fadeIn" data-wow-delay="0.2s">
-
+          <div class="row blue-text text-center wow fadeIn" data-wow-delay="0.2s">
             <!--First column-->
             <div class="col-md-3 mb-2">
-              <h1 class="amber-text mb-1 font-weight-bold">+950</h1>
+              <h1 class="white-text mb-1 font-weight-bold">500+</h1>
               <p>Happy clients</p>
             </div>
             <!--/First column-->
-
             <!--Second column-->
             <div class="col-md-3 mb-2">
-              <h1 class="amber-text mb-1 font-weight-bold">+150</h1>
-              <p>Projects completed</p>
+              <h1 class="white-text mb-1 font-weight-bold">600+</h1>
+              <p>Projects Completed</p>
             </div>
             <!--/Second column-->
-
             <!--Third column-->
             <div class="col-md-3 mb-2">
-              <h1 class="amber-text mb-1 font-weight-bold">+85</h1>
+              <h1 class="white-text mb-1 font-weight-bold">+85</h1>
               <p>Winning awards</p>
             </div>
             <!--/Third column-->
-
             <!--Fourth column-->
             <div class="col-md-3">
-              <h1 class="amber-text mb-1 font-weight-bold">+246</h1>
+              <h1 class="white-text mb-1 font-weight-bold">+246</h1>
               <p>Cups of coffee</p>
             </div>
             <!--/Fourth column-->
-
           </div>
           <!--/First row-->
         </div>
       </div>
     </div>
+    <!-- First section -->
+    <section id="portfolio" class="section mb-5">
 
-    <div class="container">
-
-      <!-- Section: Contact v.2 -->
-      <section id="contact" class="mb-5">
-
-        <!-- Section heading -->
-        <h3 class="text-center text-uppercase font-weight-bold mb-5 mt-4 pt-5 wow fadeIn" data-wow-delay="0.2s">contact
-          us</h3>
-
-        <!-- Section description -->
-        <p class="text-center grey-text my-5 w-responsive mx-auto wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Laborum quas, eos officia maiores ipsam ipsum dolores reiciendis ad
-          voluptas, animi obcaecati adipisci sapiente mollitia? Autem delectus quod accusamus tempora, aperiam minima
-          assumenda deleniti.</p>
-
-        <!-- Grid row -->
-        <div class="row wow fadeIn" data-wow-delay="0.4s">
-
-          <!-- Grid column -->
-          <div class="col-md-8 col-lg-9">
-            <form>
-              <!-- Grid row -->
-              <div class="row">
-                <!-- Grid column -->
-                <div class="col-md-6">
-                  <div class="md-form">
-                    <div class="md-form">
-                      <input type="text" id="form41" class="form-control">
-                      <label for="form41" class="">Your name</label>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Grid column -->
-                <div class="col-md-6">
-                  <div class="md-form">
-                    <div class="md-form">
-                      <input type="text" id="form52" class="form-control">
-                      <label for="form52" class="">Your email</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Grid row -->
-
-              <!-- Second row -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="md-form">
-                    <input type="text" id="form51" class="form-control">
-                    <label for="form51" class="">Subject</label>
-                  </div>
-                </div>
-              </div>
-              <!-- Second row -->
-
-              <!-- Third row -->
-              <div class="row">
-                <!-- Grid column -->
-                <div class="col-md-12">
-
-                  <div class="md-form">
-                    <textarea type="text" id="form76" class="md-textarea form-control" rows="3"></textarea>
-                    <label for="form76">Your message</label>
-                  </div>
-
-                </div>
-              </div>
-              <!-- Third row -->
-            </form>
-
-            <div class="text-center text-md-left mb-5 mt-4">
-              <a class="btn btn-rounded btn-orange-2 white-text">Send</a>
+      <!-- Section title -->
+      <h2 class="blue-text text-center text-uppercase font-weight-bold my-5 wow fadeIn" data-wow-delay="0.2s">Our
+        projects <i class="fas fa-tasks"></i></h2>
+      <!-- Section description -->
+      <p class="text-center mb-5 w-responsive mx-auto grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Quia iste provident, voluptatum voluptatibus aut modi aspernatur autem impedit, eius, debitis earum
+        voluptatem. Quaerat hic aspernatur laborum magni earum. Repellendus voluptatum, magni impedit eaque delectus,
+        beatae maxime temporibus maiores quibusdam quasi.</p>
+      <!--First row-->
+      <div class="row ml-5 mr-5 mt-2 wow fadeIn" data-wow-delay="0.2s">
+        <!--First column-->
+        <div class="col-lg-3 col-md-6">
+          <div class="view overlay z-depth-1">
+            <img src="https://mdbootstrap.com/img/Photos/Others/img3.jpg" class="img-fluid " alt="">
+            <div class="mask flex-center rgba-gradient">
+              <a class="btn  btn-outline-white btn-rounded wow fadeInUp" data-wow-delay="0.2s" href="#tour" data-offset="85">
+                <span>SEE MORE</span>
+              </a>
             </div>
           </div>
-          <!-- Grid column -->
+          <p class="text-uppercase text-center grey-text mt-4 mb-4">Lorem ipsum dolor sit</p>
+        </div>
+        <!--/First column-->
+        <!--Second column-->
+        <div class="col-lg-3 col-md-6">
+          <div class="view overlay z-depth-1 rgba-gradient" ">
+            <img src=" https://mdbootstrap.com/img/Photos/Others/img4.jpg
+            " class=" img-fluid " alt=" ">
+            <div class=" mask flex-center rgba-gradient">
+            <a class="btn btn-outline-white btn-rounded wow fadeInUp " data-wow-delay="0.2s " href="#tour " data-offset="85 ">
+              <span>SEE MORE</span>
+            </a>
+          </div>
+        </div>
+        <p class="text-uppercase text-center grey-text mt-4 mb-4 ">Lorem ipsum dolor sit</p>
+      </div>
+      <!--/Second column-->
 
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3">
-            <ul class="text-center list-unstyled float-md-right">
-              <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                <p>New York, NY 10012, USA</p>
+      <!--Third column-->
+      <div class="col-lg-3 col-md-6 ">
+        <div class="view overlay z-depth-1">
+          <img src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" class="img-fluid " alt="">
+          <div class="mask flex-center rgba-gradient">
+            <a class="btn  btn-outline-white btn-rounded wow fadeInUp" data-wow-delay="0.2s" href="#tour" data-offset="85">
+              <span>SEE MORE</span>
+            </a>
+          </div>
+        </div>
+        <p class="text-uppercase text-center grey-text mt-4 mb-4">Lorem ipsum dolor sit</p>
+      </div>
+      <!--/Third column-->
+      <!--Fourth column-->
+      <div class="col-lg-3 col-md-6">
+        <div class="view overlay z-depth-1 rgba-gradient" ">
+            <img src=" https://mdbootstrap.com/img/Photos/Others/img6.jpg
+          " class=" img-fluid " alt=" ">
+            <div class=" mask flex-center rgba-gradient">
+          <a class="btn btn-outline-white btn-rounded wow fadeInUp " data-wow-delay="0.2s " href="#tour " data-offset="85 ">
+            <span>SEE MORE</span>
+          </a>
+        </div>
+      </div>
+      <p class="text-uppercase text-center grey-text mt-4 mb-4 ">Lorem ipsum dolor sit</p>
+      </div>
+      <!--/Fourth column-->
+
+      </div>
+      <!--/First row-->
+
+      <!--Second row-->
+      <div class="row ml-5 mr-5 mt-2 wow fadeIn " data-wow-delay="0.2s ">
+
+        <!--First column-->
+        <div class="col-lg-3 col-md-6 ">
+          <div class="view overlay z-depth-1">
+            <img src="https://mdbootstrap.com/img/Photos/Others/img7.jpg" class="img-fluid " alt="">
+            <div class="mask flex-center rgba-gradient">
+              <a class="btn  btn-outline-white btn-rounded wow fadeInUp" data-wow-delay="0.2s" href="#tour" data-offset="85">
+                <span>SEE MORE</span>
+              </a>
+            </div>
+          </div>
+          <p class="text-uppercase text-center grey-text mt-4 mb-4">Lorem ipsum dolor sit</p>
+        </div>
+        <!--/First column-->
+        <!--Second column-->
+        <div class="col-lg-3 col-md-6">
+          <div class="view overlay z-depth-1">
+            <img src="https://mdbootstrap.com/img/Photos/Others/img5.jpg " class="img-fluid " alt=" ">
+            <div class="mask flex-center  rgba-gradient">
+              <a class="btn btn-outline-white btn-rounded wow fadeInUp " data-wow-delay="0.2s " href="#tour "
+                data-offset="85 ">
+                <span>SEE MORE</span>
+              </a>
+            </div>
+          </div>
+          <p class="text-uppercase text-center grey-text mt-4 mb-4 ">Lorem ipsum dolor sit</p>
+        </div>
+        <!--/Second column-->
+
+        <!--Third column-->
+        <div class="col-lg-3 col-md-6 ">
+          <div class="view overlay z-depth-1">
+            <img src="https://mdbootstrap.com/img/Photos/Others/img9.jpg" class="img-fluid " alt="">
+            <div class="mask flex-center rgba-gradient">
+              <a class="btn  btn-outline-white btn-rounded wow fadeInUp" data-wow-delay="0.2s" href="#tour" data-offset="85">
+                <span>SEE MORE</span>
+              </a>
+            </div>
+          </div>
+          <p class="text-uppercase text-center grey-text mt-4 mb-4">Lorem ipsum dolor sit</p>
+        </div>
+        <!--/Third column-->
+        <!--Fourth column-->
+        <div class="col-lg-3 col-md-6">
+          <div class="view overlay z-depth-1 rgba-gradient" ">
+            <img src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg
+            " class=" img-fluid " alt=" ">
+            <div class=" mask flex-center rgba-gradient">
+            <a class="btn btn-outline-white btn-rounded wow fadeInUp " data-wow-delay="0.2s " href="#tour " data-offset="85 ">
+              <span>SEE MORE</span>
+            </a>
+          </div>
+        </div>
+        <p class="text-uppercase text-center grey-text mt-4 mb-4 ">Lorem ipsum dolor sit</p>
+      </div>
+      <!--/Fourth column-->
+
+      </div>
+      <!--/Second row-->
+
+    </section>
+    <!-- /.First section -->
+
+    <!--Fourth container-->
+    <div class="container-fluid " style="background-color: #eeeeee; ">
+
+      <div class="container py-5 ">
+
+        <!--Items wrapper-->
+        <div class="flex-center ">
+
+          <!--First row-->
+          <div class="row logos-panel mb-2 wow fadeIn " data-wow-delay="0.4s ">
+
+            <!--First column-->
+            <div class="col-md-3 flex-center ">
+              <img src="https://mdbootstrap.com/img/Photos/Template/34.png " class="img-fluid ">
+            </div>
+            <!--/First column-->
+
+            <!--Second column-->
+            <div class="col-md-3 flex-center ">
+              <img src="https://mdbootstrap.com/img/Photos/Template/35.png " class="img-fluid ">
+            </div>
+            <!--/Second column-->
+
+            <!--Third column-->
+            <div class="col-md-3 flex-center ">
+              <img src="https://mdbootstrap.com/img/Photos/Template/36.png " class="img-fluid ">
+            </div>
+            <!--/Third column-->
+
+            <!--Fourth column-->
+            <div class="col-md-3 flex-center ">
+              <img src="https://mdbootstrap.com/img/Photos/Template/37.png " class="img-fluid ">
+            </div>
+            <!--/Fourth column-->
+
+          </div>
+          <!--/First row-->
+
+        </div>
+        <!--/Items wrapper-->
+
+      </div>
+
+    </div>
+    <!--/Forth container-->
+
+    <!--Fifth container-->
+    <div class="container ">
+
+      <!-- Contact -->
+      <section id="contact" class="section mb-4 ">
+
+        <!-- Section title -->
+        <h2 class="blue-text text-center text-uppercase font-weight-bold my-5 pt-5 wow fadeIn " data-wow-delay="0.2s ">Contact
+          us <i class="fas fa-sms"></i></h2>
+        <!--Section sescription-->
+        <p class="text-center w-responsive mx-auto grey-text mb-5 wow fadeIn " data-wow-delay="0.2s ">Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi,
+          veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.</p>
+
+        <div class="row wow fadeIn " data-wow-delay="0.4s ">
+
+          <!--Grid column-->
+          <div class="col-md-8 mb-5">
+            <form>
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="contact-name" class="form-control">
+                    <label for="contact-name" class="">Your name</label>
+                  </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="contact-email" class="form-control">
+                    <label for="contact-email" class="">Your email</label>
+                  </div>
+                </div>
+                <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form mb-0">
+                    <input type="text" id="contact-Subject" class="form-control">
+                    <label for="contact-Subject" class="">Subject</label>
+                  </div>
+                </div>
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-12">
+
+                  <div class="md-form mb-0">
+                    <textarea type="text" id="contact-message" class="md-textarea form-control" rows="3"></textarea>
+                    <label for="contact-message">Your message</label>
+                  </div>
+
+                </div>
+              </div>
+              <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left mt-4">
+              <a class="btn btn-rounded btn-outline-black waves-effect ">Send <i class="far fa-paper-plane"></i></a>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Second column-->
+          <div class="col-md-4 ">
+            <ul class="contact-icons list-unstyled text-center">
+              <li><i class="fas fa-map-marker-alt fa-2x "></i>
+                <p class="grey-text ">Shop 13, Juici Plaza, Mandeville, Manchester Jamaica W.I.</p>
               </li>
 
-              <li><i class="fas fa-phone fa-2x"></i>
-                <p>+ 01 234 567 89</p>
+              <li><i class="fas fa-phone fa-2x "></i>
+                <p class="grey-text ">+  876-285-0133</p>
               </li>
 
-              <li><i class="fas fa-envelope fa-2x"></i>
-                <p>contact@mdbootstrap.com</p>
+              <li><i class="fas fa-envelope fa-2x "></i>
+                <p class="grey-text ">info@fenntechltd.com</p>
               </li>
             </ul>
           </div>
-          <!-- Grid column -->
+          <!--.Second column-->
 
         </div>
 
       </section>
-      <!-- Section: Contact v.2 -->
+      <!--/Section: Contact v.2-->
 
     </div>
-    <!-- Fifth container -->
-
+    <!-- /.Fifth container -->
   </main>
-  <!-- Main content -->
+  <!--/Main layout-->
 
-  <!-- Footer -->
-  <footer class="page-footer footer-tiles text-center text-md-left pt-4 mt-4">
 
-    <!-- Footer Links -->
-    <div class="container mt-1 mb-2">
 
-      <!-- Grid row -->
-      <div class="row">
 
-        <!-- Grid column -->
-        <div class="col-xl-4 col-lg-4 mt-2 mb-1 wow fadeIn" data-wow-delay="0.3s">
-          <!-- About -->
-          <h5 class="text-uppercase mb-4"><strong>ABOUT COMPANY</strong></h5>
-
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
-            atque corrupti.</p>
-
-          <p class="">Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.</p>
-
-          <div class="footer-socials">
-
-            <!-- Facebook -->
-            <a type="button" class="btn-floating orange"><i class="fab fa-facebook-f"></i></a>
-            <!-- Dribbble -->
-            <a type="button" class="btn-floating orange"><i class="fab fa-dribbble"></i></a>
-            <!-- Twitter -->
-            <a type="button" class="btn-floating orange"><i class="fab fa-twitter"></i></a>
-            <!-- Google + -->
-            <a type="button" class="btn-floating orange"><i class="fab fa-google-plus-g"></i></a>
-            <!-- Linkedin -->
-
-          </div>
-        </div>
-        <!-- Grid column -->
-
-        <hr class="w-100 clearfix d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-xl-3 ml-auto col-lg-4 mt-2 mb-1 col-md-6 wow fadeIn" data-wow-delay="0.3s">
-          <!-- Search -->
-          <h5 class="text-uppercase mb-4"><strong>Search something</strong></h5>
-
-          <ul class="footer-search list-unstyled">
-            <li>
-              <form class="search-form" role="search">
-                <div class="md-form waves-effect">
-                  <input type="text" class="form-control" placeholder="Search">
-                </div>
-              </form>
-            </li>
-          </ul>
-
-          <!-- Info -->
-          <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-          <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-          <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="w-100 clearfix d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-xl-3 ml-auto col-lg-4 mt-2 mb-1 col-md-6 wow fadeIn" data-wow-delay="0.3s">
-
-          <!-- Title -->
-          <h5 class="text-uppercase mb-4"><strong>Opening hours</strong></h5>
-
-          <!-- Opening hours table -->
-          <table class="table footer-table text-center text-white">
-            <tbody>
-              <tr>
-                <td>Mon - Thu:</td>
-                <td>8am - 9pm</td>
-              </tr>
-              <tr>
-                <td>Fri - Sat:</td>
-                <td>8am - 1am</td>
-              </tr>
-              <tr>
-                <td>Sunday:</td>
-                <td>9am - 10pm</td>
-              </tr>
-            </tbody>
-          </table>
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
+    <!-- Scrollspy -->
+    <div class="dotted-scrollspy clearfix d-none d-sm-block ">
+      <ul class="nav smooth-scroll flex-column ">
+        <li class="nav-item "><a class="nav-link " href="#home"><span></span></a></li>
+        <li class="nav-item "><a class="nav-link " href="#about"><span></span></a></li>
+        <li class="nav-item "><a class="nav-link " href="#services"><span></span></a></li>
+        <li class="nav-item "><a class="nav-link " href="#portfolio"><span></span></a></li>
+        <li class="nav-item "><a class="nav-link " href="#contact"><span></span></a></li>
+      </ul>
     </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright py-3 text-center wow fadeIn" data-wow-delay="0.3s">
-      <div class="container-fluid">
-        © 2019 Copyright: <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
-      </div>
-    </div>
-    <!-- Copyright -->
 
   </footer>
-  <!-- Footer -->
-
-
-
-
-
-
-
-
-
-
-{{-- <style>
-    li {
-        list-style: none;
-        text-align: center;
-    }
-</style>
-<div class="container-fluid">
-
-            @include('components.carousel')
-            @include('components/testimonial')
-
-
-
-    <div class="row p-5 justify-content-center ">
-        <h2 class="h1-responsive font-weight-bold my-5">
-            "What Can We Do For You"
-        </h2>
-        <div class="col-12">
-            <!-- Card deck -->
-            <div class=" card-deck ">
-                <!-- Card -->
-                <div
-                    class="card mb-4  align-items-center d-flex justify-content-center"
-                >
-                    <!--Card image-->
-                    <div class="view overlay p-5 d-flex justify-content-center">
-                        <img
-                            style="width:50%;"
-                            class="card-img-top"
-                            srcq="{{ url('storage/images/shoppingcart.png') }}"
-                            alt=" image cap"
-                        />
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-
-                    <!--Card content-->
-                    <div class="card-body ">
-                        <!--Title-->
-                        <h4 class="card-title">Products we sell</h4>
-                        <!--Text-->
-                        <p class="card-text">
-                            <li>Computer Systems</li>
-                            <li>Lapops</li>
-                            <li>Tablet Computers</li>
-                            <li>Accessories</li>
-                            <li>Software</li>
-                        </p>
-                        <div class="text-center">
-                            <button
-                                style="color:white"
-                                type="button"
-                                class="btn btn-light-blue btn-md "
-                            >
-                                <a
-                                    href="http://buy.fenntechltd.com/"
-                                    style="color:white"
-                                >
-                                    More
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card -->
-
-                <!-- Card -->
-                <div
-                    class="card mb-4  align-items-center d-flex justify-content-center"
-                >
-                    <!--Card image-->
-                    <div class="view overlay p-5 d-flex justify-content-center">
-                        <img
-                            class="card-img-top"
-                            src="{{ url('storage/images/Repair.jpg') }}"
-                            style="width:50%"
-                            alt="Card image cap"
-                        />
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-
-                    <!--Card content-->
-                    <div class="card-body">
-                        <!--Title-->
-                        <h4 class="card-title">Repair & Installation</h4>
-                        <!--Text-->
-                        <p class="card-text">
-                            <li>General PC Repairs</li>
-                            <li>In-Home, In-Office</li>
-                            <li>Virus Removal</li>
-                            <li>Accessories</li>
-                            <li>Maintenance</li>
-                        </p>
-                        <div class="text-center">
-                            <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                            >
-                                <a
-                                    href="{{ route('repair') }}"
-                                    style="color:white"
-                                >
-                                    More</a
-                                >
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card -->
-
-                <!-- Card -->
-                <div
-                    class="card mb-4  align-items-center d-flex justify-content-center"
-                >
-                    <!--Card image-->
-                    <div class="view overlay p-5 d-flex justify-content-center">
-                        <img
-                            class="card-img-top"
-                            src="{{ url('storage/images/security.jpg') }}"
-                            style="width:50%"
-                            alt="Card image cap"
-                        />
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-
-                    <!--Card content-->
-                    <div class="card-body">
-                        <!--Title-->
-                        <h4 class="card-title">Home & Office Security</h4>
-                        <!--Text-->
-                        <p class="card-text">
-                            <li>Security Camera (CCTV)</li>
-                            <li>Alarm & Panic Setup</li>
-                            <li>Access Control</li>
-                            <li>Lapop & PC Security</li>
-                            <li>General Security Products</li>
-                        </p>
-                        <div class="text-center">
-                            <!-- buttons -->
-                            <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                            >
-                                <a
-                                    href="{{ route('homeSecurity') }}"
-                                    style="color:white"
-                                >
-                                    More
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card -->
-            </div>
-            <!-- Card deck -->
-        </div>
-
-        <div class="col-12">
-            <!-- Card deck -->
-            <div class=" card-deck ">
-                <!-- Card -->
-                <div
-                    class="card mb-4  align-items-center d-flex justify-content-center"
-                >
-                    <!--Card image-->
-                    <div class="view overlay p-5 d-flex justify-content-center">
-                        <img
-                            style="width:50%;"
-                            class="card-img-top"
-                            src="{{ url('storage/images/illustrationforcabling.jpg') }}"
-                            alt=" image cap"
-                        />
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-
-                    <!--Card content-->
-                    <div class="card-body ">
-                        <!--Title-->
-                        <h4 class="card-title">Networking & Cabling</h4>
-                        <!--Text-->
-                        <p class="card-text">
-                            <li>Networking Supplies</li>
-                            <li>Cables</li>
-                            <li>Networking Services</li>
-                            <li>Wireless Setup</li>
-                        </p>
-                        <div class="text-center">
-                            <button
-                                style="color:white"
-                                type="button"
-                                class="btn btn-light-blue btn-md "
-                            >
-                                <a
-                                href="{{ route('networking') }}"
-                                style="color:white"
-                                >
-                                    More
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card -->
-
-                <!-- Card -->
-                <div
-                    class="card mb-4  align-items-center d-flex justify-content-center"
-                >
-                    <!--Card image-->
-                    <div class="view overlay p-5 d-flex justify-content-center">
-                        <img
-                            class="card-img-top"
-                            src="{{ url('storage/images/corporate.jpg')}}"
-                            style="width:50%"
-                            alt="Card image cap"
-                        />
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-
-                    <!--Card content-->
-                    <div class="card-body">
-                        <!--Title-->
-                        <h4 class="card-title">Corporate & Institutions</h4>
-                        <!--Text-->
-                        <p class="card-text">
-                            <li>Technology Procurement</li>
-                            <li>Point-Of-Sale Solutions</li>
-                            <li>Wireless Network Development</li>
-                        </p>
-                        <div class="text-center">
-                            <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                            >
-                                <a
-                                href="{{ route('corporate') }}"
-                                style="color:white"
-                                >
-                                    More</a
-                                >
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card -->
-
-                <!-- Card -->
-                <div
-                    class="card mb-4  align-items-center d-flex justify-content-center"
-                >
-                    <!--Card image-->
-                    <div class="view overlay p-5 d-flex justify-content-center">
-                        <img
-                            class="card-img-top"
-                            src="{{url('storage/images/web3.jpg')}}"
-                            style="width:50%"
-                            alt="Card image cap"
-                        />
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-
-                    <!--Card content-->
-                    <div class="card-body">
-                        <!--Title-->
-                        <h4 class="card-title">
-                            Website Design & Development
-                        </h4>
-                        <!--Text-->
-                        <p class="card-text">
-                            <li>Website Solutions</li>
-                            <li>Web applications</li>
-                            <li>Software Solutions</li>
-                            <li>Intranet & CMS</li>
-                        </p>
-                        <div class="text-center">
-                            <!-- buttons -->
-                            <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                            >
-                                <a
-                                href="{{ route('website') }}"
-                                    style="color:white"
-                                >
-                                    More
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card -->
-            </div>
-            <!-- Card deck -->
-        </div>
-
-
-</div> --}}
+  <!--Footer-->
 @endsection
+
+  <!-- SCRIPTS -->
+
+  <!-- JQuery -->
+  <script type="text/javascript " src="../js/jquery-3.3.1.min.js "></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript " src="../js/popper.min.js "></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript " src="../js/bootstrap.min.js "></script>
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript " src="../js/mdb.min.js "></script>
+
+  <script>
+    // initialize scrollspy
+    $('body').scrollspy({
+      target: '.dotted-scrollspy'
+    });
+
+    // initialize lightbox
+    $(function () {
+      $("#mdb-lightbox-ui ").load("mdb-addons/mdb-lightbox-ui.html ");
+    });
+
+    /* WOW.js init */
+    new WOW().init();
+
+    $('.navbar-collapse a').click(function () {
+      $(".navbar-collapse ").collapse('hide');
+    });
+
+  </script>
+
+
