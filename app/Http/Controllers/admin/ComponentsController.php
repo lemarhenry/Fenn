@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\admin;
 
 use App\Carousel;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Testimonial;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class ComponentsController extends Controller
@@ -15,7 +15,7 @@ class ComponentsController extends Controller
         $this->middleware('auth');
     }
 
-    public function  tcpage()
+    public function tcpage()
     {
         return view('admin.testimonial/create');
     }
@@ -76,6 +76,7 @@ class ComponentsController extends Controller
 
     public function carouselSave(Request $request)
     {
+
         $this->validate($request, ['img' => 'mimes:jpeg,jpg,png|max:1999|required']);
         $caro = new Carousel;
         $filenameWithExt = $request->file('img')->getClientOriginalName();
@@ -85,6 +86,7 @@ class ComponentsController extends Controller
         $path = $request->file('img')->storeAs('public/carousel', $filenametostore);
         $caro->caption = htmlentities($request->caption);
         $caro->image = $filenametostore;
+        $caro->section = htmlentities($request->section);
         $caro->save();
         return ['status' => 200];
     }
@@ -104,6 +106,7 @@ class ComponentsController extends Controller
     public function carouselUpdate(Request $request, Carousel $id)
     {
         $id->caption = htmlentities($request->caption);
+        $id->section = htmlentities($request->section);
         if ($request->file('img') != null) {
             $this->validate(
                 $request,
@@ -116,6 +119,7 @@ class ComponentsController extends Controller
             $filenametostore = $filename . '_' . time() . '.' . $extension;
             $path = $request->file('img')->storeAs('public/carousel', $filenametostore);
             $id->image = $filenametostore;
+            $id->section = htmlentities($request->section);
             $id->save();
         }
         $id->save();

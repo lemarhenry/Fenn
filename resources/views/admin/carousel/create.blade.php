@@ -42,6 +42,13 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <select
+                            class="browser-default custom-select"
+                            id="section"
+                        >
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <textarea
                             class="form-control rounded-0 caption"
                             rows="3"
@@ -51,7 +58,7 @@
                         ></textarea>
                     </div>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer bg-white">
                     <div class="text-center">
                         <button class="btn btn-success" id="submitcarousel">
                             <i class="fa fa-plus"></i>

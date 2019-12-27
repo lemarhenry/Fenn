@@ -61,6 +61,13 @@
                             </div>
                         </div>
                     </div>
+                     <div class="form-group">
+                        <select
+                            class="browser-default custom-select"
+                            id="section"
+                        >
+                        </select>
+                    </div>
                     <div class="form-group">
                         <textarea
                             class="form-control rounded-0 caption"

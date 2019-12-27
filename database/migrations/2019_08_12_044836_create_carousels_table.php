@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateCarouselsTable extends Migration
 {
@@ -17,6 +17,7 @@ class CreateCarouselsTable extends Migration
             $table->bigIncrements('id');
             $table->string('image');
             $table->string('caption')->nullable();
+            $table->string('section');
             $table->timestamps();
         });
     }

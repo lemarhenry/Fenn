@@ -5,6 +5,26 @@ var state = {
     msg_id: null
 };
 
+let siteSections = [
+    { value: 1, site: "FennTech Home" },
+    { value: 2, site: "FennTech Corporate" },
+    { value: 3, site: "FennTech Networking" },
+    { value: 4, site: "FennTech Website" }
+];
+
+var section = document.querySelector("#section") || null;
+
+var populateCarouselDropDown = IsSelected => {
+    let output = "";
+    siteSections.forEach(s => {
+        let selected = Number(s.value) == IsSelected ? "selected" : "";
+        output += `<option value="${s.value}" ${selected}>${s.site}</option>`;
+    });
+    if (section) {
+        section.innerHTML = output;
+    }
+};
+
 let carouselin = document.getElementById("carouselimage") || null;
 let carouselout = $("#carouselout") || null;
 let editcarouselimagein =
@@ -454,6 +474,7 @@ addCarouselimage = () => {
     } else {
         if (state.img.files[0].size < 2000000.0) {
             fd.append("caption", caption.value);
+            fd.append("section", section.value);
             fd.append("img", state.img.files[0]);
             axios
                 .post("/create/carousel", fd)
@@ -484,6 +505,7 @@ getCarouselIMages = () => {
         .then(res => {
             $("#totalcarousel").html(res.data.length);
             let len = res.data.length;
+            console.log(res.data);
             res.data.forEach(ca => {
                 let body =
                     ca.caption.length > 0
@@ -584,6 +606,7 @@ pcarData = id => {
                 `/storage/carousel/${res.data.image}`
             );
             $("#editimagecaption").val(res.data.caption);
+            populateCarouselDropDown(res.data.section);
         })
         .catch(err => {
             iziToast.error({
@@ -606,6 +629,7 @@ updateCarousel = () => {
     let fd = new FormData();
     fd.append("img", state.img ? state.img.files[0] : null);
     fd.append("caption", caption);
+    fd.append("section", section.value);
     axios
         .post(`/single/carousel/${state.edit_id}`, fd)
         .then(res => {
@@ -629,3 +653,4 @@ updateCarousel = () => {
 getTestimonials();
 getCarouselIMages();
 AdminData();
+populateCarouselDropDown(1);
