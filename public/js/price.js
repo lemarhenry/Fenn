@@ -18,7 +18,6 @@ updateDigify = () => {
                     message: `${d.name} field is required .`,
                     position: "topCenter"
                 });
-                return;
             } else {
                 pass = true;
                 fd.append(d.id, d.value);
@@ -35,10 +34,7 @@ updateDigify = () => {
                     getDigify();
                 })
                 .catch(err => {
-                    iziToast.error({
-                        message: err.message,
-                        position: "topCenter"
-                    });
+                    throw err;
                 });
         }
     }
@@ -124,10 +120,7 @@ updateDan = () => {
                     getDan();
                 })
                 .catch(err => {
-                    iziToast.error({
-                        message: err.message,
-                        position: "topCenter"
-                    });
+                    throw err;
                 });
         }
     }
@@ -159,10 +152,7 @@ getDan = () => {
             $("#deliteprice").val(res.data.eprice);
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };
 

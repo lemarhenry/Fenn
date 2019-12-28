@@ -14,6 +14,7 @@ mediaQuery = () => {
 };
 
 sendMessage = e => {
+    console.log("sendMessage:");
     e.preventDefault();
     let name = $("#formname").val();
     let email = $("#formemail").val();
@@ -49,12 +50,9 @@ sendMessage = e => {
                 $("#errorsubject").html("");
                 $("#errorbody").html("");
             })
-            .catch(err =>
-                iziToast.error({
-                    position: "topCenter",
-                    message: err
-                })
-            );
+            .catch(err => {
+                throw err;
+            });
     }
 };
 
@@ -85,10 +83,7 @@ Carousel = () => {
             }
         })
         .catch(err => {
-            iziToast.error({
-                position: "topCenter",
-                message: err
-            });
+            throw err;
         });
 };
 

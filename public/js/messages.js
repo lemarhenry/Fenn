@@ -72,10 +72,7 @@ getMessages = () => {
             }
         })
         .catch(err => {
-            iziToast.error({
-                position: "topCenter",
-                message: err.message
-            });
+            throw err;
         });
 };
 
@@ -86,10 +83,7 @@ getNewmsg = msg => {
         .get("/messages")
         .then(res => (res.data.length != msg ? getMessages() : ""))
         .catch(err => {
-            iziToast.error({
-                position: "topCenter",
-                message: err.message
-            });
+            throw err;
         });
 };
 
@@ -100,10 +94,7 @@ seenMessage = id => {
             getMessages();
         })
         .catch(err => {
-            iziToast.error({
-                position: "topCenter",
-                message: err.message
-            });
+            throw err;
         });
 };
 
@@ -123,10 +114,7 @@ viewMessage = id => {
             state.msg_id = res.data.id;
         })
         .catch(err => {
-            iziToast.error({
-                position: "topCenter",
-                message: err.message
-            });
+            throw err;
         });
 };
 
@@ -148,10 +136,7 @@ deleteMessage = () => {
             getMessages();
         })
         .catch(err => {
-            iziToast.error({
-                position: "topCenter",
-                message: err.message
-            });
+            throw err;
         });
 };
 
@@ -349,9 +334,6 @@ replyDelete = id => {
             getReplies(state.msg_id);
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };

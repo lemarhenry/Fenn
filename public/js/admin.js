@@ -14,7 +14,7 @@ let siteSections = [
 
 var section = document.querySelector("#section") || null;
 
-var populateCarouselDropDown = IsSelected => {
+var populateCarouselDropDown = (IsSelected = 1) => {
     let output = "";
     siteSections.forEach(s => {
         let selected = Number(s.value) == IsSelected ? "selected" : "";
@@ -325,10 +325,7 @@ AdminData = () => {
             $("#profilecardemail").html(res.data.email);
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };
 
@@ -505,7 +502,6 @@ getCarouselIMages = () => {
         .then(res => {
             $("#totalcarousel").html(res.data.length);
             let len = res.data.length;
-            console.log(res.data);
             res.data.forEach(ca => {
                 let body =
                     ca.caption.length > 0
@@ -572,10 +568,7 @@ getCarouselIMages = () => {
             }
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };
 
@@ -590,10 +583,7 @@ deleteCarouselImage = id => {
             getCarouselIMages();
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };
 
@@ -609,10 +599,7 @@ pcarData = id => {
             populateCarouselDropDown(res.data.section);
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };
 
@@ -642,10 +629,7 @@ updateCarousel = () => {
             $("#closecarouselmodal").click();
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };
 
@@ -653,4 +637,4 @@ updateCarousel = () => {
 getTestimonials();
 getCarouselIMages();
 AdminData();
-populateCarouselDropDown(1);
+populateCarouselDropDown();

@@ -50,10 +50,7 @@ createportfolio = () => {
                 $("#tempportfolioimage").attr("src", "");
             })
             .catch(err => {
-                iziToast.error({
-                    position: "topCenter",
-                    message: err.message
-                });
+                throw err;
             });
     }
 };
@@ -280,10 +277,7 @@ UpdatePort = () => {
                 getPortfolios();
             })
             .catch(err => {
-                iziToast.error({
-                    position: "topCenter",
-                    message: err.message
-                });
+                throw err;
             });
     }
 };

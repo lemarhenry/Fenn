@@ -27,8 +27,10 @@ class AdminController extends Controller
 
     public function adminUpdate(Request $request)
     {
+        // return $request->all();
         $this->validate($request, [
             'Email' => 'required|email',
+            'Name' => 'required',
         ]);
         $admin = User::find(Auth::user()->id);
         $like = User::where('email', htmlentities($request->Email))->first();

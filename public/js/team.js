@@ -71,10 +71,7 @@ memberCreate = () => {
                     $("#tempMemberimage").attr("src", "");
                 })
                 .catch(err => {
-                    iziToast.error({
-                        message: err.message,
-                        position: "topCenter"
-                    });
+                    throw err;
                 });
         }
     }
@@ -147,10 +144,7 @@ getMembers = () => {
             }
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };
 
@@ -167,10 +161,7 @@ memberDelete = id => {
             getMembers();
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };
 
@@ -232,9 +223,6 @@ memberData = id => {
             $("#etposition").val(res.data.position);
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };

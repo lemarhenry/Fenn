@@ -27,10 +27,7 @@ createJob = () => {
                     });
                 })
                 .catch(err => {
-                    iziToast.error({
-                        position: "topCenter",
-                        message: err.message
-                    });
+                    throw err;
                 });
         }
     } else {
@@ -115,10 +112,7 @@ getJobs = () => {
             }
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };
 
@@ -132,10 +126,7 @@ jobEdit = id => {
             $("#editprereq3").val(res.data.prereq3);
         })
         .catch(err => {
-            iziToast.error({
-                message: err.message,
-                position: "topCenter"
-            });
+            throw err;
         });
 };
 
@@ -171,10 +162,7 @@ jobUpdate = () => {
                 getJobs();
             })
             .catch(err => {
-                iziToast.error({
-                    message: err.message,
-                    position: "topCenter"
-                });
+                throw err;
             });
     } else {
         iziToast.error({
